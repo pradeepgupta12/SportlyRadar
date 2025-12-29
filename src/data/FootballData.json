@@ -1,0 +1,318 @@
+{
+  "status": "success",
+  "data": {
+    "LiveMatches": [
+      {
+        "match_id": "1",
+        "competition": "UEFA Nations League 2025",
+        "match_type": "International",
+        "match_number": "Group Stage",
+        "schedule": {
+          "date": "2025-12-26",
+          "kickoff_time": "20:45 CET",
+          "broadcast": ["BBC", "ITV", "ZDF", "Sky Sports"]
+        },
+        "venue": {
+          "name": "Wembley Stadium",
+          "city": "London",
+          "country": "England",
+          "capacity": 90000,
+          "attendance": 85000
+        },
+        "status": "Live",
+        "images": {
+          "team1_logo": "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/800px-Flag_of_England.svg.png",
+          "team2_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/800px-Flag_of_Germany.svg.png",
+          "stadium": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Wembley_Stadium_interior.jpg/800px-Wembley_Stadium_interior.jpg"
+        },
+        "teams": {
+          "home": {
+            "name": "England",
+            "short_name": "ENG",
+            "manager": "Gareth Southgate",
+            "country": "England"
+          },
+          "away": {
+            "name": "Germany",
+            "short_name": "GER",
+            "manager": "Julian Nagelsmann",
+            "country": "Germany"
+          }
+        },
+        "scores": {
+          "current_score": {
+            "home_goals": 2,
+            "away_goals": 1,
+            "match_time": "68:00",
+            "scorers": [
+              { "player": "Harry Kane", "team": "England", "minute": 15, "assist": "Jude Bellingham" },
+              { "player": "Kai Havertz", "team": "Germany", "minute": 32, "assist": "Jamal Musiala" },
+              { "player": "Bukayo Saka", "team": "England", "minute": 55, "assist": "Phil Foden" }
+            ]
+          }
+        },
+        "stats": {
+          "home_team": {
+            "name": "England",
+            "goals": 2,
+            "shots": 12,
+            "shots_on_target": 6,
+            "possession": 58,
+            "passes_completed": 520,
+            "corners": 5,
+            "offsides": 2,
+            "fouls": 9,
+            "yellow_cards": 1,
+            "red_cards": 0
+          },
+          "away_team": {
+            "name": "Germany",
+            "goals": 1,
+            "shots": 10,
+            "shots_on_target": 4,
+            "possession": 42,
+            "passes_completed": 420,
+            "corners": 3,
+            "offsides": 1,
+            "fouls": 11,
+            "yellow_cards": 2,
+            "red_cards": 0
+          }
+        },
+        "match_summary": {
+          "referee": "Clement Turpin",
+          "current_status": "England leading in second half",
+          "match_time": "Second Half"
+        },
+        "highlights": [
+          "15' - Harry Kane heads England in front!",
+          "32' - Kai Havertz equalizes with a clinical finish",
+          "55' - Bukayo Saka restores England's lead with a curling shot"
+        ],
+        "commentary": [
+          { "minute": "68:00", "text": "England pushing for a third goal, Germany looking dangerous on the counter." },
+          { "minute": "55:00", "text": "GOAL! Saka makes it 2-1!" },
+          { "minute": "32:00", "text": "GOAL! Havertz levels it for Germany." },
+          { "minute": "15:00", "text": "GOAL! Kane scores for England!" }
+        ],
+        "lineups": {
+          "home": {
+            "formation": "4-3-3",
+            "starting_xi": ["Pickford", "Walker", "Stones", "Maguire", "Trippier", "Rice", "Bellingham", "Foden", "Saka", "Kane", "Rashford"],
+            "bench": ["Ramsdale", "Henderson", "Tomori", "Shaw", "Phillips", "Mount", "Grealish", "Palmer"]
+          },
+          "away": {
+            "formation": "4-2-3-1",
+            "starting_xi": ["ter Stegen", "Kimmich", "Rüdiger", "Schlotterbeck", "Raum", "Goretzka", "Gündoğan", "Musiala", "Sané", "Havertz", "Füllkrug"],
+            "bench": ["Neuer", "Kehrer", "Tah", "Gosens", "Can", "Brandt", "Wirtz", "Müller"]
+          }
+        }
+      },
+      {
+        "match_id": "2",
+        "competition": "CONMEBOL World Cup Qualifiers 2026",
+        "match_type": "International",
+        "match_number": "Matchday 12",
+        "schedule": {
+          "date": "2025-12-26",
+          "kickoff_time": "21:00 BRT",
+          "broadcast": ["Globo", "TyC Sports", "ESPN"]
+        },
+        "venue": {
+          "name": "Maracanã Stadium",
+          "city": "Rio de Janeiro",
+          "country": "Brazil",
+          "capacity": 78838,
+          "attendance": 75000
+        },
+        "status": "Live",
+        "images": {
+          "team1_logo": "https://upload.wikimedia.org/wikipedia/en/thumb/3/32/Flag_of_Brazil_%28alternative%29.svg/800px-Flag_of_Brazil_%28alternative%29.svg.png",
+          "team2_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/800px-Flag_of_Argentina.svg.png",
+          "stadium": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Maracan%C3%A3_Stadium_-_Rio_de_Janeiro%2C_Brazil.jpg/800px-Maracan%C3%A3_Stadium_-_Rio_de_Janeiro%2C_Brazil.jpg"
+        },
+        "teams": {
+          "home": {
+            "name": "Brazil",
+            "short_name": "BRA",
+            "manager": "Dorival Júnior",
+            "country": "Brazil"
+          },
+          "away": {
+            "name": "Argentina",
+            "short_name": "ARG",
+            "manager": "Lionel Scaloni",
+            "country": "Argentina"
+          }
+        },
+        "scores": {
+          "current_score": {
+            "home_goals": 1,
+            "away_goals": 1,
+            "match_time": "72:00",
+            "scorers": [
+              { "player": "Vinícius Júnior", "team": "Brazil", "minute": 28, "assist": "Neymar" },
+              { "player": "Lionel Messi", "team": "Argentina", "minute": 45, "assist": "Ángel Di María" }
+            ]
+          }
+        },
+        "stats": {
+          "home_team": {
+            "name": "Brazil",
+            "goals": 1,
+            "shots": 14,
+            "shots_on_target": 5,
+            "possession": 55,
+            "passes_completed": 480,
+            "corners": 6,
+            "offsides": 3,
+            "fouls": 12,
+            "yellow_cards": 2,
+            "red_cards": 0
+          },
+          "away_team": {
+            "name": "Argentina",
+            "goals": 1,
+            "shots": 11,
+            "shots_on_target": 4,
+            "possession": 45,
+            "passes_completed": 410,
+            "corners": 4,
+            "offsides": 1,
+            "fouls": 13,
+            "yellow_cards": 3,
+            "red_cards": 0
+          }
+        },
+        "match_summary": {
+          "referee": "Wilmar Roldán",
+          "current_status": "Intense South American classic",
+          "match_time": "Second Half"
+        },
+        "highlights": [
+          "28' - Vinícius Júnior dances through defense and scores!",
+          "45' - Messi equalizes with a trademark left-foot curler just before halftime",
+          "72' - Both teams pushing hard for a winner"
+        ],
+        "commentary": [
+          { "minute": "72:00", "text": "End-to-end stuff at the Maracanã! Both sides desperate for victory." },
+          { "minute": "45:00", "text": "GOAL! Messi makes it 1-1!" },
+          { "minute": "28:00", "text": "GOAL! Vinícius Júnior puts Brazil ahead!" }
+        ],
+        "lineups": {
+          "home": {
+            "formation": "4-2-3-1",
+            "starting_xi": ["Alisson", "Danilo", "Marquinhos", "Militão", "Wendell", "Casemiro", "Paquetá", "Raphinha", "Neymar", "Vinícius Júnior", "Rodrygo"],
+            "bench": ["Ederson", "Bremer", "Alex Sandro", "Guimarães", "Joelinton", "Martinelli", "Richarlison"]
+          },
+          "away": {
+            "formation": "4-3-3",
+            "starting_xi": ["Martínez", "Molina", "Romero", "Otamendi", "Tagliafico", "De Paul", "Mac Allister", "Fernández", "Di María", "Messi", "Lautaro Martínez"],
+            "bench": ["Armani", "Pezzella", "Acuña", "Paredes", "Lo Celso", "Álvarez", "Dybala"]
+          }
+        }
+      },
+      {
+        "match_id": "3",
+        "competition": "International Friendly 2025",
+        "match_type": "International",
+        "match_number": "Friendly",
+        "schedule": {
+          "date": "2025-12-26",
+          "kickoff_time": "21:00 CET",
+          "broadcast": ["TF1", "RTP", "M6", "beIN Sports"]
+        },
+        "venue": {
+          "name": "Stade de France",
+          "city": "Saint-Denis",
+          "country": "France",
+          "capacity": 80000,
+          "attendance": 78000
+        },
+        "status": "Live",
+        "images": {
+          "team1_logo": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/800px-Flag_of_France.svg.png",
+          "team2_logo": "https://upload.wikimedia.org/wikipedia/en/thumb/c/cf/Flag_of_Portugal.svg/800px-Flag_of_Portugal.svg.png",
+          "stadium": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Stade_de_France_Paris.jpg/800px-Stade_de_France_Paris.jpg"
+        },
+        "teams": {
+          "home": {
+            "name": "France",
+            "short_name": "FRA",
+            "manager": "Didier Deschamps",
+            "country": "France"
+          },
+          "away": {
+            "name": "Portugal",
+            "short_name": "POR",
+            "manager": "Roberto Martínez",
+            "country": "Portugal"
+          }
+        },
+        "scores": {
+          "current_score": {
+            "home_goals": 0,
+            "away_goals": 1,
+            "match_time": "58:00",
+            "scorers": [
+              { "player": "Cristiano Ronaldo", "team": "Portugal", "minute": 42, "assist": "Bruno Fernandes" }
+            ]
+          }
+        },
+        "stats": {
+          "home_team": {
+            "name": "France",
+            "goals": 0,
+            "shots": 15,
+            "shots_on_target": 5,
+            "possession": 62,
+            "passes_completed": 580,
+            "corners": 7,
+            "offsides": 2,
+            "fouls": 8,
+            "yellow_cards": 1,
+            "red_cards": 0
+          },
+          "away_team": {
+            "name": "Portugal",
+            "goals": 1,
+            "shots": 8,
+            "shots_on_target": 3,
+            "possession": 38,
+            "passes_completed": 350,
+            "corners": 2,
+            "offsides": 1,
+            "fouls": 10,
+            "yellow_cards": 2,
+            "red_cards": 0
+          }
+        },
+        "match_summary": {
+          "referee": "Antonio Mateu Lahoz",
+          "current_status": "Portugal leading, France pressing",
+          "match_time": "Second Half"
+        },
+        "highlights": [
+          "42' - Cristiano Ronaldo scores with a powerful header!",
+          "58' - France dominating possession but struggling to break down Portugal's defense"
+        ],
+        "commentary": [
+          { "minute": "58:00", "text": "France throwing everything forward in search of an equalizer." },
+          { "minute": "42:00", "text": "GOAL! Ronaldo rises highest to head Portugal in front!" }
+        ],
+        "lineups": {
+          "home": {
+            "formation": "4-2-3-1",
+            "starting_xi": ["Lloris", "Koundé", "Varane", "Konaté", "Hernández", "Tchouaméni", "Rabiot", "Dembélé", "Griezmann", "Mbappé", "Giroud"],
+            "bench": ["Areola", "Pavard", "Saliba", "Camavinga", "Coman", "Nkunku", "Benzema"]
+          },
+          "away": {
+            "formation": "4-3-3",
+            "starting_xi": ["Costa", "Cancelo", "Pepe", "Dias", "Mendes", "Neves", "Palhinha", "Fernandes", "Bernardo Silva", "Ronaldo", "Leão"],
+            "bench": ["Patrício", "Dalot", "Inácio", "Vitinha", "Otávio", "Jota", "Félix"]
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,211 @@
+
+
+{
+  "status": "success",
+  "live_matches": [
+    {
+      "match_id": "1",
+      "info": {
+        "series": "Pakistan vs Sri Lanka 2025",
+        "match_type": "Test",
+        "match_number": "2nd Test",
+        "venue": {
+          "name": "Galle International Stadium",
+          "city": "Galle",
+          "country": "Sri Lanka"
+        },
+        "date": "2025-06-03",
+        "status": "Live",
+        "team1_flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Flag_of_Pakistan.svg/800px-Flag_of_Pakistan.svg.png",
+        "team2_flag": "https://cdn.britannica.com/13/4413-050-98188B5C/Flag-Sri-Lanka.jpg",
+        "toss": "Sri Lanka won the toss and elected to bat",
+        "current_status": "Pakistan trail by 40 runs with 5 wickets remaining",
+        "day": 2,
+        "session": "Second Session"
+      },
+      "squads": {
+        "Pakistan": {
+          "playing_xi": [
+            "Babar Azam (c)", "Shaheen Afridi", "Mohammad Rizwan (wk)", "Fakhar Zaman", "Haris Rauf", "Shadab Khan", "Imad Wasim", "Mohammad Nawaz", "Saim Ayub", "Usama Mir", "Mohammad Haris"
+          ],
+          "bench": ["Imam-ul-Haq", "Naseem Shah", "Iftikhar Ahmed"],
+          "support_staff": ["Misbah-ul-Haq (Head Coach)", "Mohammad Asif (Physio)"],
+          "country": "Pakistan"
+        },
+        "Sri Lanka": {
+          "playing_xi": [
+            "Dimuth Karunaratne (c)", "Lasith Embuldeniya", "Kusal Mendis (wk)", "Oshada Fernando", "Dhananjaya de Silva", "Angelo Mathews", "Dinesh Chandimal", "Suranga Lakmal", "Vishwa Fernando", "Ramesh Mendis", "Lahiru Thirimanne"
+          ],
+          "bench": ["Pathum Nissanka", "Dushmantha Chameera", "Niroshan Dickwella"],
+          "support_staff": ["Mickey Arthur (Head Coach)", "Rumesh Ratnayake (Bowling Coach)", "Piyal Wijetunge (Physio)"],
+          "country": "Sri Lanka"
+        }
+      },
+      "scorecard": {
+        "1st_innings": {
+          "batting_team": "Sri Lanka",
+          "score": "310 all out",
+          "overs": "92.0",
+          "run_rate": 3.37,
+          "extras": {"byes": 3, "leg_byes": 2, "wides": 3, "no_balls": 1, "total": 9},
+          "fall_of_wickets": [
+            "95-1 (Oshada Fernando, 28.4)", "160-2 (Dimuth Karunaratne, 42.1)", "205-3 (Kusal Mendis, 54.3)", "245-4 (Dhananjaya de Silva, 66.2)", "270-5 (Angelo Mathews, 74.5)", "285-6 (Dinesh Chandimal, 80.1)", "295-7 (Ramesh Mendis, 84.3)", "305-8 (Suranga Lakmal, 88.2)", "308-9 (Vishwa Fernando, 90.4)", "310-10 (Lahiru Thirimanne, 91.6)"
+          ],
+          "top_batsmen": ["Dimuth Karunaratne 75", "Kusal Mendis 55", "Oshada Fernando 42"],
+          "top_bowlers": ["Shaheen Afridi 4/65", "Haris Rauf 3/58", "Usama Mir 2/70"]
+        },
+        "2nd_innings_current": {
+          "batting_team": "Pakistan",
+          "score": "270/5",
+          "overs": "80.0",
+          "run_rate": 3.38,
+          "on_crease": ["Babar Azam 90*", "Mohammad Rizwan 50*"],
+          "extras": {"byes": 2, "leg_byes": 1, "wides": 2, "no_balls": 1, "total": 6},
+          "fall_of_wickets": [
+            "82-1 (Saim Ayub, 24.3)", "145-2 (Fakhar Zaman, 42.1)", "188-3 (Shadab Khan, 56.4)", "224-4 (Imad Wasim, 68.2)"
+          ],
+          "top_batsmen": ["Babar Azam 90*", "Mohammad Rizwan 50*", "Fakhar Zaman 45"],
+          "top_bowlers": ["Lasith Embuldeniya 2/70", "Suranga Lakmal 1/65", "Ramesh Mendis 1/48"]
+        }
+      },
+      "overs_summary": "Pakistan 270/5 in 80.0 overs (RR 3.38) – trailing by 40 runs",
+      "highlights": [
+        "Shaheen Afridi ne Sri Lanka ki first innings mein 4 wickets liye",
+        "Babar Azam aur Rizwan ki unbeaten partnership ne Pakistan ko strong position di",
+        "Day 2 – Second Session ongoing",
+        "Recent wicket: Imad Wasim b Ramesh Mendis (224-4)"
+      ],
+      "full_commentary_summary": {
+        "1st_innings": "Sri Lanka ne toss jeetkar pehle batting ki aur 310 banaye. Dimuth Karunaratne 75 aur Kusal Mendis 55 ke saath solid start. Shaheen Afridi ne 4 wickets lekar Sri Lanka ko 92 overs mein all out kiya.",
+        "2nd_innings": "Pakistan ne steady start liya lekin regular wickets girte rahe. Babar Azam (90*) aur Mohammad Rizwan (50*) ne 5th wicket ke liye unbeaten partnership banayi aur Pakistan ko match mein banaye rakha. Trail only 40 runs with 5 wickets in hand."
+      }
+    },
+    {
+      "match_id": "2",
+      "info": {
+        "series": "India vs Australia 2025",
+        "match_type": "ODI",
+        "match_number": "3rd ODI",
+        "venue": {
+          "name": "Eden Gardens",
+          "city": "Kolkata",
+          "country": "India"
+        },
+        "date": "2025-06-03",
+        "status": "Live",
+        "team1_flag": "https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/250px-Flag_of_India.svg.png",
+        "team2_flag": "https://upload.wikimedia.org/wikipedia/commons/8/88/Flag_of_Australia_%28converted%29.svg",
+        "toss": "India won the toss and elected to bat",
+        "current_status": "India batting in the first innings",
+        "day": 1,
+        "session": "Second Session"
+      },
+      "squads": {
+        "India": {
+          "playing_xi": [
+            "Rohit Sharma (c)", "Virat Kohli", "Jasprit Bumrah", "Shubman Gill", "Cheteshwar Pujara", "Rishabh Pant (wk)", "Ravindra Jadeja", "Ravichandran Ashwin", "Mohammed Shami", "Yashasvi Jaiswal", "Mohammed Siraj"
+          ],
+          "bench": ["KL Rahul", "Ishant Sharma", "Axar Patel"],
+          "support_staff": ["Ravi Shastri (Head Coach)", "Vikram Rathour (Batting Coach)", "Arun Bharadwaj (Physio)"],
+          "country": "India"
+        },
+        "Australia": {
+          "playing_xi": [
+            "Pat Cummins (c)", "Steve Smith", "David Warner", "Marnus Labuschagne", "Travis Head", "Alex Carey (wk)", "Cameron Green", "Nathan Lyon", "Josh Hazlewood", "Mitchell Starc", "Usman Khawaja"
+          ],
+          "bench": ["Mitchell Marsh", "Matthew Renshaw", "Scott Boland"],
+          "support_staff": ["Andrew McDonald (Head Coach)", "Michael Di Venuto (Batting Coach)", "Alex Kountouri (Physio)"],
+          "country": "Australia"
+        }
+      },
+      "scorecard": {
+        "1st_innings_current": {
+          "batting_team": "India",
+          "score": "200/4",
+          "overs": "40.0",
+          "run_rate": 5.00,
+          "on_crease": ["Rohit Sharma 75*", "Virat Kohli 40*"],
+          "extras": {"byes": 1, "leg_byes": 2, "wides": 2, "no_balls": 1, "total": 6},
+          "fall_of_wickets": [
+            "65-1 (Shubman Gill, 14.2)", "120-2 (Yashasvi Jaiswal, 24.5)", "165-3 (Rishabh Pant, 32.3)"
+          ],
+          "top_batsmen": ["Rohit Sharma 75*", "Virat Kohli 40*", "Shubman Gill 35"],
+          "top_bowlers": ["Pat Cummins 2/45", "Josh Hazlewood 1/50"]
+        }
+      },
+      "overs_summary": "India 200/4 in 40.0 overs (RR 5.00)",
+      "highlights": [
+        "Rohit Sharma aur Virat Kohli ne unbeaten 5th wicket partnership banayi",
+        "Pat Cummins ne 2 wickets liye",
+        "India strong position mein – 10 overs baaki",
+        "Recent wicket: Rishabh Pant c Steve Smith b Pat Cummins"
+      ],
+      "full_commentary_summary": {
+        "1st_innings": "India ne toss jeetkar batting chuni. Shubman Gill aur Yashasvi Jaiswal ne solid opening di lekin dono out hue. Rohit Sharma (75*) aur Virat Kohli (40*) ne match ko control mein rakha hai. 40 overs ke baad 200/4 – good platform for big total."
+      }
+    },
+    {
+      "match_id": "3",
+      "info": {
+        "series": "England vs New Zealand 2025",
+        "match_type": "T20I",
+        "match_number": "2nd T20I",
+        "venue": {
+          "name": "Old Trafford",
+          "city": "Manchester",
+          "country": "England"
+        },
+        "date": "2025-06-03",
+        "status": "Live",
+        "team1_flag": "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/330px-Flag_of_England.svg.png",
+        "team2_flag": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Flag_of_New_Zealand.svg",
+        "toss": "England won the toss and elected to bat",
+        "current_status": "England batting in the first innings",
+        "day": 1,
+        "session": "First Innings"
+      },
+      "squads": {
+        "England": {
+          "playing_xi": [
+            "Joe Root (c)", "Jos Buttler (wk)", "Jofra Archer", "Jason Roy", "Jonny Bairstow", "Ben Stokes", "Moeen Ali", "Chris Woakes", "Adil Rashid", "Dawid Malan", "Mark Wood"
+          ],
+          "bench": ["Zak Crawley", "Sam Curran", "Tom Curran"],
+          "support_staff": ["Chris Silverwood (Head Coach)", "Graham Thorpe (Batting Coach)", "Craig de Weymarn (Physio)"],
+          "country": "England"
+        },
+        "New Zealand": {
+          "playing_xi": [
+            "Kane Williamson (c)", "Trent Boult", "Devon Conway", "Tom Latham (wk)", "Martin Guptill", "Ross Taylor", "Mitchell Santner", "Lockie Ferguson", "Tim Southee", "Glenn Phillips", "Jimmy Neesham"
+          ],
+          "bench": ["Colin de Grandhomme", "Matt Henry", "Will Young"],
+          "support_staff": ["Gary Stead (Head Coach)", "Luke Ronchi (Batting Coach)", "Shane Jurgensen (Bowling Coach)"],
+          "country": "New Zealand"
+        }
+      },
+      "scorecard": {
+        "1st_innings_current": {
+          "batting_team": "England",
+          "score": "150/3",
+          "overs": "18.0",
+          "run_rate": 8.33,
+          "on_crease": ["Joe Root 60*", "Jos Buttler 45*"],
+          "extras": {"byes": 0, "leg_byes": 1, "wides": 2, "no_balls": 0, "total": 3},
+          "fall_of_wickets": [
+            "45-1 (Jason Roy, 4.2)", "85-2 (Jonny Bairstow, 8.5)", "110-3 (Dawid Malan, 12.3)"
+          ],
+          "top_batsmen": ["Joe Root 60*", "Jos Buttler 45*", "Jason Roy 25"],
+          "top_bowlers": ["Trent Boult 1/35", "Lockie Ferguson 1/30", "Mitchell Santner 1/32"]
+        }
+      },
+      "overs_summary": "England 150/3 in 18.0 overs (RR 8.33) – 2 overs remaining",
+      "highlights": [
+        "Joe Root aur Jos Buttler ki unbeaten partnership – explosive batting",
+        "England strong finish ki taraf",
+        "Recent wicket: Dawid Malan b Mitchell Santner"
+      ],
+      "full_commentary_summary": {
+        "1st_innings": "England ne toss jeetkar pehle batting ki. Powerplay mein Jason Roy ne fast start diya lekin jaldi out. Root (60*) aur Buttler (45*) ne match ko dominate kiya aur 18 overs mein 150/3 – big total on cards."
+      }
+    }
+  ]
+}

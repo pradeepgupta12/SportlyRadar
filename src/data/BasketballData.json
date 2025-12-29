@@ -1,0 +1,385 @@
+{
+  "live_matches": [
+    {
+      "match_id": "1",
+      "league": "FIBA World Cup Qualifiers 2025",
+      "match_type": "International",
+      "match_round": "Group Stage",
+      "date": "2025-06-13",
+      "status": "Live",
+      "arena": {
+        "name": "Saitama Super Arena",
+        "city": "Saitama",
+        "country": "Japan"
+      },
+      "images": {
+        "team1_flag": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/1200px-Flag_of_Japan.svg.png",
+        "team2_flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Flag_of_Australia_%28converted%29.svg/330px-Flag_of_Australia_%28converted%29.svg.png"
+      },
+      "match_info": {
+        "tip_off": "Australia won the tip-off",
+        "current_status": "Australia leading 65-60 in the third quarter",
+        "quarter": 3,
+        "time_remaining": "4:30"
+      },
+      "quarter_scores": [
+        {
+          "quarter_number": 1,
+          "team1_points": 20,
+          "team2_points": 22
+        },
+        {
+          "quarter_number": 2,
+          "team1_points": 25,
+          "team2_points": 28
+        },
+        {
+          "quarter_number": 3,
+          "team1_points": 15,
+          "team2_points": 15
+        }
+      ],
+      "commentary": [
+        "Third quarter underway – Australia maintaining a slim lead with strong playmaking from Giddey.",
+        "Watanabe drains a three for Japan – crowd erupts!",
+        "Giddey answers with a drive and dish – Australia keeping pace.",
+        "Tight battle in the paint; both teams trading baskets in this crucial quarter."
+      ],
+      "highlights": [
+        "Josh Giddey triple-double watch: 20 pts, 7 reb, 8 ast – dominating the floor.",
+        "Yuta Watanabe hot from deep: 2/5 3PT, leading Japan's comeback attempt.",
+        "Australia's transition game shining – fast breaks leading to easy buckets.",
+        "Key moment: Mills' corner three in Q2 extended lead to 8 points."
+      ],
+      "head_to_head": "Australia historically dominates Japan in international play (recent close games around 90-85 range).",
+      "teams": [
+        {
+          "name": "Japan",
+          "short_name": "JPN",
+          "total_points": 60,
+          "team_stats": {
+            "field_goals_made": 22,
+            "field_goals_attempted": 45,
+            "fg_percentage": "48.9%",
+            "three_pointers_made": 6,
+            "three_pointers_attempted": 15,
+            "three_pt_percentage": "40.0%",
+            "free_throws_made": 10,
+            "free_throws_attempted": 12,
+            "ft_percentage": "83.3%",
+            "rebounds": 25,
+            "assists": 12,
+            "turnovers": 8
+          },
+          "player_stats": [
+            {
+              "player_id": "p10",
+              "name": "Yuta Watanabe",
+              "points": 18,
+              "rebounds": 5,
+              "assists": 3,
+              "field_goals_made": 7,
+              "field_goals_attempted": 14,
+              "three_pointers_made": 2,
+              "three_pointers_attempted": 5
+            },
+            {
+              "player_id": "p11",
+              "name": "Rui Hachimura",
+              "points": 14,
+              "rebounds": 6,
+              "assists": 2,
+              "field_goals_made": 6,
+              "field_goals_attempted": 12,
+              "three_pointers_made": 1,
+              "three_pointers_attempted": 3
+            }
+          ],
+          "squad": {
+            "players": [
+              {"id": "p10", "name": "Yuta Watanabe", "role": "Small Forward", "is_captain": true},
+              {"id": "p11", "name": "Rui Hachimura", "role": "Power Forward", "is_captain": false},
+              {"id": "p12", "name": "Keisei Tominaga", "role": "Shooting Guard", "is_captain": false},
+              {"id": "p134", "name": "Makoto Hiejima", "role": "Point Guard", "is_captain": false},
+              {"id": "p135", "name": "Yuki Togashi", "role": "Point Guard", "is_captain": false},
+              {"id": "p136", "name": "Josh Hawkinson", "role": "Center", "is_captain": false},
+              {"id": "p137", "name": "Yudai Baba", "role": "Shooting Guard", "is_captain": false},
+              {"id": "p138", "name": "Hirotaka Yoshii", "role": "Small Forward", "is_captain": false},
+              {"id": "p139", "name": "Kaito Nakayama", "role": "Point Guard", "is_captain": false},
+              {"id": "p140", "name": "Aki Chambers", "role": "Power Forward", "is_captain": false},
+              {"id": "p141", "name": "Soichiro Inoue", "role": "Center", "is_captain": false}
+            ],
+            "supporting_staff": [
+              {"id": "s10", "name": "Tom Hovasse", "role": "Head Coach"},
+              {"id": "s11", "name": "Kenji Sato", "role": "Assistant Coach"},
+              {"id": "s12", "name": "Hiroshi Tanaka", "role": "Physio"}
+            ],
+            "benched_players": [
+              {"id": "p142", "name": "Tenketsu Harimoto", "role": "Small Forward", "is_captain": false},
+              {"id": "p143", "name": "Kenta Hirose", "role": "Shooting Guard", "is_captain": false},
+              {"id": "p144", "name": "Kenta Maeda", "role": "Power Forward", "is_captain": false}
+            ]
+          },
+          "country": "Japan"
+        },
+        {
+          "name": "Australia",
+          "short_name": "AUS",
+          "total_points": 65,
+          "team_stats": {
+            "field_goals_made": 24,
+            "field_goals_attempted": 50,
+            "fg_percentage": "48.0%",
+            "three_pointers_made": 8,
+            "three_pointers_attempted": 20,
+            "three_pt_percentage": "40.0%",
+            "free_throws_made": 9,
+            "free_throws_attempted": 11,
+            "ft_percentage": "81.8%",
+            "rebounds": 28,
+            "assists": 15,
+            "turnovers": 7
+          },
+          "player_stats": [
+            {
+              "player_id": "p26",
+              "name": "Josh Giddey",
+              "points": 20,
+              "rebounds": 7,
+              "assists": 8,
+              "field_goals_made": 8,
+              "field_goals_attempted": 15,
+              "three_pointers_made": 2,
+              "three_pointers_attempted": 4
+            },
+            {
+              "player_id": "p25",
+              "name": "Patty Mills",
+              "points": 15,
+              "rebounds": 3,
+              "assists": 4,
+              "field_goals_made": 6,
+              "field_goals_attempted": 11,
+              "three_pointers_made": 3,
+              "three_pointers_attempted": 6
+            }
+          ],
+          "squad": {
+            "players": [
+              {"id": "p25", "name": "Patty Mills", "role": "Point Guard", "is_captain": true},
+              {"id": "p26", "name": "Josh Giddey", "role": "Point Guard", "is_captain": false},
+              {"id": "p27", "name": "Joe Ingles", "role": "Small Forward", "is_captain": false},
+              {"id": "p189", "name": "Dante Exum", "role": "Shooting Guard", "is_captain": false},
+              {"id": "p190", "name": "Matisse Thybulle", "role": "Small Forward", "is_captain": false},
+              {"id": "p191", "name": "Duop Reath", "role": "Center", "is_captain": false},
+              {"id": "p192", "name": "Jock Landale", "role": "Center", "is_captain": false},
+              {"id": "p193", "name": "Dyson Daniels", "role": "Point Guard", "is_captain": false},
+              {"id": "p194", "name": "Nick Kay", "role": "Power Forward", "is_captain": false},
+              {"id": "p195", "name": "Xavier Cooks", "role": "Power Forward", "is_captain": false},
+              {"id": "p196", "name": "Chris Goulding", "role": "Shooting Guard", "is_captain": false}
+            ],
+            "supporting_staff": [
+              {"id": "s25", "name": "Brian Goorjian", "role": "Head Coach"},
+              {"id": "s26", "name": "Matt Nielsen", "role": "Assistant Coach"},
+              {"id": "s27", "name": "Adam Caporn", "role": "Physio"}
+            ],
+            "benched_players": [
+              {"id": "p197", "name": "Will Magnay", "role": "Center", "is_captain": false},
+              {"id": "p198", "name": "Jack White", "role": "Small Forward", "is_captain": false},
+              {"id": "p199", "name": "Sam Froling", "role": "Power Forward", "is_captain": false}
+            ]
+          },
+          "country": "Australia"
+        }
+      ]
+    },
+    {
+      "match_id": "2",
+      "league": "WNBA 2025",
+      "match_type": "Regular Season",
+      "match_round": "Game 3",
+      "date": "2025-06-12",
+      "status": "Live",
+      "arena": {
+        "name": "Barclays Center",
+        "city": "Brooklyn",
+        "country": "United States"
+      },
+      "images": {
+        "team1_flag": "https://cdn.britannica.com/14/3014-050-17B84006/flag-New-York-color-uniforms-facings-American-1909.jpg",
+        "team2_flag": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfmmZOKdrCERa54zkFVQATHV2O9yxtZhPbZA&s"
+      },
+      "match_info": {
+        "tip_off": "Aces won the tip-off",
+        "current_status": "Aces leading 45-42 in the second quarter",
+        "quarter": 2,
+        "time_remaining": "6:15"
+      },
+      "quarter_scores": [
+        {
+          "quarter_number": 1,
+          "team1_points": 20,
+          "team2_points": 22
+        },
+        {
+          "quarter_number": 2,
+          "team1_points": 22,
+          "team2_points": 23
+        }
+      ],
+      "commentary": [
+        "Second quarter heating up – Aces on a mini-run led by Wilson's dominance inside.",
+        "Stewart responds with a tough and-1 for Liberty!",
+        "Ionescu drains a step-back three – Barclays Center roaring.",
+        "Plum quick trigger three – Aces maintaining edge."
+      ],
+      "highlights": [
+        "A'ja Wilson monster double-double in progress: 18 pts, 10 reb – owning the paint.",
+        "Breanna Stewart: 15 pts, 8 reb, 4 ast – keeping Liberty close.",
+        "Battle of MVPs: Wilson vs Stewart delivering as expected.",
+        "Key moment: Aces' 8-2 run late in Q1 to take control."
+      ],
+      "head_to_head": "Intense rivalry – feels like a rematch of recent Finals; Aces often edge out close games.",
+      "teams": [
+        {
+          "name": "New York Liberty",
+          "short_name": "NYL",
+          "total_points": 42,
+          "team_stats": {
+            "field_goals_made": 16,
+            "field_goals_attempted": 35,
+            "fg_percentage": "45.7%",
+            "three_pointers_made": 5,
+            "three_pointers_attempted": 12,
+            "three_pt_percentage": "41.7%",
+            "free_throws_made": 5,
+            "free_throws_attempted": 7,
+            "ft_percentage": "71.4%",
+            "rebounds": 20,
+            "assists": 10,
+            "turnovers": 6
+          },
+          "player_stats": [
+            {
+              "player_id": "p37",
+              "name": "Breanna Stewart",
+              "points": 15,
+              "rebounds": 8,
+              "assists": 4,
+              "field_goals_made": 6,
+              "field_goals_attempted": 12,
+              "three_pointers_made": 2,
+              "three_pointers_attempted": 4
+            },
+            {
+              "player_id": "p38",
+              "name": "Sabrina Ionescu",
+              "points": 12,
+              "rebounds": 3,
+              "assists": 5,
+              "field_goals_made": 5,
+              "field_goals_attempted": 10,
+              "three_pointers_made": 2,
+              "three_pointers_attempted": 5
+            }
+          ],
+          "squad": {
+            "players": [
+              {"id": "p37", "name": "Breanna Stewart", "role": "Power Forward", "is_captain": true},
+              {"id": "p38", "name": "Sabrina Ionescu", "role": "Point Guard", "is_captain": false},
+              {"id": "p39", "name": "Jonquel Jones", "role": "Center", "is_captain": false},
+              {"id": "p228", "name": "Betnijah Laney", "role": "Small Forward", "is_captain": false},
+              {"id": "p229", "name": "Courtney Vandersloot", "role": "Point Guard", "is_captain": false},
+              {"id": "p230", "name": "Kayla Thornton", "role": "Small Forward", "is_captain": false},
+              {"id": "p231", "name": "Natasha Howard", "role": "Power Forward", "is_captain": false},
+              {"id": "p232", "name": "Leonie Fiebich", "role": "Shooting Guard", "is_captain": false},
+              {"id": "p233", "name": "Nyara Sabally", "role": "Center", "is_captain": false},
+              {"id": "p234", "name": "Ivana Dojkic", "role": "Shooting Guard", "is_captain": false},
+              {"id": "p235", "name": "Marquesha Davis", "role": "Small Forward", "is_captain": false}
+            ],
+            "supporting_staff": [
+              {"id": "s37", "name": "Sandy Brondello", "role": "Head Coach"},
+              {"id": "s38", "name": "Olaf Lange", "role": "Assistant Coach"},
+              {"id": "s39", "name": "Lisa Thompson", "role": "Physio"}
+            ],
+            "benched_players": [
+              {"id": "p236", "name": "Tiffany Hayes", "role": "Shooting Guard", "is_captain": false},
+              {"id": "p237", "name": "Esmery Martinez", "role": "Power Forward", "is_captain": false},
+              {"id": "p238", "name": "Jaylyn Sherrod", "role": "Point Guard", "is_captain": false}
+            ]
+          },
+          "country": "New York Liberty"
+        },
+        {
+          "name": "Las Vegas Aces",
+          "short_name": "LVA",
+          "total_points": 45,
+          "team_stats": {
+            "field_goals_made": 18,
+            "field_goals_attempted": 38,
+            "fg_percentage": "47.4%",
+            "three_pointers_made": 6,
+            "three_pointers_attempted": 14,
+            "three_pt_percentage": "42.9%",
+            "free_throws_made": 3,
+            "free_throws_attempted": 4,
+            "ft_percentage": "75.0%",
+            "rebounds": 22,
+            "assists": 12,
+            "turnovers": 5
+          },
+          "player_stats": [
+            {
+              "player_id": "p40",
+              "name": "A'ja Wilson",
+              "points": 18,
+              "rebounds": 10,
+              "assists": 3,
+              "field_goals_made": 7,
+              "field_goals_attempted": 13,
+              "three_pointers_made": 1,
+              "three_pointers_attempted": 2
+            },
+            {
+              "player_id": "p41",
+              "name": "Kelsey Plum",
+              "points": 14,
+              "rebounds": 4,
+              "assists": 4,
+              "field_goals_made": 6,
+              "field_goals_attempted": 11,
+              "three_pointers_made": 2,
+              "three_pointers_attempted": 4
+            }
+          ],
+          "squad": {
+            "players": [
+              {"id": "p40", "name": "A'ja Wilson", "role": "Center", "is_captain": true},
+              {"id": "p41", "name": "Kelsey Plum", "role": "Point Guard", "is_captain": false},
+              {"id": "p42", "name": "Chelsea Gray", "role": "Point Guard", "is_captain": false},
+              {"id": "p239", "name": "Jackie Young", "role": "Shooting Guard", "is_captain": false},
+              {"id": "p240", "name": "Tiffany Hayes", "role": "Shooting Guard", "is_captain": false},
+              {"id": "p241", "name": "Alysha Clark", "role": "Small Forward", "is_captain": false},
+              {"id": "p242", "name": "Kiah Stokes", "role": "Center", "is_captain": false},
+              {"id": "p243", "name": "Megan Gustafson", "role": "Power Forward", "is_captain": false},
+              {"id": "p244", "name": "Sydney Colson", "role": "Point Guard", "is_captain": false},
+              {"id": "p245", "name": "Candace Parker", "role": "Power Forward", "is_captain": false},
+              {"id": "p246", "name": "Kate Martin", "role": "Shooting Guard", "is_captain": false}
+            ],
+            "supporting_staff": [
+              {"id": "s40", "name": "Becky Hammon", "role": "Head Coach"},
+              {"id": "s41", "name": "Natalie Nakase", "role": "Assistant Coach"},
+              {"id": "s42", "name": "Tyler Marsh", "role": "Physio"}
+            ],
+            "benched_players": [
+              {"id": "p247", "name": "Dyaisha Fair", "role": "Point Guard", "is_captain": false},
+              {"id": "p248", "name": "Emma Cannon", "role": "Power Forward", "is_captain": false},
+              {"id": "p249", "name": "Jessika Carter", "role": "Center", "is_captain": false}
+            ]
+          },
+          "country": "Las Vegas Aces"
+        }
+      ]
+    }
+  ]
+}

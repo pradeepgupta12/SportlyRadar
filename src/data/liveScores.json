@@ -1,0 +1,112 @@
+{
+  "meta": {
+    "lastUpdated": "2025-12-25T10:15:00",
+    "totalLiveMatches": 3
+  },
+  "liveMatches": [
+    {
+      "matchId": "cric_001",
+      "sport": "cricket",
+      "status": "LIVE",
+      "isFeatured": true,
+
+      "series": {
+        "name": "India vs Australia ODI Series",
+        "season": "2025"
+      },
+
+      "matchInfo": {
+        "matchName": "2nd ODI",
+        "venue": "Green Park Stadium, Kanpur",
+        "city": "Kanpur",
+        "country": "India",
+        "startTime": "2025-12-25T09:30:00",
+        "toss": {
+          "winner": "India",
+          "decision": "Batting"
+        }
+      },
+
+      "teams": {
+        "teamA": {
+          "id": "IND",
+          "name": "India",
+          "shortName": "IND",
+          "logo": "/flags/india.png",
+          "score": {
+            "runs": 245,
+            "wickets": 6,
+            "overs": 40.2
+          }
+        },
+        "teamB": {
+          "id": "AUS",
+          "name": "Australia",
+          "shortName": "AUS",
+          "logo": "/flags/australia.png",
+          "score": {
+            "runs": null,
+            "wickets": null,
+            "overs": null
+          }
+        }
+      },
+
+      "currentState": {
+        "battingTeam": "India",
+        "bowlingTeam": "Australia",
+        "currentBatsmen": [
+          {
+            "name": "Virat Kohli",
+            "runs": 61,
+            "balls": 48,
+            "onStrike": true
+          },
+          {
+            "name": "KL Rahul",
+            "runs": 34,
+            "balls": 29,
+            "onStrike": false
+          }
+        ],
+        "currentBowler": {
+          "name": "Mitchell Starc",
+          "overs": 8,
+          "runsConceded": 45,
+          "wickets": 3
+        },
+        "recentOvers": ["1", "4", "0", "6", "W", "2"]
+      },
+
+      "matchStatusText": "India are building a strong total",
+      "lastUpdated": "1 min ago"
+    },
+
+    {
+      "matchId": "foot_002",
+      "sport": "football",
+      "status": "LIVE",
+
+      "league": "Premier League",
+      "matchInfo": {
+        "venue": "Old Trafford",
+        "time": "67'"
+      },
+
+      "teams": {
+        "teamA": {
+          "name": "Manchester United",
+          "shortName": "MUN",
+          "score": 2
+        },
+        "teamB": {
+          "name": "Chelsea",
+          "shortName": "CHE",
+          "score": 1
+        }
+      },
+
+      "matchStatusText": "Second Half Ongoing"
+    }
+  ]
+}
