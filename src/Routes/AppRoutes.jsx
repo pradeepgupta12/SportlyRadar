@@ -1,54 +1,33 @@
-// import React from "react";
-// import { Routes, Route } from "react-router-dom";
-// import { Navbar } from "../components/Navbar";
 
-// import Home from "../Pages/Home";
-// import LiveScoresPage from "../Pages/LiveScoresPage";
-// import LatestSportNewsDetails from "../Pages/LatestSportNewsDetails";
-// import AllLatestNews from "../Pages/AllLatestNews";
-// import Blogs from "../Pages/Blogs";
-// import BlogDetails from "../Pages/BlogDetails";
-// import Footer from "../components/Footer";
-
-// const AppRoutes = () => {
-//   return (
-//     <>
-//       <Navbar />
-
-//       <Routes>
-//         <Route path="/" element={<Home />} />
-//         <Route path="/live-scores" element={<LiveScoresPage />} />
-//         <Route path="/news-details/:title" element={< LatestSportNewsDetails/>} />
-//         <Route path="/all-latest-news" element={<AllLatestNews />} />
-//         <Route path="/blogs" element={<Blogs />} />
-// <Route path="/blogs/:slug" element={<BlogDetails />} />
-//       </Routes>
-//       <Footer/>
-//     </>
-//   );
-// };
-
-// export default AppRoutes;
 
 
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { Navbar } from "../components/Navbar";
+import Footer from "../components/Footer";
 
+// === General Pages ===
 import Home from "../Pages/Home";
-import LiveScoresPage from "../Pages/LiveScoresPage";
 import LatestSportNewsDetails from "../Pages/LatestSportNewsDetails";
 import AllLatestNews from "../Pages/AllLatestNews";
 import Blogs from "../Pages/Blogs";
 import BlogDetails from "../Pages/BlogDetails";
-import Footer from "../components/Footer";
 
-// Scorecard Components Import करें
-import FootballScorecard from "../Pages/FootballScorecard";     // या जहाँ भी हैं
+// === Scorecard Pages ===
+import FootballScorecard from "../Pages/FootballScorecard";
 import BasketballScorecard from "../Pages/BasketballScorecard";
 import HockeyScorecard from "../Pages/HockeyScorecard";
 import CricketScorecard from "../Pages/CricketScorecard";
 import TennisScorecard from "../Pages/TennisScorecard";
+
+// === Cricket Pages - Capital C folder ===
+import LiveScores from "../Modules/Cricket/LiveScores";
+import ICCRankings from "../Modules/Cricket/ICCRankings";
+import Schedule from "../Modules/Cricket/Schedule";
+import Leagues from "../Modules/Cricket/Leagues";
+import SeriesTournaments from "../Modules/Cricket/SeriesTournaments";
+import ScheduleMatchDetail from "../Modules/Cricket/ScheduleMatchDetail";
+
 
 const AppRoutes = () => {
   return (
@@ -56,23 +35,32 @@ const AppRoutes = () => {
       <Navbar />
 
       <Routes>
-        {/* Existing Routes */}
+        {/* Home & General Routes */}
         <Route path="/" element={<Home />} />
-        <Route path="/live-scores" element={<LiveScoresPage />} />
         <Route path="/news-details/:title" element={<LatestSportNewsDetails />} />
         <Route path="/all-latest-news" element={<AllLatestNews />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/blogs/:slug" element={<BlogDetails />} />
 
-        {/* === NEW: Sport-specific Scorecard Routes === */}
+        {/* === Cricket Section Routes === */}
+        <Route path="/cricket/live" element={<LiveScores />} />
+        <Route path="/cricket/series" element={<SeriesTournaments />} />
+        <Route path="/cricket/rankings" element={<ICCRankings />} />
+        <Route path="/cricket/schedule" element={<Schedule />} />
+        <Route path="/cricket/leagues" element={<Leagues />} />
+
+        {/* === Scorecard Routes === */}
+        <Route path="/cricket-scorecard/:matchId" element={<CricketScorecard />} />
         <Route path="/football-scorecard/:matchId" element={<FootballScorecard />} />
         <Route path="/basketball-scorecard/:matchId" element={<BasketballScorecard />} />
         <Route path="/hockey-scorecard/:matchId" element={<HockeyScorecard />} />
-        <Route path="/cricket-scorecard/:matchId" element={<CricketScorecard />} />
         <Route path="/tennis-scorecard/:matchId" element={<TennisScorecard />} />
+        <Route path="/cricket/match/:matchId" element={<ScheduleMatchDetail />} />
+ 
+       
 
-        {/* Optional: Generic fallback अगर कोई और sport आए */}
-        {/* <Route path="*" element={<div>Page Not Found</div>} /> */}
+        {/* Optional: 404 Page (अगर चाहें तो uncomment करें) */}
+        {/* <Route path="*" element={<div className="min-h-screen flex items-center justify-center text-3xl font-bold">404 - Page Not Found</div>} /> */}
       </Routes>
 
       <Footer />

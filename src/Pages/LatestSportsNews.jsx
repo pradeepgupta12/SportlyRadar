@@ -16,7 +16,7 @@ const LatestSportsNews = () => {
         <h3 className="text-lg sm:text-xl font-bold mb-4 text-black p-2 rounded">
           Latest Sports News
         </h3>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {LatestNews.data.LatestNews.slice(0, 6).map((article) => (
             <div
               key={article.title}

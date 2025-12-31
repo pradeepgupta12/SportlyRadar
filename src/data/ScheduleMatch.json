@@ -1,0 +1,192 @@
+{
+  "cricket_matches": {
+    "international": {
+      "matches": [
+        {
+          "matchId": "INT-AUS-ENG-5TEST-2026",
+          "series": {
+            "name": "The Ashes",
+            "season": "2025-26",
+            "format": "Test"
+          },
+          "matchInfo": {
+            "matchTitle": "Australia vs England, 5th Test",
+            "status": "Upcoming",
+            "day": "Day 1",
+            "dateTime": {
+              "venueLocal": "2026-01-03T10:30:00",
+              "gmt": "2026-01-03T23:30:00Z",
+              "userIST": "2026-01-04T05:00:00+05:30"
+            },
+            "venue": {
+              "id": "SCG",
+              "name": "Sydney Cricket Ground",
+              "city": "Sydney",
+              "country": "Australia",
+              "capacity": 48000,
+              "ends": ["Paddington End", "Randwick End"]
+            }
+          },
+          "tabs": {
+            "info": {
+              "umpires": ["TBA", "TBA"],
+              "referee": "TBA",
+              "weather": "Clear",
+              "pitch": "Balanced surface with early seam",
+              "toss": null
+            },
+            "squads": {
+              "Australia": {
+                "captain": "Pat Cummins",
+                "players": [
+                  { "name": "Steven Smith", "role": "Batsman", "avatar": "/images/players/aus/steven_smith.png" },
+                  { "name": "Travis Head", "role": "All-Rounder", "avatar": "/images/players/aus/travis_head.png" },
+                  { "name": "Usman Khawaja", "role": "Batsman", "avatar": "/images/players/aus/usman_khawaja.png" },
+                  { "name": "Marnus Labuschagne", "role": "Batsman", "avatar": "/images/players/aus/marnus.png" },
+                  { "name": "Alex Carey", "role": "Wicket Keeper", "avatar": "/images/players/aus/alex_carey.png" },
+                  { "name": "Pat Cummins", "role": "Bowler", "avatar": "/images/players/aus/pat_cummins.png" }
+                ]
+              },
+              "England": {
+                "captain": "Ben Stokes",
+                "players": [
+                  { "name": "Ben Stokes", "role": "All-Rounder", "avatar": "/images/players/eng/ben_stokes.png" },
+                  { "name": "Joe Root", "role": "Batsman", "avatar": "/images/players/eng/joe_root.png" },
+                  { "name": "Zak Crawley", "role": "Batsman", "avatar": "/images/players/eng/zak_crawley.png" },
+                  { "name": "Ollie Pope", "role": "Batsman", "avatar": "/images/players/eng/ollie_pope.png" },
+                  { "name": "Jofra Archer", "role": "Bowler", "avatar": "/images/players/eng/jofra_archer.png" }
+                ]
+              }
+            },
+            "live": { "enabled": false },
+            "scorecard": { "enabled": false },
+            "overs": { "enabled": false },
+            "highlights": { "enabled": false },
+            "fullCommentary": { "enabled": false }
+          }
+        }
+      ]
+    },
+    "t20_leagues": {
+      "matches": [
+        {
+          "matchId": "IPL-2026-MI-CSK-01",
+          "series": {
+            "name": "Indian Premier League",
+            "season": "2026",
+            "format": "T20"
+          },
+          "matchInfo": {
+            "matchTitle": "Mumbai Indians vs Chennai Super Kings",
+            "status": "Upcoming",
+            "venue": {
+              "name": "Wankhede Stadium",
+              "city": "Mumbai",
+              "country": "India"
+            }
+          },
+          "tabs": {
+            "info": {
+              "pitch": "Batting friendly",
+              "weather": "Humid"
+            },
+            "squads": {
+              "Mumbai Indians": {
+                "captain": "Hardik Pandya",
+                "players": [
+                  { "name": "Rohit Sharma", "role": "Batsman", "avatar": "/images/players/ipl/rohit.png" },
+                  { "name": "Hardik Pandya", "role": "All-Rounder", "avatar": "/images/players/ipl/hardik.png" }
+                ]
+              },
+              "Chennai Super Kings": {
+                "captain": "Ruturaj Gaikwad",
+                "players": [
+                  { "name": "MS Dhoni", "role": "Wicket Keeper", "avatar": "/images/players/ipl/dhoni.png" },
+                  { "name": "Ravindra Jadeja", "role": "All-Rounder", "avatar": "/images/players/ipl/jadeja.png" }
+                ]
+              }
+            },
+            "live": { "enabled": false },
+            "scorecard": { "enabled": false }
+          }
+        }
+      ]
+    },
+    "domestic": {
+      "matches": [
+        {
+          "matchId": "RANJI-2026-MUM-DEL",
+          "series": {
+            "name": "Ranji Trophy",
+            "season": "2025-26",
+            "format": "First Class"
+          },
+          "matchInfo": {
+            "matchTitle": "Mumbai vs Delhi",
+            "status": "Upcoming",
+            "venue": {
+              "name": "Wankhede Stadium",
+              "city": "Mumbai"
+            }
+          },
+          "tabs": {
+            "info": {
+              "toss": null
+            },
+            "squads": {
+              "Mumbai": {
+                "players": [
+                  { "name": "Prithvi Shaw", "role": "Batsman", "avatar": "/images/players/domestic/prithvi.png" }
+                ]
+              },
+              "Delhi": {
+                "players": [
+                  { "name": "Yash Dhull", "role": "Batsman", "avatar": "/images/players/domestic/yash.png" }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    "women": {
+      "matches": [
+        {
+          "matchId": "W-IND-AUS-ODI-01",
+          "series": {
+            "name": "India Women Tour of Australia",
+            "season": "2026",
+            "format": "ODI"
+          },
+          "matchInfo": {
+            "matchTitle": "Australia Women vs India Women",
+            "status": "Upcoming",
+            "venue": {
+              "name": "Melbourne Cricket Ground",
+              "city": "Melbourne"
+            }
+          },
+          "tabs": {
+            "info": {
+              "pitch": "Balanced"
+            },
+            "squads": {
+              "Australia Women": {
+                "captain": "Alyssa Healy",
+                "players": [
+                  { "name": "Meg Lanning", "role": "Batsman", "avatar": "/images/players/women/lanning.png" }
+                ]
+              },
+              "India Women": {
+                "captain": "Harmanpreet Kaur",
+                "players": [
+                  { "name": "Smriti Mandhana", "role": "Batsman", "avatar": "/images/players/women/smriti.png" }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
