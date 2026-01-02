@@ -1,193 +1,119 @@
 {
-  "cricket_matches": {
-    "international": {
+  "series": "ICC Mens T20 World Cup 2026",
+  "schedule": [
+    {
+      "date": "SAT, FEB 7 2026",
       "matches": [
         {
-          "matchId": "T20WC-2026-PAK-NED-01",
-          "series": {
-            "name": "ICC Mens T20 World Cup",
-            "season": "2026",
-            "format": "T20"
+          "matchId": "T20WC26-PAK-NED-01",
+          "matchNumber": "1st Match",
+          "group": "Group A",
+          "venue": {
+            "city": "Colombo",
+            "stadium": "Sinhalese Sports Club"
           },
-          "matchInfo": {
-            "matchTitle": "Pakistan vs Netherlands, 1st Match, Group A",
-            "status": "Upcoming",
-            "dateTime": {
-              "venueLocal": "2026-02-07T11:00:00",
-              "gmt": "2026-02-07T05:30:00Z",
-              "userIST": "2026-02-07T11:00:00+05:30"
+          "teams": [
+            {
+              "name": "Pakistan",
+              "flag": "/flags/pakistan.png"
             },
-            "venue": {
-              "name": "Sinhalese Sports Club",
-              "city": "Colombo",
-              "country": "Sri Lanka"
+            {
+              "name": "Netherlands",
+              "flag": "/flags/netherlands.png"
             }
+          ],
+          "matchDay": "Sat, Feb 7",
+          "time": {
+            "local": "11:00 AM",
+            "gmt": "5:30 AM"
           },
-          "tabs": {
-            "info": {
-              "umpires": ["TBA", "TBA"],
-              "referee": "TBA",
-              "toss": null
-            },
-            "squads": {
-              "Pakistan": {
-                "captain": "TBA",
-                "players": []
-              },
-              "Netherlands": {
-                "captain": "TBA",
-                "players": []
-              }
-            },
-            "live": { "enabled": false },
-            "scorecard": { "enabled": false },
-            "overs": { "enabled": false },
-            "highlights": { "enabled": false },
-            "fullCommentary": { "enabled": false }
-          }
+          "displayTime": "11:00 AM LOCAL / 5:30 AM GMT",
+          "statusText": "Match yet to begin"
         },
         {
-          "matchId": "T20WC-2026-WI-BAN-02",
-          "series": {
-            "name": "ICC Mens T20 World Cup",
-            "season": "2026",
-            "format": "T20"
+          "matchId": "T20WC26-WI-BAN-02",
+          "matchNumber": "2nd Match",
+          "group": "Group C",
+          "venue": {
+            "city": "Kolkata",
+            "stadium": "Eden Gardens"
           },
-          "matchInfo": {
-            "matchTitle": "West Indies vs Bangladesh, 2nd Match, Group C",
-            "status": "Upcoming",
-            "dateTime": {
-              "venueLocal": "2026-02-07T15:00:00",
-              "gmt": "2026-02-07T09:30:00Z",
-              "userIST": "2026-02-07T15:00:00+05:30"
+          "teams": [
+            {
+              "name": "West Indies",
+              "flag": "/flags/west-indies.png"
             },
-            "venue": {
-              "name": "Eden Gardens",
-              "city": "Kolkata",
-              "country": "India"
+            {
+              "name": "Bangladesh",
+              "flag": "/flags/bangladesh.png"
             }
+          ],
+          "matchDay": "Sat, Feb 7",
+          "time": {
+            "local": "3:00 PM",
+            "gmt": "9:30 AM"
           },
-          "tabs": {
-            "info": {
-              "umpires": ["TBA", "TBA"],
-              "referee": "TBA",
-              "toss": null
-            },
-            "squads": {
-              "West Indies": {
-                "captain": "TBA",
-                "players": []
-              },
-              "Bangladesh": {
-                "captain": "TBA",
-                "players": []
-              }
-            },
-            "live": { "enabled": false },
-            "scorecard": { "enabled": false },
-            "overs": { "enabled": false },
-            "highlights": { "enabled": false },
-            "fullCommentary": { "enabled": false }
-          }
+          "displayTime": "3:00 PM LOCAL / 9:30 AM GMT",
+          "statusText": "Match yet to begin"
         },
         {
-          "matchId": "T20WC-2026-IND-USA-03",
-          "series": {
-            "name": "ICC Mens T20 World Cup",
-            "season": "2026",
-            "format": "T20"
+          "matchId": "T20WC26-IND-USA-03",
+          "matchNumber": "3rd Match",
+          "group": "Group A",
+          "venue": {
+            "city": "Mumbai",
+            "stadium": "Wankhede Stadium"
           },
-          "matchInfo": {
-            "matchTitle": "India vs United States of America, 3rd Match, Group A",
-            "status": "Upcoming",
-            "dateTime": {
-              "venueLocal": "2026-02-07T19:00:00",
-              "gmt": "2026-02-07T13:30:00Z",
-              "userIST": "2026-02-07T19:00:00+05:30"
+          "teams": [
+            {
+              "name": "India",
+              "flag": "/flags/india.png"
             },
-            "venue": {
-              "name": "Wankhede Stadium",
-              "city": "Mumbai",
-              "country": "India"
+            {
+              "name": "United States of America",
+              "flag": "/flags/usa.png"
             }
+          ],
+          "matchDay": "Sat, Feb 7",
+          "time": {
+            "local": "7:00 PM",
+            "gmt": "1:30 PM"
           },
-          "tabs": {
-            "info": {
-              "umpires": ["TBA", "TBA"],
-              "referee": "TBA",
-              "toss": null
-            },
-            "squads": {
-              "India": {
-                "captain": "TBA",
-                "players": []
-              },
-              "United States of America": {
-                "captain": "TBA",
-                "players": []
-              }
-            },
-            "live": { "enabled": false },
-            "scorecard": { "enabled": false },
-            "overs": { "enabled": false },
-            "highlights": { "enabled": false },
-            "fullCommentary": { "enabled": false }
-          }
-        },
-        {
-          "matchId": "T20WC-2026-NZ-AFG-04",
-          "series": {
-            "name": "ICC Mens T20 World Cup",
-            "season": "2026",
-            "format": "T20"
-          },
-          "matchInfo": {
-            "matchTitle": "New Zealand vs Afghanistan, 4th Match, Group D",
-            "status": "Upcoming",
-            "dateTime": {
-              "venueLocal": "2026-02-08T11:00:00",
-              "gmt": "2026-02-08T05:30:00Z",
-              "userIST": "2026-02-08T11:00:00+05:30"
-            },
-            "venue": {
-              "name": "MA Chidambaram Stadium",
-              "city": "Chennai",
-              "country": "India"
-            }
-          },
-          "tabs": {
-            "info": {
-              "umpires": ["TBA", "TBA"],
-              "referee": "TBA",
-              "toss": null
-            },
-            "squads": {
-              "New Zealand": {
-                "captain": "TBA",
-                "players": []
-              },
-              "Afghanistan": {
-                "captain": "TBA",
-                "players": []
-              }
-            },
-            "live": { "enabled": false },
-            "scorecard": { "enabled": false },
-            "overs": { "enabled": false },
-            "highlights": { "enabled": false },
-            "fullCommentary": { "enabled": false }
-          }
+          "displayTime": "7:00 PM LOCAL / 1:30 PM GMT",
+          "statusText": "Match yet to begin"
         }
       ]
     },
-    "t20_leagues": {
-      "matches": []
-    },
-    "domestic": {
-      "matches": []
-    },
-    "women": {
-      "matches": []
+    {
+      "date": "SUN, FEB 8 2026",
+      "matches": [
+        {
+          "matchId": "T20WC26-NZ-AFG-04",
+          "matchNumber": "4th Match",
+          "group": "Group D",
+          "venue": {
+            "city": "Chennai",
+            "stadium": "MA Chidambaram Stadium"
+          },
+          "teams": [
+            {
+              "name": "New Zealand",
+              "flag": "/flags/new-zealand.png"
+            },
+            {
+              "name": "Afghanistan",
+              "flag": "/flags/afghanistan.png"
+            }
+          ],
+          "matchDay": "Sun, Feb 8",
+          "time": {
+            "local": "11:00 AM",
+            "gmt": "5:30 AM"
+          },
+          "displayTime": "11:00 AM LOCAL / 5:30 AM GMT",
+          "statusText": "Match yet to begin"
+        }
+      ]
     }
-  }
+  ]
 }

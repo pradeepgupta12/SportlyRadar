@@ -1,0 +1,144 @@
+{
+  "series": "ICC Mens T20 World Cup 2026",
+  "matches": [
+    {
+      "matchId": "T20WC26-PAK-NED-01",
+      "basic": {
+        "matchNumber": "1st Match",
+        "group": "Group A",
+        "teams": ["Pakistan", "Netherlands"],
+        "venue": {
+          "stadium": "Sinhalese Sports Club",
+          "city": "Colombo",
+          "country": "Sri Lanka"
+        },
+        "date": "2026-02-07",
+        "time": {
+          "local": "11:00 AM",
+          "gmt": "05:30 AM"
+        }
+      },
+      "tabs": {
+        "info": {
+          "umpires": ["TBA", "TBA"],
+          "referee": "TBA",
+          "weather": "Clear",
+          "pitch": "Good batting surface",
+          "toss": null
+        },
+        "squads": {
+          "Pakistan": {
+            "captain": "TBA",
+            "players": []
+          },
+          "Netherlands": {
+            "captain": "TBA",
+            "players": []
+          }
+        },
+        "live": { "enabled": false },
+        "scorecard": { "enabled": false },
+        "overs": { "enabled": false },
+        "highlights": { "enabled": false },
+        "commentary": { "enabled": false }
+      }
+    },
+
+    {
+      "matchId": "T20WC26-WI-BAN-02",
+      "basic": {
+        "matchNumber": "2nd Match",
+        "group": "Group C",
+        "teams": ["West Indies", "Bangladesh"],
+        "venue": {
+          "stadium": "Eden Gardens",
+          "city": "Kolkata",
+          "country": "India"
+        },
+        "date": "2026-02-07",
+        "time": {
+          "local": "03:00 PM",
+          "gmt": "09:30 AM"
+        }
+      },
+      "tabs": {
+        "info": {
+          "umpires": ["TBA", "TBA"],
+          "referee": "TBA",
+          "weather": "Humid",
+          "pitch": "Spin friendly",
+          "toss": null
+        },
+        "squads": {
+          "West Indies": { "players": [] },
+          "Bangladesh": { "players": [] }
+        },
+        "live": { "enabled": false },
+        "scorecard": { "enabled": false }
+      }
+    },
+
+    {
+      "matchId": "T20WC26-IND-USA-03",
+      "basic": {
+        "matchNumber": "3rd Match",
+        "group": "Group A",
+        "teams": ["India", "United States of America"],
+        "venue": {
+          "stadium": "Wankhede Stadium",
+          "city": "Mumbai",
+          "country": "India"
+        },
+        "date": "2026-02-07",
+        "time": {
+          "local": "07:00 PM",
+          "gmt": "01:30 PM"
+        }
+      },
+      "tabs": {
+        "info": {
+          "umpires": ["TBA"],
+          "weather": "Clear",
+          "pitch": "Batting friendly"
+        },
+        "squads": {
+          "India": { "players": [] },
+          "United States of America": { "players": [] }
+        },
+        "live": { "enabled": false },
+        "scorecard": { "enabled": false }
+      }
+    },
+
+    {
+      "matchId": "T20WC26-NZ-AFG-04",
+      "basic": {
+        "matchNumber": "4th Match",
+        "group": "Group D",
+        "teams": ["New Zealand", "Afghanistan"],
+        "venue": {
+          "stadium": "MA Chidambaram Stadium",
+          "city": "Chennai",
+          "country": "India"
+        },
+        "date": "2026-02-08",
+        "time": {
+          "local": "11:00 AM",
+          "gmt": "05:30 AM"
+        }
+      },
+      "tabs": {
+        "info": {
+          "pitch": "Slow surface",
+          "weather": "Sunny"
+        },
+        "squads": {
+          "New Zealand": { "players": [] },
+          "Afghanistan": { "players": [] }
+        },
+        "live": { "enabled": false },
+        "scorecard": { "enabled": false }
+      }
+    }
+  ]
+}

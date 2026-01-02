@@ -1,9 +1,7 @@
-import React from 'react'
+import Schedule from '../../Modules/Cricket/Schedule';
 
 const SeriesTournaments = () => {
-  return (
-    <div>SeriesTournaments</div>
-  )
-}
+  return <Schedule />;
+};
 
-export default SeriesTournaments
+export default SeriesTournaments;

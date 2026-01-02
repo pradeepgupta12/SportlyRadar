@@ -27,6 +27,10 @@ import Schedule from "../Modules/Cricket/Schedule";
 import Leagues from "../Modules/Cricket/Leagues";
 import SeriesTournaments from "../Modules/Cricket/SeriesTournaments";
 import ScheduleMatchDetail from "../Modules/Cricket/ScheduleMatchDetail";
+import ICCMenWorld from "../Modules/Cricket/ICCMenWorld";
+import ICCMenDetailPage from "../Modules/Cricket/ICCMenDetailPage";
+import Series from "../Modules/Cricket/Series";
+import SeriesDetail from "../Modules/Cricket/SeriesDetail";
 
 
 const AppRoutes = () => {
@@ -44,7 +48,8 @@ const AppRoutes = () => {
 
         {/* === Cricket Section Routes === */}
         <Route path="/cricket/live" element={<LiveScores />} />
-        <Route path="/cricket/series" element={<SeriesTournaments />} />
+       <Route path="/cricket/series" element={<Series />} />
+<Route path="/cricket/series/:slug" element={<SeriesDetail />} />
         <Route path="/cricket/rankings" element={<ICCRankings />} />
         <Route path="/cricket/schedule" element={<Schedule />} />
         <Route path="/cricket/leagues" element={<Leagues />} />
@@ -56,6 +61,9 @@ const AppRoutes = () => {
         <Route path="/hockey-scorecard/:matchId" element={<HockeyScorecard />} />
         <Route path="/tennis-scorecard/:matchId" element={<TennisScorecard />} />
         <Route path="/cricket/match/:matchId" element={<ScheduleMatchDetail />} />
+        <Route path="/cricket/series/icc-mens-t20-world-cup-2026" element={<ICCMenWorld />} />
+        <Route path="/cricket/series/icc-mens-t20-world-cup-2026/match/:matchId" element={<ICCMenDetailPage />} />
+
  
        
 
