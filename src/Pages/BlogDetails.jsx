@@ -73,7 +73,7 @@ const BlogDetails = () => {
   };
 
   return (
-    <div className="mx-auto max-w-6xl">
+    <div className="mx-auto max-w-7xl">
       {/* Hero Image */}
       <section className="relative h-[300px] sm:h-[400px] lg:h-[500px] overflow-hidden">
         <img
