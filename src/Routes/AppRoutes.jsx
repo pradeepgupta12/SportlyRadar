@@ -72,6 +72,8 @@ import BasketballSchedule from "../Modules/Basketball/Schedule";
 import AboutUs from "../Pages/AboutUs";
 import AllTopCricketStories from "../Pages/AllTopCricketStories";
 import CricketStoryDetail from "../Pages/CricketStoryDetail";
+import AllTopFootballStories from "../Pages/AllTopFootballStories";
+import FootballStoryDetails from "../Pages/FootballStoryDetails";
 
 const AppRoutes = () => {
   return (
@@ -147,6 +149,9 @@ const AppRoutes = () => {
 
         <Route path="/all-top-cricket-stories" element={<AllTopCricketStories />} />
         <Route path="/details/cricket/:id" element={<CricketStoryDetail />} />
+
+        <Route path="/all-top-football-stories" element={<AllTopFootballStories />} />
+        <Route path="/details/football/:id" element={<FootballStoryDetails />} />
 
         {/* ========== 404 PAGE ========== */}
         <Route path="*" element={
