@@ -74,6 +74,8 @@ import AllTopCricketStories from "../Pages/AllTopCricketStories";
 import CricketStoryDetail from "../Pages/CricketStoryDetail";
 import AllTopFootballStories from "../Pages/AllTopFootballStories";
 import FootballStoryDetails from "../Pages/FootballStoryDetails";
+import AllTopTennisStories from "../Pages/AllTopTennisStories";
+import TennisStoryDetails from "../Pages/TennisStoryDetails";
 
 const AppRoutes = () => {
   return (
@@ -152,6 +154,10 @@ const AppRoutes = () => {
 
         <Route path="/all-top-football-stories" element={<AllTopFootballStories />} />
         <Route path="/details/football/:id" element={<FootballStoryDetails />} />
+
+        <Route path="/all-top-tennis-stories" element={<AllTopTennisStories />} />
+        <Route path="/details/tennis/:id" element={<TennisStoryDetails />} />
+
 
         {/* ========== 404 PAGE ========== */}
         <Route path="*" element={
