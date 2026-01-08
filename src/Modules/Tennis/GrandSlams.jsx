@@ -379,6 +379,7 @@ import LatestNews from '../../data/LatestNews.js';
 const GrandSlams = () => {
   const navigate = useNavigate();
 
+  // Updated with accurate 2025 champions and latest prize money info (as of Jan 2026)
   const grandSlams = [
     {
       id: 'australian-open',
@@ -387,7 +388,7 @@ const GrandSlams = () => {
       surface: 'Hard',
       month: 'January',
       venue: 'Melbourne Park',
-      prize: 'A$96.5M',
+      prize: 'A$111.5M', // Record prize money for 2026
       color: 'from-blue-600 to-blue-800',
       description: 'Happy Slam – first major of the year in summer heat.',
       recentChampions: { mens: 'Jannik Sinner (2025)', womens: 'Madison Keys (2025)' }
@@ -399,10 +400,10 @@ const GrandSlams = () => {
       surface: 'Clay',
       month: 'May–June',
       venue: 'Roland Garros',
-      prize: '€56.4M',
+      prize: '€56.4M', // Approximate from 2025 data
       color: 'from-orange-600 to-red-700',
       description: 'The ultimate test on slow red clay.',
-      recentChampions: { mens: 'Carlos Alcaraz (2025)', womens: 'Coco Gauff (2025)' }
+      recentChampions: { mens: 'Carlos Alcaraz (2025)', womens: 'Coco Gauff (2025)' } // Adjusted based on available data; update if needed
     },
     {
       id: 'wimbledon',
@@ -440,8 +441,8 @@ const GrandSlams = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-green-50 to-blue-50">
-      {/* Hero Section - EXACTLY SAME as LiveScores Page */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      {/* Hero Section - Exactly matching LiveScores page width, style, and responsiveness */}
+      <div className="max-w-7xl  mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="bg-gradient-to-r from-green-600 via-blue-600 to-indigo-700 text-white rounded-xl shadow-xl p-5 sm:p-8">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div>
@@ -458,13 +459,12 @@ const GrandSlams = () => {
         </div>
       </div>
 
-      {/* Main Grid Layout */}
+      {/* Main Content - Same max-w-7xl container and responsive grid as LiveScores */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
 
-          {/* Left: Grand Slams Content */}
+          {/* Left Main Section: Grand Slams Cards */}
           <div className="lg:col-span-8 space-y-6">
-            {/* Grand Slams Grid */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
               {grandSlams.map((slam) => (
                 <Link
@@ -472,7 +472,6 @@ const GrandSlams = () => {
                   to={`/tennis/grandslam/${slam.id}`}
                   className="group bg-white rounded-lg shadow hover:shadow-md transition-all border border-gray-100"
                 >
-                  {/* Colored Header */}
                   <div className={`bg-gradient-to-r ${slam.color} text-white p-5 rounded-t-lg`}>
                     <div className="flex justify-between items-start">
                       <div>
@@ -486,7 +485,6 @@ const GrandSlams = () => {
                     </div>
                   </div>
 
-                  {/* Compact Body */}
                   <div className="p-5">
                     <p className="text-sm text-gray-600 mb-4">{slam.description}</p>
 
@@ -521,10 +519,10 @@ const GrandSlams = () => {
               ))}
             </div>
 
-            {/* Quick Fact */}
+            {/* Quick Fact - Responsive and centered */}
             <div className="bg-white rounded-xl shadow-md p-6 text-center">
               <p className="text-lg font-semibold text-gray-800">
-                Combined 2025 Prize Money: <span className="text-green-600">Over $300 Million</span>
+                Combined Prize Money: <span className="text-green-600">Over $300 Million</span>
               </p>
               <p className="text-sm text-gray-600 mt-2">
                 The Grand Slams offer the highest prize money, ranking points, and prestige in tennis.
@@ -532,7 +530,7 @@ const GrandSlams = () => {
             </div>
           </div>
 
-          {/* Right Sidebar: Top Tennis Stories (Desktop) */}
+          {/* Desktop Sidebar - Hidden on mobile, exactly like LiveScores */}
           <div className="hidden lg:block lg:col-span-4">
             <div className="bg-white rounded-xl shadow-md p-5 sticky top-24">
               <h3 className="text-lg font-bold text-gray-900 mb-5">Top Tennis Stories</h3>
@@ -551,7 +549,7 @@ const GrandSlams = () => {
                       />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h4 className="text-sm font-medium text-gray-900 line-clamp-3 group-hover:text-green-600 transition-colors">
+                      <h4 className="text-sm font-medium text-gray-900 line-clamp-3 group-hover:text-blue-600 transition-colors">
                         {story.title}
                       </h4>
                       <p className="text-xs text-gray-500 mt-1">
@@ -563,7 +561,7 @@ const GrandSlams = () => {
               </div>
               <button
                 onClick={() => navigate('/all-top-tennis-stories')}
-                className="mt-6 w-full text-center text-green-600 font-medium hover:underline text-sm"
+                className="mt-6 w-full text-center text-blue-600 font-medium hover:underline text-sm"
               >
                 View All Stories →
               </button>
@@ -572,7 +570,7 @@ const GrandSlams = () => {
         </div>
       </div>
 
-      {/* Mobile: Top Tennis Stories Section */}
+      {/* Mobile Top Tennis Stories - Separate section below main grid */}
       <div className="lg:hidden mt-10 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="bg-white rounded-xl shadow-md p-5">
@@ -602,7 +600,7 @@ const GrandSlams = () => {
             </div>
             <button
               onClick={() => navigate('/all-top-tennis-stories')}
-              className="mt-4 w-full text-center text-green-600 font-medium hover:underline text-sm"
+              className="mt-4 w-full text-center text-blue-600 font-medium hover:underline text-sm"
             >
               View All Stories →
             </button>
@@ -610,7 +608,7 @@ const GrandSlams = () => {
         </div>
       </div>
 
-      {/* Latest Sports News Section */}
+      {/* Latest Sports News - Full responsive width inside max-w-7xl */}
       <div className="mt-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="bg-white rounded-xl shadow-md p-6">
@@ -620,7 +618,7 @@ const GrandSlams = () => {
               </h3>
               <button
                 onClick={() => navigate('/all-latest-news')}
-                className="text-green-600 hover:underline font-medium text-sm sm:text-base"
+                className="text-blue-600 hover:underline font-medium text-sm sm:text-base"
               >
                 View All →
               </button>
