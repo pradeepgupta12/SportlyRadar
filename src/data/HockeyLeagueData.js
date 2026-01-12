@@ -1,0 +1,58 @@
+// src/data/HockeyLeagueData.js
+
+export const hockeyLeagues = [
+  {
+    id: 1,
+    name: 'FIH Pro League',
+    country: 'International',
+    teams: 9,
+    logo: '🏑',
+    description: 'Premier international hockey league',
+    season: '2025-26',
+  },
+  {
+    id: 2,
+    name: 'Euro Hockey League',
+    country: 'Europe',
+    teams: 24,
+    logo: '🇪🇺',
+    description: 'Top European club competition',
+    season: '2025-26',
+  },
+  {
+    id: 3,
+    name: 'Hockey India League',
+    country: 'India',
+    teams: 8,
+    logo: '🇮🇳',
+    description: 'Premier hockey league in India',
+    season: '2025',
+  },
+  {
+    id: 4,
+    name: 'Australian Hockey League',
+    country: 'Australia',
+    teams: 10,
+    logo: '🇦🇺',
+    description: 'Top tier Australian hockey',
+    season: '2025',
+  },
+  {
+    id: 5,
+    name: 'Hoofdklasse',
+    country: 'Netherlands',
+    teams: 12,
+    logo: '🇳🇱',
+    description: 'Dutch national hockey league',
+    season: '2025-26',
+  },
+  {
+    id: 6,
+    name: 'Hockey Belgium League',
+    country: 'Belgium',
+    teams: 14,
+    logo: '🇧🇪',
+    description: 'Belgian premier hockey division',
+    season: '2025-26',
+  },
+];

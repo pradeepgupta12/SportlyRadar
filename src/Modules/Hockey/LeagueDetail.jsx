@@ -529,100 +529,709 @@
 // export default LeagueDetail;
 
 
+// import React, { useState } from 'react';
+// import { useParams, Link } from 'react-router-dom';
+
+// const LeagueDetail = () => {
+//   const { leagueId } = useParams();
+//   const [activeTab, setActiveTab] = useState('overview');
+
+//   const leaguesData = {
+//     1: {
+//       id: 1,
+//       name: 'FIH Pro League',
+//       country: 'International',
+//       logo: '🏑',
+//       season: '2025-26',
+//       description: 'The premier international league featuring the world\'s top 9 national teams in a home-and-away format.',
+//       founded: '2019',
+//       teams: 9,
+//       format: 'Round Robin (Home & Away)',
+//       standings: [
+//         { rank: 1, team: 'Argentina', flag: '🇦🇷', played: 4, won: 3, drawn: 1, lost: 0, gf: 12, ga: 6, gd: 6, points: 11 },
+//         { rank: 2, team: 'Belgium', flag: '🇧🇪', played: 4, won: 3, drawn: 1, lost: 0, gf: 12, ga: 6, gd: 6, points: 10 },
+//         { rank: 3, team: 'Netherlands', flag: '🇳🇱', played: 4, won: 2, drawn: 1, lost: 1, gf: 10, ga: 8, gd: 2, points: 7 },
+//         { rank: 4, team: 'Germany', flag: '🇩🇪', played: 4, won: 1, drawn: 0, lost: 3, gf: 7, ga: 12, gd: -5, points: 3 },
+//         { rank: 5, team: 'England', flag: '🏴󠁧󠁢󠁥󠁮󠁧󠁿', played: 4, won: 1, drawn: 0, lost: 3, gf: 6, ga: 11, gd: -5, points: 3 },
+//         { rank: 6, team: 'Pakistan', flag: '🇵🇰', played: 4, won: 0, drawn: 1, lost: 3, gf: 6, ga: 12, gd: -6, points: 1 },
+//       ],
+//       topScorers: [
+//         { rank: 1, name: 'Multiple Players', team: '', flag: '', goals: 4 },
+//         { rank: 2, name: 'Multiple Players', team: '', flag: '', goals: 3 },
+//       ],
+//       recentMatches: [
+//         { id: 1, date: '2025-12-14', team1: 'Belgium', team2: 'Germany', flag1: '🇧🇪', flag2: '🇩🇪', score: '4-1', status: 'Completed' },
+//         { id: 2, date: '2025-12-14', team1: 'Netherlands', team2: 'Pakistan', flag1: '🇳🇱', flag2: '🇵🇰', score: '5-2', status: 'Completed' },
+//         { id: 3, date: '2025-12-13', team1: 'England', team2: 'Germany', flag1: '🏴󠁧󠁢󠁥󠁮󠁧󠁿', flag2: '🇩🇪', score: '1-4', status: 'Completed' },
+//         { id: 4, date: '2025-12-12', team1: 'Argentina', team2: 'Netherlands', flag1: '🇦🇷', flag2: '🇳🇱', score: '1-1 (2-4 SO)', status: 'Completed' },
+//       ],
+//       upcomingMatches: [
+//         { id: 5, date: '2026-02-05', team1: 'China', team2: 'England', flag1: '🇨🇳', flag2: '🏴󠁧󠁢󠁥󠁮󠁧󠁿', time: 'TBD', venue: 'Yunfu' },
+//         { id: 6, date: '2026-02-06', team1: 'England', team2: 'Netherlands', flag1: '🏴󠁧󠁢󠁥󠁮󠁧󠁿', flag2: '🇳🇱', time: 'TBD', venue: 'Valencia' },
+//         { id: 7, date: '2026-02-10', team1: 'India', team2: 'Argentina', flag1: '🇮🇳', flag2: '🇦🇷', time: 'TBD', venue: 'Rourkela' },
+//       ],
+//     },
+//     2: {
+//       id: 2,
+//       name: 'Euro Hockey League',
+//       country: 'Europe',
+//       logo: '🇪🇺',
+//       season: '2025-26',
+//       description: 'Europe\'s top club competition – knockout format with the best teams from national leagues.',
+//       founded: '2007',
+//       teams: 24,
+//       format: 'Knockout (KO16 → Final8)',
+//       standings: [ /* Limited data available – season ongoing */ ],
+//       topScorers: [],
+//       recentMatches: [],
+//       upcomingMatches: [
+//         { id: 3, date: '2026-04-17', team1: 'Various Teams', team2: '', flag1: '', flag2: '', time: 'TBD', venue: '\'s-Hertogenbosch' },
+//       ],
+//     },
+//     3: {
+//       id: 3,
+//       name: 'Hockey India League',
+//       country: 'India',
+//       logo: '🇮🇳',
+//       season: '2025-26',
+//       description: 'India\'s professional franchise league – men\'s starts Jan 3, women\'s ongoing.',
+//       founded: '2013 (revived 2024)',
+//       teams: 8,
+//       format: 'League + Playoffs',
+//       standings: [ /* Early days – matches starting */ ],
+//       topScorers: [],
+//       recentMatches: [],
+//       upcomingMatches: [
+//         { id: 4, date: '2026-01-03', team1: 'Various Teams', team2: '', flag1: '', flag2: '', time: 'TBD', venue: 'Rourkela & Ranchi' },
+//       ],
+//     },
+//     4: {
+//       id: 4,
+//       name: 'Hockey One (Australia)',
+//       country: 'Australia',
+//       logo: '🇦🇺',
+//       season: '2025',
+//       description: 'Australia\'s domestic league featuring state-based teams.',
+//       founded: '2019',
+//       teams: 7,
+//       format: 'League + Finals',
+//       standings: [],
+//       topScorers: [],
+//       recentMatches: [],
+//       upcomingMatches: [],
+//     },
+//   };
+
+//   const league = leaguesData[leagueId];
+
+//   if (!league) {
+//     return (
+//       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-blue-50 text-gray-600">
+//         League not found
+//       </div>
+//     );
+//   }
+
+//   const tabs = [
+//     { id: 'overview', label: 'Overview' },
+//     { id: 'standings', label: 'Standings' },
+//     { id: 'scorers', label: 'Top Scorers' },
+//     { id: 'matches', label: 'Matches' },
+//   ];
+
+//   return (
+//     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 py-6">
+//       <div className="max-w-7xl mx-auto px-4">
+//         {/* Header */}
+//         <div className="bg-white rounded-xl shadow-md p-6 mb-6">
+//           <div className="flex items-center justify-between">
+//             <div className="flex items-center gap-4">
+//               <span className="text-5xl">{league.logo}</span>
+//               <div>
+//                 <h1 className="text-2xl font-bold text-gray-900">{league.name}</h1>
+//                 <p className="text-sm text-gray-600 mt-1">{league.country} • Season {league.season}</p>
+//               </div>
+//             </div>
+//             <Link
+//               to="/hockey/leagues"
+//               className="px-5 py-2.5 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium hover:bg-gray-200"
+//             >
+//               ← Back
+//             </Link>
+//           </div>
+//         </div>
+
+//         {/* Tabs */}
+//         <div className="bg-white rounded-xl shadow-md mb-6">
+//           <div className="flex gap-3 overflow-x-auto border-b">
+//             {tabs.map((tab) => (
+//               <button
+//                 key={tab.id}
+//                 onClick={() => setActiveTab(tab.id)}
+//                 className={`px-6 py-3.5 text-sm font-medium transition-all ${
+//                   activeTab === tab.id ? 'bg-blue-600 text-white' : 'text-gray-700 hover:bg-gray-100'
+//                 }`}
+//               >
+//                 {tab.label}
+//               </button>
+//             ))}
+//           </div>
+
+//           <div className="p-6">
+//             {activeTab === 'overview' && (
+//               <div className="grid md:grid-cols-2 gap-6">
+//                 <div>
+//                   <p className="text-gray-700 text-sm leading-relaxed">{league.description}</p>
+//                   <div className="mt-4 grid grid-cols-2 gap-4 text-sm">
+//                     <div className="bg-blue-50 rounded-lg p-4">
+//                       <p className="text-gray-600">Format</p>
+//                       <p className="font-bold">{league.format}</p>
+//                     </div>
+//                     <div className="bg-green-50 rounded-lg p-4">
+//                       <p className="text-gray-600">Teams</p>
+//                       <p className="font-bold">{league.teams}</p>
+//                     </div>
+//                   </div>
+//                 </div>
+//                 <div>
+//                   <p className="text-sm text-gray-600">Founded: {league.founded}</p>
+//                 </div>
+//               </div>
+//             )}
+
+//             {activeTab === 'standings' && league.standings.length > 0 && (
+//               <div className="overflow-x-auto">
+//                 <table className="w-full text-sm">
+//                   <thead className="bg-gray-50">
+//                     <tr>
+//                       <th className="text-left py-3 px-4">Rank</th>
+//                       <th className="text-left py-3 px-4">Team</th>
+//                       <th className="text-center py-3 px-4">P</th>
+//                       <th className="text-center py-3 px-4">W</th>
+//                       <th className="text-center py-3 px-4">D</th>
+//                       <th className="text-center py-3 px-4">L</th>
+//                       <th className="text-center py-3 px-4">GD</th>
+//                       <th className="text-center py-3 px-4">Pts</th>
+//                     </tr>
+//                   </thead>
+//                   <tbody className="divide-y divide-gray-100">
+//                     {league.standings.map((team, idx) => (
+//                       <tr key={team.rank} className="hover:bg-gray-50">
+//                         <td className="py-3 px-4">
+//                           <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold text-white ${
+//                             idx < 3 ? (idx === 0 ? 'bg-yellow-500' : idx === 1 ? 'bg-gray-400' : 'bg-orange-500') : 'bg-gray-600'
+//                           }`}>
+//                             {team.rank}
+//                           </div>
+//                         </td>
+//                         <td className="py-3 px-4 flex items-center gap-2">
+//                           <span className="text-2xl">{team.flag}</span>
+//                           <span className="font-medium">{team.team}</span>
+//                         </td>
+//                         <td className="py-3 px-4 text-center">{team.played}</td>
+//                         <td className="py-3 px-4 text-center text-green-600 font-medium">{team.won}</td>
+//                         <td className="py-3 px-4 text-center">{team.drawn}</td>
+//                         <td className="py-3 px-4 text-center text-red-600 font-medium">{team.lost}</td>
+//                         <td className="py-3 px-4 text-center">{team.gd > 0 ? '+' : ''}{team.gd}</td>
+//                         <td className="py-3 px-4 text-center font-bold text-blue-600">{team.points}</td>
+//                       </tr>
+//                     ))}
+//                   </tbody>
+//                 </table>
+//               </div>
+//             )}
+
+//             {activeTab === 'scorers' && league.topScorers.length > 0 && (
+//               <div className="space-y-4">
+//                 {league.topScorers.map((scorer) => (
+//                   <div key={scorer.rank} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+//                     <div className="flex items-center gap-4">
+//                       <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-white ${
+//                         scorer.rank <= 3 ? (scorer.rank === 1 ? 'bg-yellow-500' : scorer.rank === 2 ? 'bg-gray-400' : 'bg-orange-500') : 'bg-gray-600'
+//                       }`}>
+//                         {scorer.rank}
+//                       </div>
+//                       <div>
+//                         <p className="font-semibold">{scorer.name}</p>
+//                         {scorer.team && <p className="text-sm text-gray-600 flex items-center gap-1"><span>{scorer.flag}</span> {scorer.team}</p>}
+//                       </div>
+//                     </div>
+//                     <p className="text-2xl font-bold text-green-600">{scorer.goals}</p>
+//                   </div>
+//                 ))}
+//               </div>
+//             )}
+
+//             {activeTab === 'matches' && (
+//               <div className="space-y-6">
+//                 {league.recentMatches.length > 0 && (
+//                   <div>
+//                     <h3 className="text-lg font-semibold mb-3">Recent Results</h3>
+//                     <div className="space-y-3">
+//                       {league.recentMatches.map((match) => (
+//                         <div key={match.id} className="bg-gray-50 rounded-lg p-4 flex items-center justify-between">
+//                           <div className="flex items-center gap-3">
+//                             <span className="text-2xl">{match.flag1}</span>
+//                             <span className="font-medium">{match.team1}</span>
+//                           </div>
+//                           <span className="font-bold text-blue-600">{match.score}</span>
+//                           <div className="flex items-center gap-3">
+//                             <span className="font-medium">{match.team2}</span>
+//                             <span className="text-2xl">{match.flag2}</span>
+//                           </div>
+//                         </div>
+//                       ))}
+//                     </div>
+//                   </div>
+//                 )}
+
+//                 {league.upcomingMatches.length > 0 && (
+//                   <div>
+//                     <h3 className="text-lg font-semibold mb-3">Upcoming Fixtures</h3>
+//                     <div className="space-y-3">
+//                       {league.upcomingMatches.map((match) => (
+//                         <div key={match.id} className="bg-blue-50 rounded-lg p-4 flex items-center justify-between">
+//                           <div className="flex items-center gap-3">
+//                             {match.flag1 && <span className="text-2xl">{match.flag1}</span>}
+//                             <span className="font-medium">{match.team1}</span>
+//                           </div>
+//                           <div className="text-center text-sm">
+//                             <p>{match.date.replace('2026-', '').replace('2025-', '')}</p>
+//                             <p>{match.time}</p>
+//                             <p className="text-xs text-gray-600">{match.venue}</p>
+//                           </div>
+//                           <div className="flex items-center gap-3">
+//                             <span className="font-medium">{match.team2}</span>
+//                             {match.flag2 && <span className="text-2xl">{match.flag2}</span>}
+//                           </div>
+//                         </div>
+//                       ))}
+//                     </div>
+//                   </div>
+//                 )}
+//               </div>
+//             )}
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default LeagueDetail;
+
+
+// import React, { useState } from 'react';
+// import { useParams, Link, useNavigate } from 'react-router-dom';
+// import TopHockeyStories from '../../data/TopHockeyStories.js';
+// import LatestNews from '../../data/LatestNews.js';
+
+// const LeagueDetail = () => {
+//   const { leagueId } = useParams();
+//   const navigate = useNavigate();
+//   const [activeTab, setActiveTab] = useState('overview');
+
+//   const handleStoryClick = (id) => {
+//     navigate(`/details/hockey/${id}`);
+//   };
+
+//   const handleNewsCardClick = (articleTitle) => {
+//     navigate(`/news-details/${encodeURIComponent(articleTitle)}`);
+//   };
+
+//   const leaguesData = {
+//     1: {
+//       id: 1,
+//       name: 'FIH Pro League',
+//       country: 'International',
+//       logo: '🏑',
+//       season: '2025-26',
+//       description: 'The premier international league featuring the world\'s top 9 national teams in a home-and-away format.',
+//       founded: '2019',
+//       teams: 9,
+//       format: 'Round Robin (Home & Away)',
+//       standings: [
+//         { rank: 1, team: 'Argentina', flag: '🇦🇷', played: 4, won: 3, drawn: 1, lost: 0, gf: 12, ga: 6, gd: 6, points: 11 },
+//         { rank: 2, team: 'Belgium', flag: '🇧🇪', played: 4, won: 3, drawn: 1, lost: 0, gf: 12, ga: 6, gd: 6, points: 10 },
+//         { rank: 3, team: 'Netherlands', flag: '🇳🇱', played: 4, won: 2, drawn: 1, lost: 1, gf: 10, ga: 8, gd: 2, points: 7 },
+//         { rank: 4, team: 'Germany', flag: '🇩🇪', played: 4, won: 1, drawn: 0, lost: 3, gf: 7, ga: 12, gd: -5, points: 3 },
+//         { rank: 5, team: 'England', flag: '🏴󠁧󠁢󠁥󠁮󠁧󠁿', played: 4, won: 1, drawn: 0, lost: 3, gf: 6, ga: 11, gd: -5, points: 3 },
+//         { rank: 6, team: 'Pakistan', flag: '🇵🇰', played: 4, won: 0, drawn: 1, lost: 3, gf: 6, ga: 12, gd: -6, points: 1 },
+//       ],
+//       topScorers: [
+//         { rank: 1, name: 'Multiple Players', team: '', flag: '', goals: 4 },
+//         { rank: 2, name: 'Multiple Players', team: '', flag: '', goals: 3 },
+//       ],
+//       recentMatches: [
+//         { id: 1, date: '2025-12-14', team1: 'Belgium', team2: 'Germany', flag1: '🇧🇪', flag2: '🇩🇪', score: '4-1', status: 'Completed' },
+//         { id: 2, date: '2025-12-14', team1: 'Netherlands', team2: 'Pakistan', flag1: '🇳🇱', flag2: '🇵🇰', score: '5-2', status: 'Completed' },
+//         { id: 3, date: '2025-12-13', team1: 'England', team2: 'Germany', flag1: '🏴󠁧󠁢󠁥󠁮󠁧󠁿', flag2: '🇩🇪', score: '1-4', status: 'Completed' },
+//         { id: 4, date: '2025-12-12', team1: 'Argentina', team2: 'Netherlands', flag1: '🇦🇷', flag2: '🇳🇱', score: '1-1 (2-4 SO)', status: 'Completed' },
+//       ],
+//       upcomingMatches: [
+//         { id: 5, date: '2026-02-05', team1: 'China', team2: 'England', flag1: '🇨🇳', flag2: '🏴󠁧󠁢󠁥󠁮󠁧󠁿', time: 'TBD', venue: 'Yunfu' },
+//         { id: 6, date: '2026-02-06', team1: 'England', team2: 'Netherlands', flag1: '🏴󠁧󠁢󠁥󠁮󠁧󠁿', flag2: '🇳🇱', time: 'TBD', venue: 'Valencia' },
+//         { id: 7, date: '2026-02-10', team1: 'India', team2: 'Argentina', flag1: '🇮🇳', flag2: '🇦🇷', time: 'TBD', venue: 'Rourkela' },
+//       ],
+//     },
+//     // ... other leagues data (kept same as provided)
+//   };
+
+//   const league = leaguesData[leagueId];
+
+//   if (!league) {
+//     return (
+//       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-blue-50 text-gray-600">
+//         League not found
+//       </div>
+//     );
+//   }
+
+//   const tabs = [
+//     { id: 'overview', label: 'Overview' },
+//     { id: 'standings', label: 'Standings' },
+//     { id: 'scorers', label: 'Top Scorers' },
+//     { id: 'matches', label: 'Matches' },
+//   ];
+
+//   return (
+//     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50">
+//       {/* Main Grid Layout */}
+//       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+//         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
+          
+//           {/* Left: League Detail Content */}
+//           <div className="lg:col-span-8 space-y-6">
+//             {/* Header */}
+//             <div className="bg-white rounded-xl shadow-md p-6 mb-6">
+//               <div className="flex items-center justify-between">
+//                 <div className="flex items-center gap-4">
+//                   <span className="text-5xl">{league.logo}</span>
+//                   <div>
+//                     <h1 className="text-2xl font-bold text-gray-900">{league.name}</h1>
+//                     <p className="text-sm text-gray-600 mt-1">{league.country} • Season {league.season}</p>
+//                   </div>
+//                 </div>
+//                 <Link
+//                   to="/hockey/leagues"
+//                   className="px-5 py-2.5 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium hover:bg-gray-200"
+//                 >
+//                   ← Back
+//                 </Link>
+//               </div>
+//             </div>
+
+//             {/* Tabs */}
+//             <div className="bg-white rounded-xl shadow-md mb-6">
+//               <div className="flex gap-3 overflow-x-auto border-b scrollbar-hide">
+//                 {tabs.map((tab) => (
+//                   <button
+//                     key={tab.id}
+//                     onClick={() => setActiveTab(tab.id)}
+//                     className={`px-6 py-3.5 text-sm font-medium transition-all ${
+//                       activeTab === tab.id ? 'bg-blue-600 text-white' : 'text-gray-700 hover:bg-gray-100'
+//                     }`}
+//                   >
+//                     {tab.label}
+//                   </button>
+//                 ))}
+//               </div>
+
+//               <div className="p-6">
+//                 {activeTab === 'overview' && (
+//                   <div className="grid md:grid-cols-2 gap-6">
+//                     <div>
+//                       <p className="text-gray-700 text-sm leading-relaxed">{league.description}</p>
+//                       <div className="mt-4 grid grid-cols-2 gap-4 text-sm">
+//                         <div className="bg-blue-50 rounded-lg p-4">
+//                           <p className="text-gray-600">Format</p>
+//                           <p className="font-bold">{league.format}</p>
+//                         </div>
+//                         <div className="bg-green-50 rounded-lg p-4">
+//                           <p className="text-gray-600">Teams</p>
+//                           <p className="font-bold">{league.teams}</p>
+//                         </div>
+//                       </div>
+//                     </div>
+//                     <div>
+//                       <p className="text-sm text-gray-600">Founded: {league.founded}</p>
+//                     </div>
+//                   </div>
+//                 )}
+
+//                 {activeTab === 'standings' && league.standings?.length > 0 && (
+//                   <div className="overflow-x-auto">
+//                     <table className="w-full text-sm">
+//                       <thead className="bg-gray-50">
+//                         <tr>
+//                           <th className="text-left py-3 px-4">Rank</th>
+//                           <th className="text-left py-3 px-4">Team</th>
+//                           <th className="text-center py-3 px-4">P</th>
+//                           <th className="text-center py-3 px-4">W</th>
+//                           <th className="text-center py-3 px-4">D</th>
+//                           <th className="text-center py-3 px-4">L</th>
+//                           <th className="text-center py-3 px-4">GD</th>
+//                           <th className="text-center py-3 px-4">Pts</th>
+//                         </tr>
+//                       </thead>
+//                       <tbody className="divide-y divide-gray-100">
+//                         {league.standings.map((team, idx) => (
+//                           <tr key={team.rank} className="hover:bg-gray-50">
+//                             <td className="py-3 px-4">
+//                               <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold text-white ${
+//                                 idx < 3 ? (idx === 0 ? 'bg-yellow-500' : idx === 1 ? 'bg-gray-400' : 'bg-orange-500') : 'bg-gray-600'
+//                               }`}>
+//                                 {team.rank}
+//                               </div>
+//                             </td>
+//                             <td className="py-3 px-4 flex items-center gap-2">
+//                               <span className="text-2xl">{team.flag}</span>
+//                               <span className="font-medium">{team.team}</span>
+//                             </td>
+//                             <td className="py-3 px-4 text-center">{team.played}</td>
+//                             <td className="py-3 px-4 text-center text-green-600 font-medium">{team.won}</td>
+//                             <td className="py-3 px-4 text-center">{team.drawn}</td>
+//                             <td className="py-3 px-4 text-center text-red-600 font-medium">{team.lost}</td>
+//                             <td className="py-3 px-4 text-center">{team.gd > 0 ? '+' : ''}{team.gd}</td>
+//                             <td className="py-3 px-4 text-center font-bold text-blue-600">{team.points}</td>
+//                           </tr>
+//                         ))}
+//                       </tbody>
+//                     </table>
+//                   </div>
+//                 )}
+
+//                 {activeTab === 'scorers' && league.topScorers?.length > 0 && (
+//                   <div className="space-y-4">
+//                     {league.topScorers.map((scorer) => (
+//                       <div key={scorer.rank} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+//                         <div className="flex items-center gap-4">
+//                           <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-white ${
+//                             scorer.rank <= 3 ? (scorer.rank === 1 ? 'bg-yellow-500' : scorer.rank === 2 ? 'bg-gray-400' : 'bg-orange-500') : 'bg-gray-600'
+//                           }`}>
+//                             {scorer.rank}
+//                           </div>
+//                           <div>
+//                             <p className="font-semibold">{scorer.name}</p>
+//                             {scorer.team && <p className="text-sm text-gray-600 flex items-center gap-1"><span>{scorer.flag}</span> {scorer.team}</p>}
+//                           </div>
+//                         </div>
+//                         <p className="text-2xl font-bold text-green-600">{scorer.goals}</p>
+//                       </div>
+//                     ))}
+//                   </div>
+//                 )}
+
+//                 {activeTab === 'matches' && (
+//                   <div className="space-y-6">
+//                     {league.recentMatches?.length > 0 && (
+//                       <div>
+//                         <h3 className="text-lg font-semibold mb-3">Recent Results</h3>
+//                         <div className="space-y-3">
+//                           {league.recentMatches.map((match) => (
+//                             <div key={match.id} className="bg-gray-50 rounded-lg p-4 flex items-center justify-between">
+//                               <div className="flex items-center gap-3">
+//                                 <span className="text-2xl">{match.flag1}</span>
+//                                 <span className="font-medium">{match.team1}</span>
+//                               </div>
+//                               <span className="font-bold text-blue-600">{match.score}</span>
+//                               <div className="flex items-center gap-3">
+//                                 <span className="font-medium">{match.team2}</span>
+//                                 <span className="text-2xl">{match.flag2}</span>
+//                               </div>
+//                             </div>
+//                           ))}
+//                         </div>
+//                       </div>
+//                     )}
+
+//                     {league.upcomingMatches?.length > 0 && (
+//                       <div>
+//                         <h3 className="text-lg font-semibold mb-3">Upcoming Fixtures</h3>
+//                         <div className="space-y-3">
+//                           {league.upcomingMatches.map((match) => (
+//                             <div key={match.id} className="bg-blue-50 rounded-lg p-4 flex items-center justify-between">
+//                               <div className="flex items-center gap-3">
+//                                 {match.flag1 && <span className="text-2xl">{match.flag1}</span>}
+//                                 <span className="font-medium">{match.team1}</span>
+//                               </div>
+//                               <div className="text-center text-sm">
+//                                 <p>{match.date.replace('2026-', '').replace('2025-', '')}</p>
+//                                 <p>{match.time}</p>
+//                                 <p className="text-xs text-gray-600">{match.venue}</p>
+//                               </div>
+//                               <div className="flex items-center gap-3">
+//                                 <span className="font-medium">{match.team2}</span>
+//                                 {match.flag2 && <span className="text-2xl">{match.flag2}</span>}
+//                               </div>
+//                             </div>
+//                           ))}
+//                         </div>
+//                       </div>
+//                     )}
+//                   </div>
+//                 )}
+//               </div>
+//             </div>
+//           </div>
+
+//           {/* Right Sidebar: Top Hockey Stories (Desktop Only) */}
+//           <div className="hidden lg:block lg:col-span-4">
+//             <div className="bg-white rounded-xl shadow-md p-5 sticky top-24">
+//               <h3 className="text-lg font-bold text-gray-900 mb-5">Top Hockey Stories</h3>
+//               <div className="space-y-4">
+//                 {TopHockeyStories.data.TopHockeyStories.slice(0, 5).map((story) => (
+//                   <div
+//                     key={story.id}
+//                     onClick={() => handleStoryClick(story.id)}
+//                     className="flex gap-3 cursor-pointer group hover:bg-gray-50 rounded-lg p-3 -mx-3 transition-colors"
+//                   >
+//                     <div className="flex-shrink-0">
+//                       <img
+//                         src={story.image || 'https://via.placeholder.com/100'}
+//                         alt={story.title}
+//                         className="w-20 h-20 object-cover rounded-lg"
+//                       />
+//                     </div>
+//                     <div className="flex-1 min-w-0">
+//                       <h4 className="text-sm font-medium text-gray-900 line-clamp-3 group-hover:text-blue-600 transition-colors">
+//                         {story.title}
+//                       </h4>
+//                       <p className="text-xs text-gray-500 mt-1">
+//                         {new Date(story.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+//                       </p>
+//                     </div>
+//                   </div>
+//                 ))}
+//               </div>
+//               <button
+//                 onClick={() => navigate('/all-top-hockey-stories')}
+//                 className="mt-6 w-full text-center text-blue-600 font-medium hover:underline text-sm"
+//               >
+//                 View All Stories →
+//               </button>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+
+//       {/* Mobile Top Hockey Stories */}
+//       <div className="lg:hidden mt-10 px-4 sm:px-6 lg:px-8">
+//         <div className="max-w-7xl mx-auto">
+//           <div className="bg-white rounded-xl shadow-md p-5">
+//             <h3 className="text-lg font-bold text-gray-900 mb-4">Top Hockey Stories</h3>
+//             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+//               {TopHockeyStories.data.TopHockeyStories.slice(0, 4).map((story) => (
+//                 <div
+//                   key={story.id}
+//                   onClick={() => handleStoryClick(story.id)}
+//                   className="cursor-pointer hover:shadow-lg transition-shadow rounded-lg overflow-hidden"
+//                 >
+//                   <img
+//                     src={story.image || 'https://via.placeholder.com/300'}
+//                     alt={story.title}
+//                     className="w-full h-40 object-cover"
+//                   />
+//                   <div className="p-3">
+//                     <h4 className="text-sm font-medium text-gray-900 line-clamp-2">
+//                       {story.title}
+//                     </h4>
+//                     <p className="text-xs text-gray-500 mt-1">
+//                       {new Date(story.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+//                     </p>
+//                   </div>
+//                 </div>
+//               ))}
+//             </div>
+//             <button
+//               onClick={() => navigate('/all-top-hockey-stories')}
+//               className="mt-4 w-full text-center text-blue-600 font-medium hover:underline text-sm"
+//             >
+//               View All Stories →
+//             </button>
+//           </div>
+//         </div>
+//       </div>
+
+//       {/* Latest Sports News Section */}
+//       <div className="mt-12 px-4 sm:px-6 lg:px-8">
+//         <div className="max-w-7xl mx-auto">
+//           <div className="bg-white rounded-xl shadow-md p-6">
+//             <div className="flex items-center justify-between mb-6">
+//               <h3 className="text-xl sm:text-2xl font-bold text-gray-900">
+//                 Latest Sports News
+//               </h3>
+//               <button
+//                 onClick={() => navigate('/all-latest-news')}
+//                 className="text-blue-600 hover:underline font-medium text-sm sm:text-base"
+//               >
+//                 View All →
+//               </button>
+//             </div>
+
+//             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+//               {LatestNews.data.LatestNews.slice(0, 6).map((article) => (
+//                 <div
+//                   key={article.title}
+//                   onClick={() => handleNewsCardClick(article.title)}
+//                   className="bg-gray-50 rounded-lg overflow-hidden cursor-pointer hover:shadow-lg transition-shadow"
+//                 >
+//                   <img
+//                     src={article.image || "https://via.placeholder.com/400x250"}
+//                     alt={article.title}
+//                     className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+//                   />
+//                   <div className="p-4">
+//                     <h4 className="text-base font-semibold text-gray-800 line-clamp-2 mb-2">
+//                       {article.title}
+//                     </h4>
+//                     <p className="text-sm text-gray-600 line-clamp-2 mb-3">
+//                       {article.description}
+//                     </p>
+//                     <div className="flex justify-between text-xs text-gray-500">
+//                       <span>Source: {article.source}</span>
+//                       <span>
+//                         {new Date(article.published).toLocaleDateString('en-US', {
+//                           month: 'short',
+//                           day: '2-digit',
+//                           year: 'numeric',
+//                         })}
+//                       </span>
+//                     </div>
+//                   </div>
+//                 </div>
+//               ))}
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default LeagueDetail;
+
 import React, { useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
+import TopHockeyStories from '../../data/TopHockeyStories.js';
+import LatestNews from '../../data/LatestNews.js';
+import { hockeyLeagueDetails } from '../../data/HockeyLeagueDetail.js';
 
 const LeagueDetail = () => {
   const { leagueId } = useParams();
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('overview');
 
-  const leaguesData = {
-    1: {
-      id: 1,
-      name: 'FIH Pro League',
-      country: 'International',
-      logo: '🏑',
-      season: '2025-26',
-      description: 'The premier international league featuring the world\'s top 9 national teams in a home-and-away format.',
-      founded: '2019',
-      teams: 9,
-      format: 'Round Robin (Home & Away)',
-      standings: [
-        { rank: 1, team: 'Argentina', flag: '🇦🇷', played: 4, won: 3, drawn: 1, lost: 0, gf: 12, ga: 6, gd: 6, points: 11 },
-        { rank: 2, team: 'Belgium', flag: '🇧🇪', played: 4, won: 3, drawn: 1, lost: 0, gf: 12, ga: 6, gd: 6, points: 10 },
-        { rank: 3, team: 'Netherlands', flag: '🇳🇱', played: 4, won: 2, drawn: 1, lost: 1, gf: 10, ga: 8, gd: 2, points: 7 },
-        { rank: 4, team: 'Germany', flag: '🇩🇪', played: 4, won: 1, drawn: 0, lost: 3, gf: 7, ga: 12, gd: -5, points: 3 },
-        { rank: 5, team: 'England', flag: '🏴󠁧󠁢󠁥󠁮󠁧󠁿', played: 4, won: 1, drawn: 0, lost: 3, gf: 6, ga: 11, gd: -5, points: 3 },
-        { rank: 6, team: 'Pakistan', flag: '🇵🇰', played: 4, won: 0, drawn: 1, lost: 3, gf: 6, ga: 12, gd: -6, points: 1 },
-      ],
-      topScorers: [
-        { rank: 1, name: 'Multiple Players', team: '', flag: '', goals: 4 },
-        { rank: 2, name: 'Multiple Players', team: '', flag: '', goals: 3 },
-      ],
-      recentMatches: [
-        { id: 1, date: '2025-12-14', team1: 'Belgium', team2: 'Germany', flag1: '🇧🇪', flag2: '🇩🇪', score: '4-1', status: 'Completed' },
-        { id: 2, date: '2025-12-14', team1: 'Netherlands', team2: 'Pakistan', flag1: '🇳🇱', flag2: '🇵🇰', score: '5-2', status: 'Completed' },
-        { id: 3, date: '2025-12-13', team1: 'England', team2: 'Germany', flag1: '🏴󠁧󠁢󠁥󠁮󠁧󠁿', flag2: '🇩🇪', score: '1-4', status: 'Completed' },
-        { id: 4, date: '2025-12-12', team1: 'Argentina', team2: 'Netherlands', flag1: '🇦🇷', flag2: '🇳🇱', score: '1-1 (2-4 SO)', status: 'Completed' },
-      ],
-      upcomingMatches: [
-        { id: 5, date: '2026-02-05', team1: 'China', team2: 'England', flag1: '🇨🇳', flag2: '🏴󠁧󠁢󠁥󠁮󠁧󠁿', time: 'TBD', venue: 'Yunfu' },
-        { id: 6, date: '2026-02-06', team1: 'England', team2: 'Netherlands', flag1: '🏴󠁧󠁢󠁥󠁮󠁧󠁿', flag2: '🇳🇱', time: 'TBD', venue: 'Valencia' },
-        { id: 7, date: '2026-02-10', team1: 'India', team2: 'Argentina', flag1: '🇮🇳', flag2: '🇦🇷', time: 'TBD', venue: 'Rourkela' },
-      ],
-    },
-    2: {
-      id: 2,
-      name: 'Euro Hockey League',
-      country: 'Europe',
-      logo: '🇪🇺',
-      season: '2025-26',
-      description: 'Europe\'s top club competition – knockout format with the best teams from national leagues.',
-      founded: '2007',
-      teams: 24,
-      format: 'Knockout (KO16 → Final8)',
-      standings: [ /* Limited data available – season ongoing */ ],
-      topScorers: [],
-      recentMatches: [],
-      upcomingMatches: [
-        { id: 3, date: '2026-04-17', team1: 'Various Teams', team2: '', flag1: '', flag2: '', time: 'TBD', venue: '\'s-Hertogenbosch' },
-      ],
-    },
-    3: {
-      id: 3,
-      name: 'Hockey India League',
-      country: 'India',
-      logo: '🇮🇳',
-      season: '2025-26',
-      description: 'India\'s professional franchise league – men\'s starts Jan 3, women\'s ongoing.',
-      founded: '2013 (revived 2024)',
-      teams: 8,
-      format: 'League + Playoffs',
-      standings: [ /* Early days – matches starting */ ],
-      topScorers: [],
-      recentMatches: [],
-      upcomingMatches: [
-        { id: 4, date: '2026-01-03', team1: 'Various Teams', team2: '', flag1: '', flag2: '', time: 'TBD', venue: 'Rourkela & Ranchi' },
-      ],
-    },
-    4: {
-      id: 4,
-      name: 'Hockey One (Australia)',
-      country: 'Australia',
-      logo: '🇦🇺',
-      season: '2025',
-      description: 'Australia\'s domestic league featuring state-based teams.',
-      founded: '2019',
-      teams: 7,
-      format: 'League + Finals',
-      standings: [],
-      topScorers: [],
-      recentMatches: [],
-      upcomingMatches: [],
-    },
+  const handleStoryClick = (id) => {
+    navigate(`/details/hockey/${id}`);
   };
 
-  const league = leaguesData[leagueId];
+  const handleNewsCardClick = (articleTitle) => {
+    navigate(`/news-details/${encodeURIComponent(articleTitle)}`);
+  };
+
+  // External file se data le rahe hain
+  const league = hockeyLeagueDetails[leagueId];
 
   if (!league) {
     return (
@@ -640,177 +1249,313 @@ const LeagueDetail = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 py-6">
-      <div className="max-w-7xl mx-auto px-4">
-        {/* Header */}
-        <div className="bg-white rounded-xl shadow-md p-6 mb-6">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
-              <span className="text-5xl">{league.logo}</span>
-              <div>
-                <h1 className="text-2xl font-bold text-gray-900">{league.name}</h1>
-                <p className="text-sm text-gray-600 mt-1">{league.country} • Season {league.season}</p>
-              </div>
-            </div>
-            <Link
-              to="/hockey/leagues"
-              className="px-5 py-2.5 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium hover:bg-gray-200"
-            >
-              ← Back
-            </Link>
-          </div>
-        </div>
-
-        {/* Tabs */}
-        <div className="bg-white rounded-xl shadow-md mb-6">
-          <div className="flex gap-3 overflow-x-auto border-b">
-            {tabs.map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
-                className={`px-6 py-3.5 text-sm font-medium transition-all ${
-                  activeTab === tab.id ? 'bg-blue-600 text-white' : 'text-gray-700 hover:bg-gray-100'
-                }`}
-              >
-                {tab.label}
-              </button>
-            ))}
-          </div>
-
-          <div className="p-6">
-            {activeTab === 'overview' && (
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <p className="text-gray-700 text-sm leading-relaxed">{league.description}</p>
-                  <div className="mt-4 grid grid-cols-2 gap-4 text-sm">
-                    <div className="bg-blue-50 rounded-lg p-4">
-                      <p className="text-gray-600">Format</p>
-                      <p className="font-bold">{league.format}</p>
-                    </div>
-                    <div className="bg-green-50 rounded-lg p-4">
-                      <p className="text-gray-600">Teams</p>
-                      <p className="font-bold">{league.teams}</p>
-                    </div>
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50">
+      {/* Main Grid Layout */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
+          
+          {/* Left: League Detail Content */}
+          <div className="lg:col-span-8 space-y-6">
+            {/* Header */}
+            <div className="bg-white rounded-xl shadow-md p-6 mb-6">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-4">
+                  <span className="text-5xl">{league.logo}</span>
+                  <div>
+                    <h1 className="text-2xl font-bold text-gray-900">{league.name}</h1>
+                    <p className="text-sm text-gray-600 mt-1">{league.country} • Season {league.season}</p>
                   </div>
                 </div>
-                <div>
-                  <p className="text-sm text-gray-600">Founded: {league.founded}</p>
-                </div>
+                <Link
+                  to="/hockey/leagues"
+                  className="px-5 py-2.5 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium hover:bg-gray-200"
+                >
+                  ← Back
+                </Link>
               </div>
-            )}
+            </div>
 
-            {activeTab === 'standings' && league.standings.length > 0 && (
-              <div className="overflow-x-auto">
-                <table className="w-full text-sm">
-                  <thead className="bg-gray-50">
-                    <tr>
-                      <th className="text-left py-3 px-4">Rank</th>
-                      <th className="text-left py-3 px-4">Team</th>
-                      <th className="text-center py-3 px-4">P</th>
-                      <th className="text-center py-3 px-4">W</th>
-                      <th className="text-center py-3 px-4">D</th>
-                      <th className="text-center py-3 px-4">L</th>
-                      <th className="text-center py-3 px-4">GD</th>
-                      <th className="text-center py-3 px-4">Pts</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-gray-100">
-                    {league.standings.map((team, idx) => (
-                      <tr key={team.rank} className="hover:bg-gray-50">
-                        <td className="py-3 px-4">
-                          <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold text-white ${
-                            idx < 3 ? (idx === 0 ? 'bg-yellow-500' : idx === 1 ? 'bg-gray-400' : 'bg-orange-500') : 'bg-gray-600'
-                          }`}>
-                            {team.rank}
-                          </div>
-                        </td>
-                        <td className="py-3 px-4 flex items-center gap-2">
-                          <span className="text-2xl">{team.flag}</span>
-                          <span className="font-medium">{team.team}</span>
-                        </td>
-                        <td className="py-3 px-4 text-center">{team.played}</td>
-                        <td className="py-3 px-4 text-center text-green-600 font-medium">{team.won}</td>
-                        <td className="py-3 px-4 text-center">{team.drawn}</td>
-                        <td className="py-3 px-4 text-center text-red-600 font-medium">{team.lost}</td>
-                        <td className="py-3 px-4 text-center">{team.gd > 0 ? '+' : ''}{team.gd}</td>
-                        <td className="py-3 px-4 text-center font-bold text-blue-600">{team.points}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+            {/* Tabs */}
+            <div className="bg-white rounded-xl shadow-md mb-6">
+              <div className="flex gap-3 overflow-x-auto border-b scrollbar-hide">
+                {tabs.map((tab) => (
+                  <button
+                    key={tab.id}
+                    onClick={() => setActiveTab(tab.id)}
+                    className={`px-6 py-3.5 text-sm font-medium transition-all ${
+                      activeTab === tab.id ? 'bg-blue-600 text-white' : 'text-gray-700 hover:bg-gray-100'
+                    }`}
+                  >
+                    {tab.label}
+                  </button>
+                ))}
               </div>
-            )}
 
-            {activeTab === 'scorers' && league.topScorers.length > 0 && (
-              <div className="space-y-4">
-                {league.topScorers.map((scorer) => (
-                  <div key={scorer.rank} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
-                    <div className="flex items-center gap-4">
-                      <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-white ${
-                        scorer.rank <= 3 ? (scorer.rank === 1 ? 'bg-yellow-500' : scorer.rank === 2 ? 'bg-gray-400' : 'bg-orange-500') : 'bg-gray-600'
-                      }`}>
-                        {scorer.rank}
-                      </div>
-                      <div>
-                        <p className="font-semibold">{scorer.name}</p>
-                        {scorer.team && <p className="text-sm text-gray-600 flex items-center gap-1"><span>{scorer.flag}</span> {scorer.team}</p>}
+              <div className="p-6">
+                {activeTab === 'overview' && (
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <p className="text-gray-700 text-sm leading-relaxed">{league.description}</p>
+                      <div className="mt-4 grid grid-cols-2 gap-4 text-sm">
+                        <div className="bg-blue-50 rounded-lg p-4">
+                          <p className="text-gray-600">Format</p>
+                          <p className="font-bold">{league.format}</p>
+                        </div>
+                        <div className="bg-green-50 rounded-lg p-4">
+                          <p className="text-gray-600">Teams</p>
+                          <p className="font-bold">{league.teams}</p>
+                        </div>
                       </div>
                     </div>
-                    <p className="text-2xl font-bold text-green-600">{scorer.goals}</p>
+                    <div>
+                      <p className="text-sm text-gray-600">Founded: {league.founded}</p>
+                    </div>
+                  </div>
+                )}
+
+                {activeTab === 'standings' && league.standings?.length > 0 && (
+                  <div className="overflow-x-auto">
+                    <table className="w-full text-sm">
+                      <thead className="bg-gray-50">
+                        <tr>
+                          <th className="text-left py-3 px-4">Rank</th>
+                          <th className="text-left py-3 px-4">Team</th>
+                          <th className="text-center py-3 px-4">P</th>
+                          <th className="text-center py-3 px-4">W</th>
+                          <th className="text-center py-3 px-4">D</th>
+                          <th className="text-center py-3 px-4">L</th>
+                          <th className="text-center py-3 px-4">GD</th>
+                          <th className="text-center py-3 px-4">Pts</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-gray-100">
+                        {league.standings.map((team, idx) => (
+                          <tr key={team.rank} className="hover:bg-gray-50">
+                            <td className="py-3 px-4">
+                              <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold text-white ${
+                                idx < 3 ? (idx === 0 ? 'bg-yellow-500' : idx === 1 ? 'bg-gray-400' : 'bg-orange-500') : 'bg-gray-600'
+                              }`}>
+                                {team.rank}
+                              </div>
+                            </td>
+                            <td className="py-3 px-4 flex items-center gap-2">
+                              <span className="text-2xl">{team.flag}</span>
+                              <span className="font-medium">{team.team}</span>
+                            </td>
+                            <td className="py-3 px-4 text-center">{team.played}</td>
+                            <td className="py-3 px-4 text-center text-green-600 font-medium">{team.won}</td>
+                            <td className="py-3 px-4 text-center">{team.drawn}</td>
+                            <td className="py-3 px-4 text-center text-red-600 font-medium">{team.lost}</td>
+                            <td className="py-3 px-4 text-center">{team.gd > 0 ? '+' : ''}{team.gd}</td>
+                            <td className="py-3 px-4 text-center font-bold text-blue-600">{team.points}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
+
+                {activeTab === 'scorers' && league.topScorers?.length > 0 && (
+                  <div className="space-y-4">
+                    {league.topScorers.map((scorer) => (
+                      <div key={scorer.rank} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                        <div className="flex items-center gap-4">
+                          <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-white ${
+                            scorer.rank <= 3 ? (scorer.rank === 1 ? 'bg-yellow-500' : scorer.rank === 2 ? 'bg-gray-400' : 'bg-orange-500') : 'bg-gray-600'
+                          }`}>
+                            {scorer.rank}
+                          </div>
+                          <div>
+                            <p className="font-semibold">{scorer.name}</p>
+                            {scorer.team && <p className="text-sm text-gray-600 flex items-center gap-1"><span>{scorer.flag}</span> {scorer.team}</p>}
+                          </div>
+                        </div>
+                        <p className="text-2xl font-bold text-green-600">{scorer.goals}</p>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                {activeTab === 'matches' && (
+                  <div className="space-y-6">
+                    {league.recentMatches?.length > 0 && (
+                      <div>
+                        <h3 className="text-lg font-semibold mb-3">Recent Results</h3>
+                        <div className="space-y-3">
+                          {league.recentMatches.map((match) => (
+                            <div key={match.id} className="bg-gray-50 rounded-lg p-4 flex items-center justify-between">
+                              <div className="flex items-center gap-3">
+                                <span className="text-2xl">{match.flag1}</span>
+                                <span className="font-medium">{match.team1}</span>
+                              </div>
+                              <span className="font-bold text-blue-600">{match.score}</span>
+                              <div className="flex items-center gap-3">
+                                <span className="font-medium">{match.team2}</span>
+                                <span className="text-2xl">{match.flag2}</span>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {league.upcomingMatches?.length > 0 && (
+                      <div>
+                        <h3 className="text-lg font-semibold mb-3">Upcoming Fixtures</h3>
+                        <div className="space-y-3">
+                          {league.upcomingMatches.map((match) => (
+                            <div key={match.id} className="bg-blue-50 rounded-lg p-4 flex items-center justify-between">
+                              <div className="flex items-center gap-3">
+                                {match.flag1 && <span className="text-2xl">{match.flag1}</span>}
+                                <span className="font-medium">{match.team1}</span>
+                              </div>
+                              <div className="text-center text-sm">
+                                <p>{match.date.replace('2026-', '').replace('2025-', '')}</p>
+                                <p>{match.time}</p>
+                                <p className="text-xs text-gray-600">{match.venue}</p>
+                              </div>
+                              <div className="flex items-center gap-3">
+                                <span className="font-medium">{match.team2}</span>
+                                {match.flag2 && <span className="text-2xl">{match.flag2}</span>}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+
+          {/* Right Sidebar: Top Hockey Stories (Desktop Only) */}
+          <div className="hidden lg:block lg:col-span-4">
+            <div className="bg-white rounded-xl shadow-md p-5 sticky top-24">
+              <h3 className="text-lg font-bold text-gray-900 mb-5">Top Hockey Stories</h3>
+              <div className="space-y-4">
+                {TopHockeyStories.data.TopHockeyStories.slice(0, 5).map((story) => (
+                  <div
+                    key={story.id}
+                    onClick={() => handleStoryClick(story.id)}
+                    className="flex gap-3 cursor-pointer group hover:bg-gray-50 rounded-lg p-3 -mx-3 transition-colors"
+                  >
+                    <div className="flex-shrink-0">
+                      <img
+                        src={story.image || 'https://via.placeholder.com/100'}
+                        alt={story.title}
+                        className="w-20 h-20 object-cover rounded-lg"
+                      />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h4 className="text-sm font-medium text-gray-900 line-clamp-3 group-hover:text-blue-600 transition-colors">
+                        {story.title}
+                      </h4>
+                      <p className="text-xs text-gray-500 mt-1">
+                        {new Date(story.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+                      </p>
+                    </div>
                   </div>
                 ))}
               </div>
-            )}
+              <button
+                onClick={() => navigate('/all-top-hockey-stories')}
+                className="mt-6 w-full text-center text-blue-600 font-medium hover:underline text-sm"
+              >
+                View All Stories →
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
 
-            {activeTab === 'matches' && (
-              <div className="space-y-6">
-                {league.recentMatches.length > 0 && (
-                  <div>
-                    <h3 className="text-lg font-semibold mb-3">Recent Results</h3>
-                    <div className="space-y-3">
-                      {league.recentMatches.map((match) => (
-                        <div key={match.id} className="bg-gray-50 rounded-lg p-4 flex items-center justify-between">
-                          <div className="flex items-center gap-3">
-                            <span className="text-2xl">{match.flag1}</span>
-                            <span className="font-medium">{match.team1}</span>
-                          </div>
-                          <span className="font-bold text-blue-600">{match.score}</span>
-                          <div className="flex items-center gap-3">
-                            <span className="font-medium">{match.team2}</span>
-                            <span className="text-2xl">{match.flag2}</span>
-                          </div>
-                        </div>
-                      ))}
+      {/* Mobile Top Hockey Stories */}
+      <div className="lg:hidden mt-10 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-white rounded-xl shadow-md p-5">
+            <h3 className="text-lg font-bold text-gray-900 mb-4">Top Hockey Stories</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {TopHockeyStories.data.TopHockeyStories.slice(0, 4).map((story) => (
+                <div
+                  key={story.id}
+                  onClick={() => handleStoryClick(story.id)}
+                  className="cursor-pointer hover:shadow-lg transition-shadow rounded-lg overflow-hidden"
+                >
+                  <img
+                    src={story.image || 'https://via.placeholder.com/300'}
+                    alt={story.title}
+                    className="w-full h-40 object-cover"
+                  />
+                  <div className="p-3">
+                    <h4 className="text-sm font-medium text-gray-900 line-clamp-2">
+                      {story.title}
+                    </h4>
+                    <p className="text-xs text-gray-500 mt-1">
+                      {new Date(story.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <button
+              onClick={() => navigate('/all-top-hockey-stories')}
+              className="mt-4 w-full text-center text-blue-600 font-medium hover:underline text-sm"
+            >
+              View All Stories →
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Latest Sports News Section */}
+      <div className="mt-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-white rounded-xl shadow-md p-6">
+            <div className="flex items-center justify-between mb-6">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900">
+                Latest Sports News
+              </h3>
+              <button
+                onClick={() => navigate('/all-latest-news')}
+                className="text-blue-600 hover:underline font-medium text-sm sm:text-base"
+              >
+                View All →
+              </button>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {LatestNews.data.LatestNews.slice(0, 6).map((article) => (
+                <div
+                  key={article.title}
+                  onClick={() => handleNewsCardClick(article.title)}
+                  className="bg-gray-50 rounded-lg overflow-hidden cursor-pointer hover:shadow-lg transition-shadow"
+                >
+                  <img
+                    src={article.image || "https://via.placeholder.com/400x250"}
+                    alt={article.title}
+                    className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="p-4">
+                    <h4 className="text-base font-semibold text-gray-800 line-clamp-2 mb-2">
+                      {article.title}
+                    </h4>
+                    <p className="text-sm text-gray-600 line-clamp-2 mb-3">
+                      {article.description}
+                    </p>
+                    <div className="flex justify-between text-xs text-gray-500">
+                      <span>Source: {article.source}</span>
+                      <span>
+                        {new Date(article.published).toLocaleDateString('en-US', {
+                          month: 'short',
+                          day: '2-digit',
+                          year: 'numeric',
+                        })}
+                      </span>
                     </div>
                   </div>
-                )}
-
-                {league.upcomingMatches.length > 0 && (
-                  <div>
-                    <h3 className="text-lg font-semibold mb-3">Upcoming Fixtures</h3>
-                    <div className="space-y-3">
-                      {league.upcomingMatches.map((match) => (
-                        <div key={match.id} className="bg-blue-50 rounded-lg p-4 flex items-center justify-between">
-                          <div className="flex items-center gap-3">
-                            {match.flag1 && <span className="text-2xl">{match.flag1}</span>}
-                            <span className="font-medium">{match.team1}</span>
-                          </div>
-                          <div className="text-center text-sm">
-                            <p>{match.date.replace('2026-', '').replace('2025-', '')}</p>
-                            <p>{match.time}</p>
-                            <p className="text-xs text-gray-600">{match.venue}</p>
-                          </div>
-                          <div className="flex items-center gap-3">
-                            <span className="font-medium">{match.team2}</span>
-                            {match.flag2 && <span className="text-2xl">{match.flag2}</span>}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-            )}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

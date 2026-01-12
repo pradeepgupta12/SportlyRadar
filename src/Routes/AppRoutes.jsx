@@ -25,7 +25,7 @@ import TennisScorecard from "../Pages/TennisScorecard";
 import LiveScores from "../Modules/Cricket/LiveScores";
 import ICCRankings from "../Modules/Cricket/ICCRankings";
 import Schedule from "../Modules/Cricket/Schedule";
-import Leagues from "../Modules/Cricket/Leagues";
+//import Leagues from "../Modules/Cricket/Leagues";
 import ScheduleMatchDetail from "../Modules/Cricket/ScheduleMatchDetail";
 import ICCMenWorld from "../Modules/Cricket/ICCMenWorld";
 import ICCMenDetailPage from "../Modules/Cricket/ICCMenDetailPage";
@@ -78,6 +78,10 @@ import AllTopTennisStories from "../Pages/AllTopTennisStories";
 import TennisStoryDetails from "../Pages/TennisStoryDetails";
 import AllTopBasketballStories from "../Pages/AllTopBasketballStories";
 import BasketballStoryDetails from "../Pages/BasketballStoryDetails";
+import AllTopHockeyStories from "../Pages/AllTopHockeyStories";
+import HockeyStoryDetails from "../Pages/HockeyStoryDetails";
+import CricketLeagues from "../Modules/Cricket/CricketLeagues";
+import LeagueDetail from "../Modules/Cricket/LeagueDetail";
 
 const AppRoutes = () => {
   return (
@@ -100,7 +104,9 @@ const AppRoutes = () => {
         <Route path="/cricket/series/:slug" element={<SeriesDetail />} />
         <Route path="/cricket/rankings" element={<ICCRankings />} />
         <Route path="/cricket/schedule" element={<Schedule />} />
-        <Route path="/cricket/leagues" element={<Leagues />} />
+        <Route path="/cricket/leagues" element={<CricketLeagues />} />
+        <Route path="/leagues/:leagueId" element={<LeagueDetail />} />
+        <Route path="/leagues" element={<CricketLeagues />} />
         <Route path="/cricket/match/:matchId" element={<ScheduleMatchDetail />} />
         <Route path="/cricket/series/icc-mens-t20-world-cup-2026" element={<ICCMenWorld />} />
         <Route path="/cricket/series/icc-mens-t20-world-cup-2026/match/:matchId" element={<ICCMenDetailPage />} />
@@ -162,6 +168,9 @@ const AppRoutes = () => {
 
         <Route path="/all-top-basketball-stories" element={<AllTopBasketballStories />} />
       <Route path="/details/basketball/:id" element={<BasketballStoryDetails />} />
+
+      <Route path="/all-top-hockey-stories" element={<AllTopHockeyStories />} />
+        <Route path="/details/hockey/:id" element={<HockeyStoryDetails />} />
 
 
         {/* ========== 404 PAGE ========== */}
