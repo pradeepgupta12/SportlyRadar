@@ -15,11 +15,11 @@
           "teams": [
             {
               "name": "Pakistan",
-              "flag": "/flags/pakistan.png"
+              "flag": "https://cdn.britannica.com/46/3346-050-DE92F66A/flag-symbolism-Pakistan-design-Islamic.jpg"
             },
             {
               "name": "Netherlands",
-              "flag": "/flags/netherlands.png"
+              "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/330px-Flag_of_the_Netherlands.svg.png"
             }
           ],
           "matchDay": "Sat, Feb 7",
@@ -41,11 +41,11 @@
           "teams": [
             {
               "name": "West Indies",
-              "flag": "/flags/west-indies.png"
+              "flag": "https://www.shutterstock.com/image-illustration/west-indies-flag-illustration-vector-260nw-2409235223.jpg"
             },
             {
               "name": "Bangladesh",
-              "flag": "/flags/bangladesh.png"
+              "flag": "https://cdn.britannica.com/67/6267-050-8A26DFEE/Flag-Bangladesh.jpg"
             }
           ],
           "matchDay": "Sat, Feb 7",
@@ -67,11 +67,11 @@
           "teams": [
             {
               "name": "India",
-              "flag": "/flags/india.png"
+              "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_India.svg/960px-Flag_of_India.svg.png"
             },
             {
               "name": "United States of America",
-              "flag": "/flags/usa.png"
+              "flag": "https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg"
             }
           ],
           "matchDay": "Sat, Feb 7",
@@ -98,11 +98,11 @@
           "teams": [
             {
               "name": "New Zealand",
-              "flag": "/flags/new-zealand.png"
+              "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Flag_of_New_Zealand.svg/2560px-Flag_of_New_Zealand.svg.png"
             },
             {
               "name": "Afghanistan",
-              "flag": "/flags/afghanistan.png"
+              "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Flag_of_Afghanistan_%282013%E2%80%932021%29.svg/960px-Flag_of_Afghanistan_%282013%E2%80%932021%29.svg.png"
             }
           ],
           "matchDay": "Sun, Feb 8",

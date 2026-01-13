@@ -39,22 +39,22 @@
               "Australia": {
                 "captain": "Pat Cummins",
                 "players": [
-                  { "name": "Steven Smith", "role": "Batsman", "avatar": "/images/players/aus/steven_smith.png" },
-                  { "name": "Travis Head", "role": "All-Rounder", "avatar": "/images/players/aus/travis_head.png" },
-                  { "name": "Usman Khawaja", "role": "Batsman", "avatar": "/images/players/aus/usman_khawaja.png" },
-                  { "name": "Marnus Labuschagne", "role": "Batsman", "avatar": "/images/players/aus/marnus.png" },
-                  { "name": "Alex Carey", "role": "Wicket Keeper", "avatar": "/images/players/aus/alex_carey.png" },
-                  { "name": "Pat Cummins", "role": "Bowler", "avatar": "/images/players/aus/pat_cummins.png" }
+                  { "name": "Steven Smith", "role": "Batsman", "avatar": "https://upload.wikimedia.org/wikipedia/commons/1/1b/STEVE_SMITH_%2811705303043%29.jpg" },
+                  { "name": "Travis Head", "role": "All-Rounder", "avatar": "https://d13ir53smqqeyp.cloudfront.net/fc-player-images/1443.png" },
+                  { "name": "Usman Khawaja", "role": "Batsman", "avatar": "https://upload.wikimedia.org/wikipedia/commons/e/ef/2018.01.05.17.43.25-Usman_Khawaja_%26_Steve_Smith_%2838876757994%29_%28Khawaja_cropped%29.jpg" },
+                  { "name": "Marnus Labuschagne", "role": "Batsman", "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFkF7QxZZlriRKopDtOmW7bW5zj6TSXOypfg&s" },
+                  { "name": "Alex Carey", "role": "Wicket Keeper", "avatar": "https://upload.wikimedia.org/wikipedia/commons/3/35/Alex_Carey_wicket-keeping_Ashes_2021_%28cropped_2%29.jpg" },
+                  { "name": "Pat Cummins", "role": "Bowler", "avatar": "https://upload.wikimedia.org/wikipedia/commons/6/69/Pat_Cummins_fielding_Ashes_2021_%28cropped%29.jpg" }
                 ]
               },
               "England": {
                 "captain": "Ben Stokes",
                 "players": [
-                  { "name": "Ben Stokes", "role": "All-Rounder", "avatar": "/images/players/eng/ben_stokes.png" },
-                  { "name": "Joe Root", "role": "Batsman", "avatar": "/images/players/eng/joe_root.png" },
-                  { "name": "Zak Crawley", "role": "Batsman", "avatar": "/images/players/eng/zak_crawley.png" },
-                  { "name": "Ollie Pope", "role": "Batsman", "avatar": "/images/players/eng/ollie_pope.png" },
-                  { "name": "Jofra Archer", "role": "Bowler", "avatar": "/images/players/eng/jofra_archer.png" }
+                  { "name": "Ben Stokes", "role": "All-Rounder", "avatar": "https://upload.wikimedia.org/wikipedia/commons/3/3e/BEN_STOKES_%2811704837023%29_%28cropped%29.jpg" },
+                  { "name": "Joe Root", "role": "Batsman", "avatar": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Joe_Root_HIP1487_%28cropped%29.jpg" },
+                  { "name": "Zak Crawley", "role": "Batsman", "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcqDtcJWA7cGut9DzVlAb5vLN8kWPj-ZA_Yg&s" },
+                  { "name": "Ollie Pope", "role": "Batsman", "avatar": "https://www.kiaoval.com/wp-content/uploads/2021/02/pope-e1681918098854.png" },
+                  { "name": "Jofra Archer", "role": "Bowler", "avatar": "https://documents.iplt20.com/ipl/IPLHeadshot2025/181.png" }
                 ]
               }
             },
@@ -94,15 +94,15 @@
               "Mumbai Indians": {
                 "captain": "Hardik Pandya",
                 "players": [
-                  { "name": "Rohit Sharma", "role": "Batsman", "avatar": "/images/players/ipl/rohit.png" },
-                  { "name": "Hardik Pandya", "role": "All-Rounder", "avatar": "/images/players/ipl/hardik.png" }
+                  { "name": "Rohit Sharma", "role": "Batsman", "avatar": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Prime_Minister_Of_Bharat_Shri_Narendra_Damodardas_Modi_with_Shri_Rohit_Gurunath_Sharma_%28Cropped%29.jpg" },
+                  { "name": "Hardik Pandya", "role": "All-Rounder", "avatar": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Hardik_Pandya_in_PMO_New_Delhi.jpg" }
                 ]
               },
               "Chennai Super Kings": {
                 "captain": "Ruturaj Gaikwad",
                 "players": [
-                  { "name": "MS Dhoni", "role": "Wicket Keeper", "avatar": "/images/players/ipl/dhoni.png" },
-                  { "name": "Ravindra Jadeja", "role": "All-Rounder", "avatar": "/images/players/ipl/jadeja.png" }
+                  { "name": "MS Dhoni", "role": "Wicket Keeper", "avatar": "https://documents.iplt20.com/ipl/IPLHeadshot2025/57.png" },
+                  { "name": "Ravindra Jadeja", "role": "All-Rounder", "avatar": "https://documents.iplt20.com/ipl/IPLHeadshot2025/46.png" }
                 ]
               }
             },
@@ -136,12 +136,12 @@
             "squads": {
               "Mumbai": {
                 "players": [
-                  { "name": "Prithvi Shaw", "role": "Batsman", "avatar": "/images/players/domestic/prithvi.png" }
+                  { "name": "Prithvi Shaw", "role": "Batsman", "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Prithvi_shaw.png/250px-Prithvi_shaw.png" }
                 ]
               },
               "Delhi": {
                 "players": [
-                  { "name": "Yash Dhull", "role": "Batsman", "avatar": "/images/players/domestic/yash.png" }
+                  { "name": "Yash Dhull", "role": "Batsman", "avatar": "https://documents.iplt20.com/ipl/IPLHeadshot2024/777.png" }
                 ]
               }
             }
@@ -174,13 +174,13 @@
               "Australia Women": {
                 "captain": "Alyssa Healy",
                 "players": [
-                  { "name": "Meg Lanning", "role": "Batsman", "avatar": "/images/players/women/lanning.png" }
+                  { "name": "Meg Lanning", "role": "Batsman", "avatar": "https://www.delhicapitals.in/static-assets/images/players/ipl/57908.png?v=2.08" }
                 ]
               },
               "India Women": {
                 "captain": "Harmanpreet Kaur",
                 "players": [
-                  { "name": "Smriti Mandhana", "role": "Batsman", "avatar": "/images/players/women/smriti.png" }
+                  { "name": "Smriti Mandhana", "role": "Batsman", "avatar": "https://static-files.cricket-australia.pulselive.com/headshots/288/943-camedia.png" }
                 ]
               }
             }

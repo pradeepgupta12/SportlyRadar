@@ -1,7 +1,12 @@
+
+
+
 // import React, { useState, useEffect } from 'react';
 // import { useParams, useNavigate } from 'react-router-dom';
-// import { ArrowLeft, ChevronRight } from 'lucide-react';
+// import { ArrowLeft, ChevronRight, Clock, Trophy } from 'lucide-react';
 // import basketballData from '../data/BasketballData.json';
+// import TopBasketballStories from '../data/TopBasketballStories.js';
+// import LatestNews from '../data/LatestNews.js';
 
 // const BasketballScorecard = () => {
 //   const { matchId } = useParams();
@@ -13,6 +18,14 @@
 //     const match = basketballData.live_matches.find(m => m.match_id === matchId);
 //     setMatchData(match);
 //   }, [matchId]);
+
+//   const handleStoryClick = (id) => {
+//     navigate(`/details/basketball/${id}`);
+//   };
+
+//   const handleNewsCardClick = (articleTitle) => {
+//     navigate(`/news-details/${encodeURIComponent(articleTitle)}`);
+//   };
 
 //   if (!matchData) {
 //     return (
@@ -42,7 +55,7 @@
 //   );
 
 //   const renderInfo = () => (
-//     <div className=" p-4 sm:p-6">
+//     <div className="">
 //       <h2 className="text-lg sm:text-xl font-bold mb-4 text-gray-800">MATCH INFO</h2>
 //       <div className="bg-white rounded-lg shadow-sm divide-y divide-gray-200">
 //         <InfoRow label="League" value={matchData.league} />
@@ -57,7 +70,7 @@
 //   );
 
 //   const renderLive = () => (
-//     <div className=" p-4 sm:p-6">
+//     <div className="">
 //       <h2 className="text-lg font-bold mb-4">LIVE SCORE</h2>
       
 //       <div className="bg-orange-600 text-white p-4 rounded-lg mb-4">
@@ -112,7 +125,7 @@
 //   );
 
 //   const renderStats = () => (
-//     <div className=" p-4">
+//     <div className="">
 //       <h2 className="text-lg font-bold mb-4">TEAM STATISTICS</h2>
 //       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 //         {matchData.teams.map((team, idx) => (
@@ -151,7 +164,7 @@
 //   );
 
 //   const renderPlayers = () => (
-//     <div className=" p-4">
+//     <div className="">
 //       <h2 className="text-lg font-bold mb-4">TOP PLAYERS</h2>
 //       {matchData.teams.map((team, idx) => (
 //         <div key={idx} className="mb-6">
@@ -188,7 +201,7 @@
 //   );
 
 //   const renderSquads = () => (
-//     <div className=" p-4">
+//     <div className="">
 //       <h2 className="text-lg font-bold mb-4">SQUADS</h2>
 //       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 //         {matchData.teams.map((team, idx) => (
@@ -227,7 +240,7 @@
 //   );
 
 //   const renderHighlights = () => (
-//     <div className=" p-4">
+//     <div className="">
 //       <h2 className="text-lg font-bold mb-4">HIGHLIGHTS</h2>
 //       <div className="space-y-3">
 //         {matchData.highlights.map((highlight, idx) => (
@@ -252,11 +265,12 @@
 //   };
 
 //   return (
-//     <div className="min-h-screen bg-gray-50">
-//       <div className="bg-white shadow-sm sticky top-0 z-10">
+//     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-orange-50 to-red-50">
+//       {/* Sticky Header */}
+//       <div className="bg-white shadow-sm sticky top-0 z-20">
 //         <div className="max-w-7xl mx-auto px-4 py-3">
 //           <div className="flex items-center gap-3 mb-3">
-//             <button onClick={() => navigate('/')} className="p-2 hover:bg-gray-100 rounded-full">
+//             <button onClick={() => navigate(-1)} className="p-2 hover:bg-gray-100 rounded-full">
 //               <ArrowLeft className="w-5 h-5" />
 //             </button>
 //             <div className="flex-1 min-w-0">
@@ -273,7 +287,7 @@
 //             </div>
 //           </div>
 
-//           <div className="flex gap-1 overflow-x-auto">
+//           <div className="flex gap-1 overflow-x-auto pb-2 scrollbar-hide">
 //             {tabs.map(tab => (
 //               <button
 //                 key={tab.id}
@@ -291,8 +305,144 @@
 //         </div>
 //       </div>
 
-//       <div className="max-w-7xl mx-auto">
-//         {renderContent()}
+//       {/* Main Grid Layout */}
+//       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+//         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
+
+//           {/* Left: Match Details */}
+//           <div className="lg:col-span-8">
+//             {renderContent()}
+//           </div>
+
+//           {/* Right Sidebar: Top Stories (Desktop only) */}
+//           <div className="hidden lg:block lg:col-span-4">
+//             <div className="bg-white rounded-xl shadow-md p-5 sticky top-24">
+//               <h3 className="text-lg font-bold text-gray-900 mb-5">Top Basketball Stories</h3>
+//               <div className="space-y-4">
+//                 {TopBasketballStories.data.TopBasketballStories.slice(0, 5).map((story) => (
+//                   <div
+//                     key={story.id}
+//                     onClick={() => handleStoryClick(story.id)}
+//                     className="flex gap-3 cursor-pointer group hover:bg-gray-50 rounded-lg p-3 -mx-3 transition-colors"
+//                   >
+//                     <div className="flex-shrink-0">
+//                       <img
+//                         src={story.image || 'https://via.placeholder.com/100'}
+//                         alt={story.title}
+//                         className="w-20 h-20 object-cover rounded-lg"
+//                       />
+//                     </div>
+//                     <div className="flex-1 min-w-0">
+//                       <h4 className="text-sm font-medium text-gray-900 line-clamp-3 group-hover:text-orange-600 transition-colors">
+//                         {story.title}
+//                       </h4>
+//                       <p className="text-xs text-gray-500 mt-1">
+//                         {new Date(story.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+//                       </p>
+//                     </div>
+//                   </div>
+//                 ))}
+//               </div>
+//               <button
+//                 onClick={() => navigate('/all-top-basketball-stories')}
+//                 className="mt-6 w-full text-center text-orange-600 font-medium hover:underline text-sm"
+//               >
+//                 View All Stories →
+//               </button>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+
+//       {/* Mobile: Top Basketball Stories */}
+//       <div className="lg:hidden mt-8 px-4 sm:px-6 lg:px-8">
+//         <div className="max-w-7xl mx-auto">
+//           <div className="bg-white rounded-xl shadow-md p-5">
+//             <h3 className="text-lg font-bold text-gray-900 mb-4">Top Basketball Stories</h3>
+//             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+//               {TopBasketballStories.data.TopBasketballStories.slice(0, 4).map((story) => (
+//                 <div
+//                   key={story.id}
+//                   onClick={() => handleStoryClick(story.id)}
+//                   className="cursor-pointer hover:shadow-lg transition-shadow rounded-lg overflow-hidden"
+//                 >
+//                   <img
+//                     src={story.image || 'https://via.placeholder.com/300'}
+//                     alt={story.title}
+//                     className="w-full h-40 object-cover"
+//                   />
+//                   <div className="p-3">
+//                     <h4 className="text-sm font-medium text-gray-900 line-clamp-2">
+//                       {story.title}
+//                     </h4>
+//                     <p className="text-xs text-gray-500 mt-1">
+//                       {new Date(story.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+//                     </p>
+//                   </div>
+//                 </div>
+//               ))}
+//             </div>
+//             <button
+//               onClick={() => navigate('/all-top-basketball-stories')}
+//               className="mt-4 w-full text-center text-orange-600 font-medium hover:underline text-sm"
+//             >
+//               View All Stories →
+//             </button>
+//           </div>
+//         </div>
+//       </div>
+
+//       {/* Latest Sports News */}
+//       <div className="mt-12 px-4 sm:px-6 lg:px-8">
+//         <div className="max-w-7xl mx-auto">
+//           <div className="bg-white rounded-xl shadow-md p-6">
+//             <div className="flex items-center justify-between mb-6">
+//               <h3 className="text-xl sm:text-2xl font-bold text-gray-900">
+//                 Latest Sports News
+//               </h3>
+//               <button
+//                 onClick={() => navigate('/all-latest-news')}
+//                 className="text-orange-600 hover:underline font-medium text-sm sm:text-base"
+//               >
+//                 View All →
+//               </button>
+//             </div>
+
+//             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+//               {LatestNews.data.LatestNews.slice(0, 6).map((article) => (
+//                 <div
+//                   key={article.title}
+//                   onClick={() => handleNewsCardClick(article.title)}
+//                   className="bg-gray-50 rounded-lg overflow-hidden cursor-pointer hover:shadow-lg transition-shadow"
+//                 >
+//                   <img
+//                     src={article.image || "https://via.placeholder.com/400x250"}
+//                     alt={article.title}
+//                     className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+//                   />
+//                   <div className="p-4">
+//                     <h4 className="text-base font-semibold text-gray-800 line-clamp-2 mb-2">
+//                       {article.title}
+//                     </h4>
+//                     <p className="text-sm text-gray-600 line-clamp-2 mb-3">
+//                       {article.description}
+//                     </p>
+//                     <div className="flex justify-between text-xs text-gray-500">
+//                       <span>Source: {article.source}</span>
+//                       <span>
+//                         {new Date(article.published).toLocaleDateString('en-US', {
+//                           month: 'short',
+//                           day: '2-digit',
+//                           year: 'numeric',
+//                         })}
+//                       </span>
+//                     </div>
+//                   </div>
+//                 </div>
+//               ))}
+//             </div>
+//           </div>
+//         </div>
 //       </div>
 //     </div>
 //   );
@@ -375,28 +525,36 @@ const BasketballScorecard = () => {
       
       <div className="bg-orange-600 text-white p-4 rounded-lg mb-4">
         <div className="flex justify-between items-center mb-4">
-          <div className="flex items-center gap-3">
-            <img src={matchData.images.team1_flag} alt={matchData.teams[0].name} className="w-12 h-12 object-contain" />
+          <div className="flex items-center gap-4">
+            <img 
+              src={matchData.images.team1_flag} 
+              alt={matchData.teams[0].name} 
+              className="w-14 h-14 sm:w-16 sm:h-16 object-contain rounded" 
+            />
             <div>
-              <p className="font-semibold text-lg">{matchData.teams[0].name}</p>
-              <p className="text-xs opacity-90">{matchData.teams[0].short_name}</p>
+              <p className="font-semibold text-lg sm:text-xl">{matchData.teams[0].name}</p>
+              <p className="text-xs sm:text-sm opacity-90">{matchData.teams[0].short_name}</p>
             </div>
           </div>
-          <div className="text-4xl font-bold">{matchData.teams[0].total_points}</div>
+          <div className="text-4xl sm:text-5xl font-bold">{matchData.teams[0].total_points}</div>
         </div>
 
-        <div className="text-center py-2 text-sm font-semibold">
+        <div className="text-center py-2 text-sm sm:text-base font-semibold">
           Q{matchData.match_info.quarter} • {matchData.match_info.time_remaining} remaining
         </div>
 
         <div className="flex justify-between items-center">
-          <div className="text-4xl font-bold">{matchData.teams[1].total_points}</div>
-          <div className="flex items-center gap-3">
+          <div className="text-4xl sm:text-5xl font-bold">{matchData.teams[1].total_points}</div>
+          <div className="flex items-center gap-4">
             <div className="text-right">
-              <p className="font-semibold text-lg">{matchData.teams[1].name}</p>
-              <p className="text-xs opacity-90">{matchData.teams[1].short_name}</p>
+              <p className="font-semibold text-lg sm:text-xl">{matchData.teams[1].name}</p>
+              <p className="text-xs sm:text-sm opacity-90">{matchData.teams[1].short_name}</p>
             </div>
-            <img src={matchData.images.team2_flag} alt={matchData.teams[1].name} className="w-12 h-12 object-contain" />
+            <img 
+              src={matchData.images.team2_flag} 
+              alt={matchData.teams[1].name} 
+              className="w-14 h-14 sm:w-16 sm:h-16 object-contain rounded" 
+            />
           </div>
         </div>
       </div>
@@ -484,7 +642,15 @@ const BasketballScorecard = () => {
               <tbody className="divide-y">
                 {team.player_stats.map((player, pidx) => (
                   <tr key={pidx} className="hover:bg-gray-50">
-                    <td className="p-2 font-medium text-blue-600">{player.name}</td>
+                    <td className="p-2 font-medium text-blue-600 flex items-center gap-3">
+                      <img
+                        src={player.avatar_url || 'https://via.placeholder.com/40?text=' + player.name.charAt(0)}
+                        alt={player.name}
+                        className="w-10 h-10 rounded-full object-cover border border-gray-200 flex-shrink-0"
+                        onError={(e) => { e.target.src = 'https://via.placeholder.com/40?text=' + player.name.charAt(0); }}
+                      />
+                      {player.name}
+                    </td>
                     <td className="p-2 text-center font-semibold">{player.points}</td>
                     <td className="p-2 text-center">{player.rebounds}</td>
                     <td className="p-2 text-center">{player.assists}</td>
@@ -514,16 +680,47 @@ const BasketballScorecard = () => {
               <div className="space-y-2">
                 {team.squad.players.map((player, pidx) => (
                   <div key={pidx} className="flex items-center justify-between p-2 bg-white rounded">
-                    <div>
-                      <span className="text-sm font-medium">{player.name}</span>
-                      {player.is_captain && <span className="ml-2 text-xs bg-yellow-400 text-black px-2 py-0.5 rounded">C</span>}
+                    <div className="flex items-center gap-3">
+                      <img 
+                        src={player.avatar_url || 'https://via.placeholder.com/40?text=' + player.name.charAt(0)} 
+                        alt={player.name} 
+                        className="w-10 h-10 rounded-full object-cover border border-gray-200 flex-shrink-0"
+                        onError={(e) => { e.target.src = 'https://via.placeholder.com/40?text=' + player.name.charAt(0); }}
+                      />
+                      <div>
+                        <span className="text-sm font-medium">{player.name}</span>
+                        {player.is_captain && <span className="ml-2 text-xs bg-yellow-400 text-black px-2 py-0.5 rounded">C</span>}
+                      </div>
                     </div>
                     <span className="text-xs text-gray-600">{player.role}</span>
                   </div>
                 ))}
               </div>
 
-              <h4 className="font-semibold mt-4 mb-2 text-sm">Coaching Staff</h4>
+              {/* Benched Players */}
+              {team.squad.benched_players && team.squad.benched_players.length > 0 && (
+                <>
+                  <h4 className="font-semibold mt-6 mb-2 text-sm">Benched Players</h4>
+                  <div className="space-y-2">
+                    {team.squad.benched_players.map((player, pidx) => (
+                      <div key={pidx} className="flex items-center justify-between p-2 bg-white rounded">
+                        <div className="flex items-center gap-3">
+                          <img 
+                            src={player.avatar_url || 'https://via.placeholder.com/40?text=' + player.name.charAt(0)} 
+                            alt={player.name} 
+                            className="w-10 h-10 rounded-full object-cover border border-gray-200 flex-shrink-0"
+                            onError={(e) => { e.target.src = 'https://via.placeholder.com/40?text=' + player.name.charAt(0); }}
+                          />
+                          <span className="text-sm font-medium">{player.name}</span>
+                        </div>
+                        <span className="text-xs text-gray-600">{player.role}</span>
+                      </div>
+                    ))}
+                  </div>
+                </>
+              )}
+
+              <h4 className="font-semibold mt-6 mb-2 text-sm">Coaching Staff</h4>
               <div className="space-y-2">
                 {team.squad.supporting_staff.map((staff, sidx) => (
                   <div key={sidx} className="flex items-center justify-between p-2 bg-white rounded">
@@ -567,7 +764,7 @@ const BasketballScorecard = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-orange-50 to-red-50">
       {/* Sticky Header */}
-      <div className="bg-white shadow-sm sticky top-0 z-20">
+      <div className="bg-white shadow-sm  z-20">
         <div className="max-w-7xl mx-auto px-4 py-3">
           <div className="flex items-center gap-3 mb-3">
             <button onClick={() => navigate(-1)} className="p-2 hover:bg-gray-100 rounded-full">

@@ -1,13 +1,25 @@
+
+
 // import React, { useState, useEffect } from 'react';
 // import { useParams, useNavigate } from 'react-router-dom';
 // import { ArrowLeft, ChevronRight } from 'lucide-react';
 // import hockeyData from '../data/LiveHockeyMatchDetail.js';
+// import TopHockeyStories from '../data/TopHockeyStories.js';
+// import LatestNews from '../data/LatestNews.js';
 
 // const HockeyScorecard = () => {
 //   const { matchId } = useParams();
 //   const navigate = useNavigate();
 //   const [activeTab, setActiveTab] = useState('info');
 //   const [matchData, setMatchData] = useState(null);
+
+//   const handleStoryClick = (id) => {
+//     navigate(`/details/hockey/${id}`);
+//   };
+
+//   const handleNewsCardClick = (articleTitle) => {
+//     navigate(`/news-details/${encodeURIComponent(articleTitle)}`);
+//   };
 
 //   useEffect(() => {
 //     const match = hockeyData.data.matches.find(m => m.match_id === matchId);
@@ -42,7 +54,7 @@
 //   );
 
 //   const renderInfo = () => (
-//     <div className=" p-4 sm:p-6">
+//     <div className="p-4 sm:p-6">
 //       <h2 className="text-lg sm:text-xl font-bold mb-4 text-gray-800">MATCH INFO</h2>
 //       <div className="bg-white rounded-lg shadow-sm divide-y divide-gray-200">
 //         <InfoRow label="Series" value={matchData.series} />
@@ -58,7 +70,7 @@
 //   );
 
 //   const renderLive = () => (
-//     <div className=" p-4 sm:p-6">
+//     <div className="p-4 sm:p-6">
 //       <h2 className="text-lg font-bold mb-4">LIVE MATCH</h2>
       
 //       <div className="bg-red-600 text-white p-4 rounded-lg mb-4">
@@ -119,7 +131,7 @@
 //   );
 
 //   const renderScorecard = () => (
-//     <div className=" p-4">
+//     <div className="p-4">
 //       <h2 className="text-lg font-bold mb-4">SCORECARD</h2>
       
 //       <div className="space-y-6">
@@ -176,7 +188,9 @@
 //                   </div>
 //                   <div className="flex justify-between">
 //                     <span>Penalty Corners</span>
-//                     <span className="font-semibold">{team.penalty_corners_awarded} ({team.penalty_corners_converted} converted)</span>
+//                     <span className="font-semibold">
+//                       {team.penalty_corners_awarded} ({team.penalty_corners_converted} converted)
+//                     </span>
 //                   </div>
 //                   <div className="flex justify-between">
 //                     <span>Possession</span>
@@ -200,7 +214,7 @@
 //   );
 
 //   const renderSquads = () => (
-//     <div className=" p-4">
+//     <div className="p-4">
 //       <h2 className="text-lg font-bold mb-4">SQUADS</h2>
 //       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 //         {matchData.squads.teams.map((team, idx) => (
@@ -239,7 +253,7 @@
 //   );
 
 //   const renderCommentary = () => (
-//     <div className=" p-4">
+//     <div className="p-4">
 //       <h2 className="text-lg font-bold mb-4">COMMENTARY</h2>
 //       <div className="space-y-3">
 //         {matchData.commentary.map((comment, idx) => (
@@ -256,7 +270,7 @@
 //   );
 
 //   const renderHighlights = () => (
-//     <div className=" p-4">
+//     <div className="p-4">
 //       <h2 className="text-lg font-bold mb-4">HIGHLIGHTS</h2>
 //       <div className="space-y-4">
 //         {matchData.highlights.map((highlight, idx) => (
@@ -289,11 +303,12 @@
 //   };
 
 //   return (
-//     <div className="min-h-screen bg-gray-50">
+//     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50">
+//       {/* Sticky Header with Tabs */}
 //       <div className="bg-white shadow-sm sticky top-0 z-10">
 //         <div className="max-w-7xl mx-auto px-4 py-3">
 //           <div className="flex items-center gap-3 mb-3">
-//             <button onClick={() => navigate('/')} className="p-2 hover:bg-gray-100 rounded-full">
+//             <button onClick={() => navigate(-1)} className="p-2 hover:bg-gray-100 rounded-full">
 //               <ArrowLeft className="w-5 h-5" />
 //             </button>
 //             <div className="flex-1 min-w-0">
@@ -310,12 +325,12 @@
 //             </div>
 //           </div>
 
-//           <div className="flex gap-1 overflow-x-auto">
+//           <div className="flex gap-1 overflow-x-auto scrollbar-hide">
 //             {tabs.map(tab => (
 //               <button
 //                 key={tab.id}
 //                 onClick={() => setActiveTab(tab.id)}
-//                 className={`px-4 py-2 text-sm font-medium whitespace-nowrap ${
+//                 className={`px-4 py-2 text-sm font-medium whitespace-nowrap transition-colors ${
 //                   activeTab === tab.id
 //                     ? 'text-red-600 border-b-2 border-red-600'
 //                     : 'text-gray-600 hover:text-gray-900'
@@ -328,14 +343,151 @@
 //         </div>
 //       </div>
 
-//       <div className="max-w-7xl mx-auto">
-//         {renderContent()}
+//       {/* Main Grid Layout - Same as Live Scores Page */}
+//       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+//         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
+          
+//           {/* Left: Match Details Content */}
+//           <div className="lg:col-span-8 space-y-6">
+//             {renderContent()}
+//           </div>
+
+//           {/* Right Sidebar: Top Hockey Stories (Large Screens Only) */}
+//           <div className="hidden lg:block lg:col-span-4">
+//             <div className="bg-white rounded-xl shadow-md p-5 sticky top-24">
+//               <h3 className="text-lg font-bold text-gray-900 mb-5">Top Hockey Stories</h3>
+//               <div className="space-y-4">
+//                 {TopHockeyStories.data.TopHockeyStories.slice(0, 5).map((story) => (
+//                   <div
+//                     key={story.id}
+//                     onClick={() => handleStoryClick(story.id)}
+//                     className="flex gap-3 cursor-pointer group hover:bg-gray-50 rounded-lg p-3 -mx-3 transition-colors"
+//                   >
+//                     <div className="flex-shrink-0">
+//                       <img
+//                         src={story.image || 'https://via.placeholder.com/100'}
+//                         alt={story.title}
+//                         className="w-20 h-20 object-cover rounded-lg"
+//                       />
+//                     </div>
+//                     <div className="flex-1 min-w-0">
+//                       <h4 className="text-sm font-medium text-gray-900 line-clamp-3 group-hover:text-blue-600 transition-colors">
+//                         {story.title}
+//                       </h4>
+//                       <p className="text-xs text-gray-500 mt-1">
+//                         {new Date(story.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+//                       </p>
+//                     </div>
+//                   </div>
+//                 ))}
+//               </div>
+//               <button
+//                 onClick={() => navigate('/all-top-hockey-stories')}
+//                 className="mt-6 w-full text-center text-blue-600 font-medium hover:underline text-sm"
+//               >
+//                 View All Stories →
+//               </button>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+
+//       {/* Mobile Top Hockey Stories */}
+//       <div className="lg:hidden mt-10 px-4 sm:px-6 lg:px-8">
+//         <div className="max-w-7xl mx-auto">
+//           <div className="bg-white rounded-xl shadow-md p-5">
+//             <h3 className="text-lg font-bold text-gray-900 mb-4">Top Hockey Stories</h3>
+//             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+//               {TopHockeyStories.data.TopHockeyStories.slice(0, 4).map((story) => (
+//                 <div
+//                   key={story.id}
+//                   onClick={() => handleStoryClick(story.id)}
+//                   className="cursor-pointer hover:shadow-lg transition-shadow rounded-lg overflow-hidden"
+//                 >
+//                   <img
+//                     src={story.image || 'https://via.placeholder.com/300'}
+//                     alt={story.title}
+//                     className="w-full h-40 object-cover"
+//                   />
+//                   <div className="p-3">
+//                     <h4 className="text-sm font-medium text-gray-900 line-clamp-2">
+//                       {story.title}
+//                     </h4>
+//                     <p className="text-xs text-gray-500 mt-1">
+//                       {new Date(story.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+//                     </p>
+//                   </div>
+//                 </div>
+//               ))}
+//             </div>
+//             <button
+//               onClick={() => navigate('/all-top-hockey-stories')}
+//               className="mt-4 w-full text-center text-blue-600 font-medium hover:underline text-sm"
+//             >
+//               View All Stories →
+//             </button>
+//           </div>
+//         </div>
+//       </div>
+
+//       {/* Latest Sports News Section (All Devices) */}
+//       <div className="mt-12 px-4 sm:px-6 lg:px-8">
+//         <div className="max-w-7xl mx-auto">
+//           <div className="bg-white rounded-xl shadow-md p-6">
+//             <div className="flex items-center justify-between mb-6">
+//               <h3 className="text-xl sm:text-2xl font-bold text-gray-900">
+//                 Latest Sports News
+//               </h3>
+//               <button
+//                 onClick={() => navigate('/all-latest-news')}
+//                 className="text-blue-600 hover:underline font-medium text-sm sm:text-base"
+//               >
+//                 View All →
+//               </button>
+//             </div>
+
+//             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+//               {LatestNews.data.LatestNews.slice(0, 6).map((article) => (
+//                 <div
+//                   key={article.title}
+//                   onClick={() => handleNewsCardClick(article.title)}
+//                   className="bg-gray-50 rounded-lg overflow-hidden cursor-pointer hover:shadow-lg transition-shadow"
+//                 >
+//                   <img
+//                     src={article.image || "https://via.placeholder.com/400x250"}
+//                     alt={article.title}
+//                     className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+//                   />
+//                   <div className="p-4">
+//                     <h4 className="text-base font-semibold text-gray-800 line-clamp-2 mb-2">
+//                       {article.title}
+//                     </h4>
+//                     <p className="text-sm text-gray-600 line-clamp-2 mb-3">
+//                       {article.description}
+//                     </p>
+//                     <div className="flex justify-between text-xs text-gray-500">
+//                       <span>Source: {article.source}</span>
+//                       <span>
+//                         {new Date(article.published).toLocaleDateString('en-US', {
+//                           month: 'short',
+//                           day: '2-digit',
+//                           year: 'numeric',
+//                         })}
+//                       </span>
+//                     </div>
+//                   </div>
+//                 </div>
+//               ))}
+//             </div>
+//           </div>
+//         </div>
 //       </div>
 //     </div>
 //   );
 // };
 
 // export default HockeyScorecard;
+
 
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
@@ -413,7 +565,12 @@ const HockeyScorecard = () => {
       <div className="bg-red-600 text-white p-4 rounded-lg mb-4">
         <div className="flex justify-between items-center mb-4">
           <div className="flex items-center gap-3">
-            <img src={matchData.images.team1_flag} alt={matchData.squads.teams[0].name} className="w-12 h-12 object-contain" />
+            <img 
+              src={matchData.squads.teams[0].logo_url} 
+              alt={matchData.squads.teams[0].name} 
+              className="w-12 h-12 object-contain rounded-full bg-white p-1" 
+              onError={(e) => { e.target.src = matchData.images.team1_flag; }}
+            />
             <div>
               <p className="font-semibold text-lg">{matchData.squads.teams[0].name}</p>
               <p className="text-xs opacity-90">{matchData.squads.teams[0].short_name}</p>
@@ -433,7 +590,12 @@ const HockeyScorecard = () => {
               <p className="font-semibold text-lg">{matchData.squads.teams[1].name}</p>
               <p className="text-xs opacity-90">{matchData.squads.teams[1].short_name}</p>
             </div>
-            <img src={matchData.images.team2_flag} alt={matchData.squads.teams[1].name} className="w-12 h-12 object-contain" />
+            <img 
+              src={matchData.squads.teams[1].logo_url} 
+              alt={matchData.squads.teams[1].name} 
+              className="w-12 h-12 object-contain rounded-full bg-white p-1" 
+              onError={(e) => { e.target.src = matchData.images.team2_flag; }}
+            />
           </div>
         </div>
       </div>
@@ -491,7 +653,15 @@ const HockeyScorecard = () => {
                 <tbody className="divide-y">
                   {quarter.teams.map((team, tidx) => (
                     <tr key={tidx} className="hover:bg-gray-50">
-                      <td className="p-2 font-medium">{team.team}</td>
+                      <td className="p-2 font-medium flex items-center gap-2">
+                        <img 
+                          src={matchData.squads.teams[tidx].logo_url} 
+                          alt={team.team} 
+                          className="w-6 h-6 object-contain rounded-full bg-white p-0.5" 
+                          onError={(e) => { e.target.src = matchData.images[`team${tidx+1}_flag`]; }}
+                        />
+                        {team.team}
+                      </td>
                       <td className="p-2 text-center font-semibold">{team.goals}</td>
                       <td className="p-2 text-center">{team.shots}</td>
                       <td className="p-2 text-center">{team.circle_entries}</td>
@@ -509,7 +679,15 @@ const HockeyScorecard = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {matchData.scorecard.team_stats.map((team, idx) => (
               <div key={idx} className="bg-gray-50 p-4 rounded">
-                <h4 className="font-semibold mb-3 text-center">{team.team}</h4>
+                <h4 className="font-semibold mb-3 text-center flex items-center justify-center gap-2">
+                  <img 
+                    src={matchData.squads.teams[idx].logo_url} 
+                    alt={team.team} 
+                    className="w-8 h-8 object-contain rounded-full bg-white p-1" 
+                    onError={(e) => { e.target.src = matchData.images[`team${idx+1}_flag`]; }}
+                  />
+                  {team.team}
+                </h4>
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between">
                     <span>Total Goals</span>
@@ -555,30 +733,67 @@ const HockeyScorecard = () => {
       <h2 className="text-lg font-bold mb-4">SQUADS</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {matchData.squads.teams.map((team, idx) => (
-          <div key={idx}>
-            <div className="bg-red-600 text-white p-3 rounded-t-lg">
-              <h3 className="font-semibold">{team.name}</h3>
+          <div key={idx} className="bg-white rounded-xl shadow-md overflow-hidden">
+            <div className="bg-red-600 text-white p-4 flex items-center gap-3">
+              <img 
+                src={team.logo_url} 
+                alt={team.name} 
+                className="w-12 h-12 object-contain rounded-full bg-white p-1" 
+                onError={(e) => { e.target.src = matchData.images[`team${idx+1}_flag`]; }}
+              />
+              <h3 className="font-semibold text-lg">{team.name}</h3>
             </div>
-            <div className="bg-gray-50 p-4 rounded-b-lg">
-              <h4 className="font-semibold mb-2 text-sm">Players</h4>
-              <div className="space-y-2">
+            <div className="p-4">
+              <h4 className="font-semibold mb-3 text-sm border-b pb-2">Playing XI / Players</h4>
+              <div className="space-y-3">
                 {team.players.map((player, pidx) => (
-                  <div key={pidx} className="flex items-center justify-between p-2 bg-white rounded">
-                    <div>
-                      <span className="text-sm font-medium">{player.name}</span>
-                      {player.is_captain && <span className="ml-2 text-xs bg-yellow-400 text-black px-2 py-0.5 rounded">C</span>}
+                  <div key={pidx} className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
+                    <img 
+                      src={player.avatar_url} 
+                      alt={player.name} 
+                      className="w-10 h-10 rounded-full object-cover border-2 border-gray-200" 
+                    />
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2">
+                        <span className="font-medium text-gray-800">{player.name}</span>
+                        {player.is_captain && <span className="text-xs bg-yellow-400 text-black px-2 py-0.5 rounded-full font-bold">C</span>}
+                      </div>
+                      <p className="text-xs text-gray-600">{player.role}</p>
                     </div>
-                    <span className="text-xs text-gray-600">{player.role}</span>
                   </div>
                 ))}
               </div>
 
-              <h4 className="font-semibold mt-4 mb-2 text-sm">Coaching Staff</h4>
-              <div className="space-y-2">
+              <h4 className="font-semibold mt-6 mb-3 text-sm border-b pb-2">Benched Players</h4>
+              <div className="space-y-3">
+                {team.benched_players.map((player, bidx) => (
+                  <div key={bidx} className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
+                    <img 
+                      src={player.avatar_url} 
+                      alt={player.name} 
+                      className="w-10 h-10 rounded-full object-cover border-2 border-gray-200" 
+                    />
+                    <div className="flex-1">
+                      <span className="font-medium text-gray-800">{player.name}</span>
+                      <p className="text-xs text-gray-600">{player.role}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <h4 className="font-semibold mt-6 mb-3 text-sm border-b pb-2">Coaching Staff</h4>
+              <div className="space-y-3">
                 {team.supporting_staff.map((staff, sidx) => (
-                  <div key={sidx} className="flex items-center justify-between p-2 bg-white rounded">
-                    <span className="text-sm">{staff.name}</span>
-                    <span className="text-xs text-gray-600">{staff.role}</span>
+                  <div key={sidx} className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
+                    <img 
+                      src={staff.avatar_url} 
+                      alt={staff.name} 
+                      className="w-10 h-10 rounded-full object-cover border-2 border-gray-200" 
+                    />
+                    <div className="flex-1">
+                      <span className="font-medium text-gray-800">{staff.name}</span>
+                      <p className="text-xs text-gray-600">{staff.role}</p>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -642,7 +857,7 @@ const HockeyScorecard = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50">
       {/* Sticky Header with Tabs */}
-      <div className="bg-white shadow-sm sticky top-0 z-10">
+      <div className="bg-white shadow-sm    z-10">
         <div className="max-w-7xl mx-auto px-4 py-3">
           <div className="flex items-center gap-3 mb-3">
             <button onClick={() => navigate(-1)} className="p-2 hover:bg-gray-100 rounded-full">

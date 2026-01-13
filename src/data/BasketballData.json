@@ -13,8 +13,8 @@
         "country": "Japan"
       },
       "images": {
-        "team1_flag": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/1200px-Flag_of_Japan.svg.png",
-        "team2_flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Flag_of_Australia_%28converted%29.svg/330px-Flag_of_Australia_%28converted%29.svg.png"
+        "team1_flag": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/1280px-Flag_of_Japan.svg.png",
+        "team2_flag": "https://upload.wikimedia.org/wikipedia/commons/8/88/Flag_of_Australia_%28converted%29.svg"
       },
       "match_info": {
         "tip_off": "Australia won the tip-off",
@@ -75,6 +75,7 @@
             {
               "player_id": "p10",
               "name": "Yuta Watanabe",
+              "avatar_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtpLkfkvvuajCcl5MFE82DF4lK-a_2V65eXQ&s",
               "points": 18,
               "rebounds": 5,
               "assists": 3,
@@ -86,6 +87,7 @@
             {
               "player_id": "p11",
               "name": "Rui Hachimura",
+              "avatar_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Rui_Hachimura_%2852381582438%29.jpg/250px-Rui_Hachimura_%2852381582438%29.jpg",
               "points": 14,
               "rebounds": 6,
               "assists": 2,
@@ -97,17 +99,17 @@
           ],
           "squad": {
             "players": [
-              {"id": "p10", "name": "Yuta Watanabe", "role": "Small Forward", "is_captain": true},
-              {"id": "p11", "name": "Rui Hachimura", "role": "Power Forward", "is_captain": false},
-              {"id": "p12", "name": "Keisei Tominaga", "role": "Shooting Guard", "is_captain": false},
-              {"id": "p134", "name": "Makoto Hiejima", "role": "Point Guard", "is_captain": false},
-              {"id": "p135", "name": "Yuki Togashi", "role": "Point Guard", "is_captain": false},
-              {"id": "p136", "name": "Josh Hawkinson", "role": "Center", "is_captain": false},
-              {"id": "p137", "name": "Yudai Baba", "role": "Shooting Guard", "is_captain": false},
-              {"id": "p138", "name": "Hirotaka Yoshii", "role": "Small Forward", "is_captain": false},
-              {"id": "p139", "name": "Kaito Nakayama", "role": "Point Guard", "is_captain": false},
-              {"id": "p140", "name": "Aki Chambers", "role": "Power Forward", "is_captain": false},
-              {"id": "p141", "name": "Soichiro Inoue", "role": "Center", "is_captain": false}
+              {"id": "p10", "name": "Yuta Watanabe", "role": "Small Forward", "is_captain": true, "avatar_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtpLkfkvvuajCcl5MFE82DF4lK-a_2V65eXQ&s"},
+              {"id": "p11", "name": "Rui Hachimura", "role": "Power Forward", "is_captain": false, "avatar_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtpLkfkvvuajCcl5MFE82DF4lK-a_2V65eXQ&s"},
+              {"id": "p12", "name": "Keisei Tominaga", "role": "Shooting Guard", "is_captain": false, "avatar_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtpLkfkvvuajCcl5MFE82DF4lK-a_2V65eXQ&s"},
+              {"id": "p134", "name": "Makoto Hiejima", "role": "Point Guard", "is_captain": false, "avatar_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtpLkfkvvuajCcl5MFE82DF4lK-a_2V65eXQ&s"},
+              {"id": "p135", "name": "Yuki Togashi", "role": "Point Guard", "is_captain": false, "avatar_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtpLkfkvvuajCcl5MFE82DF4lK-a_2V65eXQ&s"},
+              {"id": "p136", "name": "Josh Hawkinson", "role": "Center", "is_captain": false, "avatar_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtpLkfkvvuajCcl5MFE82DF4lK-a_2V65eXQ&s"},
+              {"id": "p137", "name": "Yudai Baba", "role": "Shooting Guard", "is_captain": false, "avatar_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtpLkfkvvuajCcl5MFE82DF4lK-a_2V65eXQ&s"},
+              {"id": "p138", "name": "Hirotaka Yoshii", "role": "Small Forward", "is_captain": false, "avatar_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtpLkfkvvuajCcl5MFE82DF4lK-a_2V65eXQ&s"},
+              {"id": "p139", "name": "Kaito Nakayama", "role": "Point Guard", "is_captain": false, "avatar_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtpLkfkvvuajCcl5MFE82DF4lK-a_2V65eXQ&s"},
+              {"id": "p140", "name": "Aki Chambers", "role": "Power Forward", "is_captain": false, "avatar_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtpLkfkvvuajCcl5MFE82DF4lK-a_2V65eXQ&s"},
+              {"id": "p141", "name": "Soichiro Inoue", "role": "Center", "is_captain": false, "avatar_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtpLkfkvvuajCcl5MFE82DF4lK-a_2V65eXQ&s"}
             ],
             "supporting_staff": [
               {"id": "s10", "name": "Tom Hovasse", "role": "Head Coach"},
@@ -115,9 +117,9 @@
               {"id": "s12", "name": "Hiroshi Tanaka", "role": "Physio"}
             ],
             "benched_players": [
-              {"id": "p142", "name": "Tenketsu Harimoto", "role": "Small Forward", "is_captain": false},
-              {"id": "p143", "name": "Kenta Hirose", "role": "Shooting Guard", "is_captain": false},
-              {"id": "p144", "name": "Kenta Maeda", "role": "Power Forward", "is_captain": false}
+              {"id": "p142", "name": "Tenketsu Harimoto", "role": "Small Forward", "is_captain": false, "avatar_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Flag_of_Japan.svg/1200px-Flag_of_Japan.svg.png"},
+              {"id": "p143", "name": "Kenta Hirose", "role": "Shooting Guard", "is_captain": false, "avatar_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Flag_of_Japan.svg/1200px-Flag_of_Japan.svg.png"},
+              {"id": "p144", "name": "Kenta Maeda", "role": "Power Forward", "is_captain": false, "avatar_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Flag_of_Japan.svg/1200px-Flag_of_Japan.svg.png"}
             ]
           },
           "country": "Japan"
@@ -144,6 +146,7 @@
             {
               "player_id": "p26",
               "name": "Josh Giddey",
+              "avatar_url": "https://a.espncdn.com/i/headshots/nba/players/full/4871145.png",
               "points": 20,
               "rebounds": 7,
               "assists": 8,
@@ -155,6 +158,7 @@
             {
               "player_id": "p25",
               "name": "Patty Mills",
+              "avatar_url": "https://a.espncdn.com/i/headshots/nba/players/full/2484.png",
               "points": 15,
               "rebounds": 3,
               "assists": 4,
@@ -166,17 +170,17 @@
           ],
           "squad": {
             "players": [
-              {"id": "p25", "name": "Patty Mills", "role": "Point Guard", "is_captain": true},
-              {"id": "p26", "name": "Josh Giddey", "role": "Point Guard", "is_captain": false},
-              {"id": "p27", "name": "Joe Ingles", "role": "Small Forward", "is_captain": false},
-              {"id": "p189", "name": "Dante Exum", "role": "Shooting Guard", "is_captain": false},
-              {"id": "p190", "name": "Matisse Thybulle", "role": "Small Forward", "is_captain": false},
-              {"id": "p191", "name": "Duop Reath", "role": "Center", "is_captain": false},
-              {"id": "p192", "name": "Jock Landale", "role": "Center", "is_captain": false},
-              {"id": "p193", "name": "Dyson Daniels", "role": "Point Guard", "is_captain": false},
-              {"id": "p194", "name": "Nick Kay", "role": "Power Forward", "is_captain": false},
-              {"id": "p195", "name": "Xavier Cooks", "role": "Power Forward", "is_captain": false},
-              {"id": "p196", "name": "Chris Goulding", "role": "Shooting Guard", "is_captain": false}
+              {"id": "p25", "name": "Patty Mills", "role": "Point Guard", "is_captain": true, "avatar_url": "https://a.espncdn.com/i/headshots/nba/players/full/2484.png"},
+              {"id": "p26", "name": "Josh Giddey", "role": "Point Guard", "is_captain": false, "avatar_url": "https://a.espncdn.com/i/headshots/nba/players/full/4871145.png"},
+              {"id": "p27", "name": "Joe Ingles", "role": "Small Forward", "is_captain": false, "avatar_url": "https://www.espn.com/nba/player/_/id/2968436/joe-ingles"},
+              {"id": "p189", "name": "Dante Exum", "role": "Shooting Guard", "is_captain": false, "avatar_url": "https://www.espn.com/nba/player/_/id/3102528/dante-exum"},
+              {"id": "p190", "name": "Matisse Thybulle", "role": "Small Forward", "is_captain": false, "avatar_url": "https://www.espn.com/nba/player/_/id/3907498/matisse-thybulle"},
+              {"id": "p191", "name": "Duop Reath", "role": "Center", "is_captain": false, "avatar_url": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4067017.png"},
+              {"id": "p192", "name": "Jock Landale", "role": "Center", "is_captain": false, "avatar_url": "https://www.espn.com/nba/player/_/id/3146557/jock-landale"},
+              {"id": "p193", "name": "Dyson Daniels", "role": "Point Guard", "is_captain": false, "avatar_url": "https://a.espncdn.com/i/headshots/nba/players/full/4594268.png"},
+              {"id": "p194", "name": "Nick Kay", "role": "Power Forward", "is_captain": false, "avatar_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Flag_of_Australia_%28converted%29.svg/330px-Flag_of_Australia_%28converted%29.svg.png"},
+              {"id": "p195", "name": "Xavier Cooks", "role": "Power Forward", "is_captain": false, "avatar_url": "https://a.espncdn.com/i/headshots/nba/players/full/4067018.png"},
+              {"id": "p196", "name": "Chris Goulding", "role": "Shooting Guard", "is_captain": false, "avatar_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Flag_of_Australia_%28converted%29.svg/330px-Flag_of_Australia_%28converted%29.svg.png"}
             ],
             "supporting_staff": [
               {"id": "s25", "name": "Brian Goorjian", "role": "Head Coach"},
@@ -184,9 +188,9 @@
               {"id": "s27", "name": "Adam Caporn", "role": "Physio"}
             ],
             "benched_players": [
-              {"id": "p197", "name": "Will Magnay", "role": "Center", "is_captain": false},
-              {"id": "p198", "name": "Jack White", "role": "Small Forward", "is_captain": false},
-              {"id": "p199", "name": "Sam Froling", "role": "Power Forward", "is_captain": false}
+              {"id": "p197", "name": "Will Magnay", "role": "Center", "is_captain": false, "avatar_url": "https://a.espncdn.com/i/headshots/nba/players/full/4067019.png"},
+              {"id": "p198", "name": "Jack White", "role": "Small Forward", "is_captain": false, "avatar_url": "https://a.espncdn.com/i/headshots/nba/players/full/4594269.png"},
+              {"id": "p199", "name": "Sam Froling", "role": "Power Forward", "is_captain": false, "avatar_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Flag_of_Australia_%28converted%29.svg/330px-Flag_of_Australia_%28converted%29.svg.png"}
             ]
           },
           "country": "Australia"
@@ -263,6 +267,7 @@
             {
               "player_id": "p37",
               "name": "Breanna Stewart",
+              "avatar_url": "https://a.espncdn.com/i/headshots/wnba/players/full/2998928.png",
               "points": 15,
               "rebounds": 8,
               "assists": 4,
@@ -274,6 +279,7 @@
             {
               "player_id": "p38",
               "name": "Sabrina Ionescu",
+              "avatar_url": "https://a.espncdn.com/i/headshots/wnba/players/full/4433404.png",
               "points": 12,
               "rebounds": 3,
               "assists": 5,
@@ -285,17 +291,17 @@
           ],
           "squad": {
             "players": [
-              {"id": "p37", "name": "Breanna Stewart", "role": "Power Forward", "is_captain": true},
-              {"id": "p38", "name": "Sabrina Ionescu", "role": "Point Guard", "is_captain": false},
-              {"id": "p39", "name": "Jonquel Jones", "role": "Center", "is_captain": false},
-              {"id": "p228", "name": "Betnijah Laney", "role": "Small Forward", "is_captain": false},
-              {"id": "p229", "name": "Courtney Vandersloot", "role": "Point Guard", "is_captain": false},
-              {"id": "p230", "name": "Kayla Thornton", "role": "Small Forward", "is_captain": false},
-              {"id": "p231", "name": "Natasha Howard", "role": "Power Forward", "is_captain": false},
-              {"id": "p232", "name": "Leonie Fiebich", "role": "Shooting Guard", "is_captain": false},
-              {"id": "p233", "name": "Nyara Sabally", "role": "Center", "is_captain": false},
-              {"id": "p234", "name": "Ivana Dojkic", "role": "Shooting Guard", "is_captain": false},
-              {"id": "p235", "name": "Marquesha Davis", "role": "Small Forward", "is_captain": false}
+              {"id": "p37", "name": "Breanna Stewart", "role": "Power Forward", "is_captain": true, "avatar_url": "https://a.espncdn.com/i/headshots/wnba/players/full/2998928.png"},
+              {"id": "p38", "name": "Sabrina Ionescu", "role": "Point Guard", "is_captain": false, "avatar_url": "https://a.espncdn.com/i/headshots/wnba/players/full/4433404.png"},
+              {"id": "p39", "name": "Jonquel Jones", "role": "Center", "is_captain": false, "avatar_url": "https://www.espn.com/wnba/player/_/id/2999101/jonquel-jones"},
+              {"id": "p228", "name": "Betnijah Laney", "role": "Small Forward", "is_captain": false, "avatar_url": "https://www.espn.com/wnba/player/_/id/2593770/betnijah-laney-hamilton"},
+              {"id": "p229", "name": "Courtney Vandersloot", "role": "Point Guard", "is_captain": false, "avatar_url": "https://a.espncdn.com/i/headshots/wnba/players/full/1078.png"},
+              {"id": "p230", "name": "Kayla Thornton", "role": "Small Forward", "is_captain": false, "avatar_url": "https://a.espncdn.com/i/headshots/wnba/players/full/204326.png"},
+              {"id": "p231", "name": "Natasha Howard", "role": "Power Forward", "is_captain": false, "avatar_url": "https://a.espncdn.com/i/headshots/wnba/players/full/204327.png"},
+              {"id": "p232", "name": "Leonie Fiebich", "role": "Shooting Guard", "is_captain": false, "avatar_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png"},
+              {"id": "p233", "name": "Nyara Sabally", "role": "Center", "is_captain": false, "avatar_url": "https://a.espncdn.com/i/headshots/wnba/players/full/4399343.png"},
+              {"id": "p234", "name": "Ivana Dojkic", "role": "Shooting Guard", "is_captain": false, "avatar_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png"},
+              {"id": "p235", "name": "Marquesha Davis", "role": "Small Forward", "is_captain": false, "avatar_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png"}
             ],
             "supporting_staff": [
               {"id": "s37", "name": "Sandy Brondello", "role": "Head Coach"},
@@ -303,9 +309,9 @@
               {"id": "s39", "name": "Lisa Thompson", "role": "Physio"}
             ],
             "benched_players": [
-              {"id": "p236", "name": "Tiffany Hayes", "role": "Shooting Guard", "is_captain": false},
-              {"id": "p237", "name": "Esmery Martinez", "role": "Power Forward", "is_captain": false},
-              {"id": "p238", "name": "Jaylyn Sherrod", "role": "Point Guard", "is_captain": false}
+              {"id": "p236", "name": "Tiffany Hayes", "role": "Shooting Guard", "is_captain": false, "avatar_url": "https://a.espncdn.com/i/headshots/wnba/players/full/1079.png"},
+              {"id": "p237", "name": "Esmery Martinez", "role": "Power Forward", "is_captain": false, "avatar_url": "https://a.espncdn.com/i/headshots/wnba/players/full/4399344.png"},
+              {"id": "p238", "name": "Jaylyn Sherrod", "role": "Point Guard", "is_captain": false, "avatar_url": "https://a.espncdn.com/i/headshots/wnba/players/full/4399345.png"}
             ]
           },
           "country": "New York Liberty"
@@ -332,6 +338,7 @@
             {
               "player_id": "p40",
               "name": "A'ja Wilson",
+              "avatar_url": "https://a.espncdn.com/i/headshots/wnba/players/full/3149394.png",
               "points": 18,
               "rebounds": 10,
               "assists": 3,
@@ -343,6 +350,7 @@
             {
               "player_id": "p41",
               "name": "Kelsey Plum",
+              "avatar_url": "https://a.espncdn.com/i/headshots/wnba/players/full/3149395.png",
               "points": 14,
               "rebounds": 4,
               "assists": 4,
@@ -354,17 +362,17 @@
           ],
           "squad": {
             "players": [
-              {"id": "p40", "name": "A'ja Wilson", "role": "Center", "is_captain": true},
-              {"id": "p41", "name": "Kelsey Plum", "role": "Point Guard", "is_captain": false},
-              {"id": "p42", "name": "Chelsea Gray", "role": "Point Guard", "is_captain": false},
-              {"id": "p239", "name": "Jackie Young", "role": "Shooting Guard", "is_captain": false},
-              {"id": "p240", "name": "Tiffany Hayes", "role": "Shooting Guard", "is_captain": false},
-              {"id": "p241", "name": "Alysha Clark", "role": "Small Forward", "is_captain": false},
-              {"id": "p242", "name": "Kiah Stokes", "role": "Center", "is_captain": false},
-              {"id": "p243", "name": "Megan Gustafson", "role": "Power Forward", "is_captain": false},
-              {"id": "p244", "name": "Sydney Colson", "role": "Point Guard", "is_captain": false},
-              {"id": "p245", "name": "Candace Parker", "role": "Power Forward", "is_captain": false},
-              {"id": "p246", "name": "Kate Martin", "role": "Shooting Guard", "is_captain": false}
+              {"id": "p40", "name": "A'ja Wilson", "role": "Center", "is_captain": true, "avatar_url": "https://a.espncdn.com/i/headshots/wnba/players/full/3149394.png"},
+              {"id": "p41", "name": "Kelsey Plum", "role": "Point Guard", "is_captain": false, "avatar_url": "https://a.espncdn.com/i/headshots/wnba/players/full/3149395.png"},
+              {"id": "p42", "name": "Chelsea Gray", "role": "Point Guard", "is_captain": false, "avatar_url": "https://www.espn.com/wnba/player/_/id/2529122/chelsea-gray"},
+              {"id": "p239", "name": "Jackie Young", "role": "Shooting Guard", "is_captain": false, "avatar_url": "https://www.espn.com/wnba/player/_/id/4065870/jackie-young"},
+              {"id": "p240", "name": "Tiffany Hayes", "role": "Shooting Guard", "is_captain": false, "avatar_url": "https://a.espncdn.com/i/headshots/wnba/players/full/1079.png"},
+              {"id": "p241", "name": "Alysha Clark", "role": "Small Forward", "is_captain": false, "avatar_url": "https://a.espncdn.com/i/headshots/wnba/players/full/204328.png"},
+              {"id": "p242", "name": "Kiah Stokes", "role": "Center", "is_captain": false, "avatar_url": "https://a.espncdn.com/i/headshots/wnba/players/full/3149396.png"},
+              {"id": "p243", "name": "Megan Gustafson", "role": "Power Forward", "is_captain": false, "avatar_url": "https://a.espncdn.com/i/headshots/wnba/players/full/3149397.png"},
+              {"id": "p244", "name": "Sydney Colson", "role": "Point Guard", "is_captain": false, "avatar_url": "https://a.espncdn.com/i/headshots/wnba/players/full/204329.png"},
+              {"id": "p245", "name": "Candace Parker", "role": "Power Forward", "is_captain": false, "avatar_url": "https://a.espncdn.com/i/headshots/wnba/players/full/1077.png"},
+              {"id": "p246", "name": "Kate Martin", "role": "Shooting Guard", "is_captain": false, "avatar_url": "https://a.espncdn.com/i/headshots/wnba/players/full/4433405.png"}
             ],
             "supporting_staff": [
               {"id": "s40", "name": "Becky Hammon", "role": "Head Coach"},
@@ -372,9 +380,9 @@
               {"id": "s42", "name": "Tyler Marsh", "role": "Physio"}
             ],
             "benched_players": [
-              {"id": "p247", "name": "Dyaisha Fair", "role": "Point Guard", "is_captain": false},
-              {"id": "p248", "name": "Emma Cannon", "role": "Power Forward", "is_captain": false},
-              {"id": "p249", "name": "Jessika Carter", "role": "Center", "is_captain": false}
+              {"id": "p247", "name": "Dyaisha Fair", "role": "Point Guard", "is_captain": false, "avatar_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png"},
+              {"id": "p248", "name": "Emma Cannon", "role": "Power Forward", "is_captain": false, "avatar_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png"},
+              {"id": "p249", "name": "Jessika Carter", "role": "Center", "is_captain": false, "avatar_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png"}
             ]
           },
           "country": "Las Vegas Aces"

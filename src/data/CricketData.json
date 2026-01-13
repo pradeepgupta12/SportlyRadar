@@ -1,5 +1,3 @@
-
-
 {
   "status": "success",
   "live_matches": [
@@ -16,8 +14,8 @@
         },
         "date": "2025-06-03",
         "status": "Live",
-        "team1_flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Flag_of_Pakistan.svg/800px-Flag_of_Pakistan.svg.png",
-        "team2_flag": "https://cdn.britannica.com/13/4413-050-98188B5C/Flag-Sri-Lanka.jpg",
+        "team1_flag": "https://cdn.britannica.com/46/3346-050-DE92F66A/flag-symbolism-Pakistan-design-Islamic.jpg",
+        "team2_flag": "https://upload.wikimedia.org/wikipedia/commons/1/11/Flag_of_Sri_Lanka.svg",
         "toss": "Sri Lanka won the toss and elected to bat",
         "current_status": "Pakistan trail by 40 runs with 5 wickets remaining",
         "day": 2,
@@ -26,17 +24,45 @@
       "squads": {
         "Pakistan": {
           "playing_xi": [
-            "Babar Azam (c)", "Shaheen Afridi", "Mohammad Rizwan (wk)", "Fakhar Zaman", "Haris Rauf", "Shadab Khan", "Imad Wasim", "Mohammad Nawaz", "Saim Ayub", "Usama Mir", "Mohammad Haris"
+            { "name": "Babar Azam (c)", "avatar": "https://upload.wikimedia.org/wikipedia/commons/4/43/Babar_azam_2023.jpg" },
+            { "name": "Shaheen Afridi", "avatar": "https://upload.wikimedia.org/wikipedia/commons/7/78/Shaheen_Afridi_%282%29.jpg" },
+            { "name": "Mohammad Rizwan (wk)", "avatar": "https://upload.wikimedia.org/wikipedia/commons/a/af/M_Rizwan.jpg" },
+            { "name": "Fakhar Zaman", "avatar": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Fakhar_Zaman%2C_Pakistan_vs_Sri_Lanka%2C_1st_ODI%2C_2017.jpg" },
+            { "name": "Haris Rauf", "avatar": "https://upload.wikimedia.org/wikipedia/commons/2/27/Haris-Rauf.png" },
+            { "name": "Shadab Khan", "avatar": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_320,q_50/lsci/db/PICTURES/CMS/320400/320467.1.png" },
+            { "name": "Imad Wasim", "avatar": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Imad_Wasim_1.jpg" },
+            { "name": "Mohammad Nawaz", "avatar": "https://media.gettyimages.com/id/2227767422/photo/pakistans-mohammad-nawaz-poses-with-the-player-of-the-series-award-after-his-team-won-the.jpg?s=612x612&w=gi&k=20&c=ZPCI6Mj0G8kNQEO1ihZbA2oJYjpOcGZuVwJ_AF9Q4Ks=" },
+            { "name": "Saim Ayub", "avatar": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_320,q_50/lsci/db/PICTURES/CMS/326400/326498.1.png" },
+            { "name": "Usama Mir", "avatar": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_320,q_50/lsci/db/PICTURES/CMS/387300/387326.5.png" },
+            { "name": "Mohammad Haris", "avatar": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_320,q_50/lsci/db/PICTURES/CMS/389700/389743.5.png" }
           ],
-          "bench": ["Imam-ul-Haq", "Naseem Shah", "Iftikhar Ahmed"],
+          "bench": [
+            { "name": "Imam-ul-Haq", "avatar": "https://upload.wikimedia.org/wikipedia/commons/e/e8/4_12_Imam-ul-Haq_mugshot.jpg" },
+            { "name": "Naseem Shah", "avatar": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_320,q_50/lsci/db/PICTURES/CMS/322200/322223.2.png" },
+            { "name": "Iftikhar Ahmed", "avatar": "https://d13ir53smqqeyp.cloudfront.net/player-images/8559.png" }
+          ],
           "support_staff": ["Misbah-ul-Haq (Head Coach)", "Mohammad Asif (Physio)"],
           "country": "Pakistan"
         },
         "Sri Lanka": {
           "playing_xi": [
-            "Dimuth Karunaratne (c)", "Lasith Embuldeniya", "Kusal Mendis (wk)", "Oshada Fernando", "Dhananjaya de Silva", "Angelo Mathews", "Dinesh Chandimal", "Suranga Lakmal", "Vishwa Fernando", "Ramesh Mendis", "Lahiru Thirimanne"
+            { "name": "Dimuth Karunaratne (c)", "avatar": "https://i.cdn.newsbytesapp.com/sports/players/profile/dimuth-karunaratne-1.png" },
+            { "name": "Lasith Embuldeniya", "avatar": "https://i.cdn.newsbytesapp.com/sports/players/profile/dimuth-karunaratne-1.png" },
+            { "name": "Kusal Mendis (wk)", "avatar": "https://i.cdn.newsbytesapp.com/sports/players/profile/dimuth-karunaratne-1.png" },
+            { "name": "Oshada Fernando", "avatar": "https://i.cdn.newsbytesapp.com/sports/players/profile/dimuth-karunaratne-1.png" },
+            { "name": "Dhananjaya de Silva", "avatar": "https://i.cdn.newsbytesapp.com/sports/players/profile/dimuth-karunaratne-1.png" },
+            { "name": "Angelo Mathews", "avatar": "https://i.cdn.newsbytesapp.com/sports/players/profile/dimuth-karunaratne-1.png" },
+            { "name": "Dinesh Chandimal", "avatar": "https://i.cdn.newsbytesapp.com/sports/players/profile/dimuth-karunaratne-1.png" },
+            { "name": "Suranga Lakmal", "avatar": "https://i.cdn.newsbytesapp.com/sports/players/profile/dimuth-karunaratne-1.png" },
+            { "name": "Vishwa Fernando", "avatar": "https://i.cdn.newsbytesapp.com/sports/players/profile/dimuth-karunaratne-1.png" },
+            { "name": "Ramesh Mendis", "avatar": "https://i.cdn.newsbytesapp.com/sports/players/profile/dimuth-karunaratne-1.png" },
+            { "name": "Lahiru Thirimanne", "avatar": "https://i.cdn.newsbytesapp.com/sports/players/profile/dimuth-karunaratne-1.png" }
           ],
-          "bench": ["Pathum Nissanka", "Dushmantha Chameera", "Niroshan Dickwella"],
+          "bench": [
+            { "name": "Pathum Nissanka", "avatar": "https://i.cdn.newsbytesapp.com/sports/players/profile/dimuth-karunaratne-1.png" },
+            { "name": "Dushmantha Chameera", "avatar": "https://i.cdn.newsbytesapp.com/sports/players/profile/dimuth-karunaratne-1.png" },
+            { "name": "Niroshan Dickwella", "avatar": "https://i.cdn.newsbytesapp.com/sports/players/profile/dimuth-karunaratne-1.png" }
+          ],
           "support_staff": ["Mickey Arthur (Head Coach)", "Rumesh Ratnayake (Bowling Coach)", "Piyal Wijetunge (Physio)"],
           "country": "Sri Lanka"
         }
@@ -51,21 +77,61 @@
           "fall_of_wickets": [
             "95-1 (Oshada Fernando, 28.4)", "160-2 (Dimuth Karunaratne, 42.1)", "205-3 (Kusal Mendis, 54.3)", "245-4 (Dhananjaya de Silva, 66.2)", "270-5 (Angelo Mathews, 74.5)", "285-6 (Dinesh Chandimal, 80.1)", "295-7 (Ramesh Mendis, 84.3)", "305-8 (Suranga Lakmal, 88.2)", "308-9 (Vishwa Fernando, 90.4)", "310-10 (Lahiru Thirimanne, 91.6)"
           ],
-          "top_batsmen": ["Dimuth Karunaratne 75", "Kusal Mendis 55", "Oshada Fernando 42"],
-          "top_bowlers": ["Shaheen Afridi 4/65", "Haris Rauf 3/58", "Usama Mir 2/70"]
+          "batting": [
+            { "name": "Dimuth Karunaratne (c)", "R": 75, "B": 112, "4s": 9, "6s": 1, "SR": 66.96 },
+            { "name": "Oshada Fernando", "R": 42, "B": 85, "4s": 5, "6s": 0, "SR": 49.41 },
+            { "name": "Kusal Mendis (wk)", "R": 55, "B": 78, "4s": 7, "6s": 1, "SR": 70.51 },
+            { "name": "Dhananjaya de Silva", "R": 38, "B": 62, "4s": 4, "6s": 1, "SR": 61.29 },
+            { "name": "Angelo Mathews", "R": 32, "B": 58, "4s": 3, "6s": 0, "SR": 55.17 },
+            { "name": "Dinesh Chandimal", "R": 28, "B": 45, "4s": 3, "6s": 0, "SR": 62.22 },
+            { "name": "Ramesh Mendis", "R": 18, "B": 32, "4s": 2, "6s": 0, "SR": 56.25 },
+            { "name": "Suranga Lakmal", "R": 12, "B": 24, "4s": 1, "6s": 0, "SR": 50.00 },
+            { "name": "Vishwa Fernando", "R": 5, "B": 14, "4s": 0, "6s": 0, "SR": 35.71 },
+            { "name": "Lasith Embuldeniya", "R": 3, "B": 8, "4s": 0, "6s": 0, "SR": 37.50 },
+            { "name": "Lahiru Thirimanne", "R": 2, "B": 6, "4s": 0, "6s": 0, "SR": 33.33 }
+          ],
+          "top_batsmen": [
+            { "name": "Dimuth Karunaratne 75", "avatar": "https://i.cdn.newsbytesapp.com/sports/players/profile/dimuth-karunaratne-1.png" },
+            { "name": "Kusal Mendis 55", "avatar": "https://i.cdn.newsbytesapp.com/sports/players/profile/dimuth-karunaratne-1.png" },
+            { "name": "Oshada Fernando 42", "avatar": "https://i.cdn.newsbytesapp.com/sports/players/profile/dimuth-karunaratne-1.png" }
+          ],
+          "top_bowlers": [
+            { "name": "Shaheen Afridi 4/65", "avatar": "https://i.cdn.newsbytesapp.com/sports/players/profile/dimuth-karunaratne-1.png" },
+            { "name": "Haris Rauf 3/58", "avatar": "https://i.cdn.newsbytesapp.com/sports/players/profile/dimuth-karunaratne-1.png" },
+            { "name": "Usama Mir 2/70", "avatar": "https://i.cdn.newsbytesapp.com/sports/players/profile/dimuth-karunaratne-1.png" }
+          ]
         },
         "2nd_innings_current": {
           "batting_team": "Pakistan",
           "score": "270/5",
           "overs": "80.0",
           "run_rate": 3.38,
-          "on_crease": ["Babar Azam 90*", "Mohammad Rizwan 50*"],
+          "on_crease": [
+            { "name": "Babar Azam 90*", "R": 90, "B": 148, "4s": 11, "6s": 1, "SR": 60.81, "avatar": "https://www.gettyimages.com/detail/news-photo/babar-azam-of-pakistan-poses-for-a-portrait-prior-to-the-news-photo/2156781234" },
+            { "name": "Mohammad Rizwan 50*", "R": 50, "B": 92, "4s": 6, "6s": 0, "SR": 54.35, "avatar": "https://sports.ndtv.com/cricket/players/2116-pakistan/playerimages/mohammad-rizwan.jpg" }
+          ],
           "extras": {"byes": 2, "leg_byes": 1, "wides": 2, "no_balls": 1, "total": 6},
           "fall_of_wickets": [
             "82-1 (Saim Ayub, 24.3)", "145-2 (Fakhar Zaman, 42.1)", "188-3 (Shadab Khan, 56.4)", "224-4 (Imad Wasim, 68.2)"
           ],
-          "top_batsmen": ["Babar Azam 90*", "Mohammad Rizwan 50*", "Fakhar Zaman 45"],
-          "top_bowlers": ["Lasith Embuldeniya 2/70", "Suranga Lakmal 1/65", "Ramesh Mendis 1/48"]
+          "batting": [
+            { "name": "Saim Ayub", "R": 38, "B": 72, "4s": 5, "6s": 0, "SR": 52.78 },
+            { "name": "Fakhar Zaman", "R": 45, "B": 68, "4s": 6, "6s": 1, "SR": 66.18 },
+            { "name": "Shadab Khan", "R": 28, "B": 52, "4s": 3, "6s": 0, "SR": 53.85 },
+            { "name": "Imad Wasim", "R": 32, "B": 60, "4s": 4, "6s": 0, "SR": 53.33 },
+            { "name": "Babar Azam (c)", "R": 90, "B": 148, "4s": 11, "6s": 1, "SR": 60.81 },
+            { "name": "Mohammad Rizwan (wk)", "R": 50, "B": 92, "4s": 6, "6s": 0, "SR": 54.35 }
+          ],
+          "top_batsmen": [
+            { "name": "Babar Azam 90*", "avatar": "https://www.gettyimages.com/detail/news-photo/babar-azam-of-pakistan-poses-for-a-portrait-prior-to-the-news-photo/2156781234" },
+            { "name": "Mohammad Rizwan 50*", "avatar": "https://sports.ndtv.com/cricket/players/2116-pakistan/playerimages/mohammad-rizwan.jpg" },
+            { "name": "Fakhar Zaman 45", "avatar": "https://www.gettyimages.com/detail/news-photo/fakhar-zaman-of-pakistan-celebrates-after-reaching-his-half-news-photo/123456789" }
+          ],
+          "top_bowlers": [
+            { "name": "Lasith Embuldeniya 2/70", "avatar": "https://www.espncricinfo.com/cricketers/lasith-embuldeniya-784379.jpg" },
+            { "name": "Suranga Lakmal 1/65", "avatar": "https://www.espncricinfo.com/cricketers/suranga-lakmal-49758.jpg" },
+            { "name": "Ramesh Mendis 1/48", "avatar": "https://www.espncricinfo.com/cricketers/ramesh-mendis-784385.jpg" }
+          ]
         }
       },
       "overs_summary": "Pakistan 270/5 in 80.0 overs (RR 3.38) – trailing by 40 runs",
@@ -103,17 +169,45 @@
       "squads": {
         "India": {
           "playing_xi": [
-            "Rohit Sharma (c)", "Virat Kohli", "Jasprit Bumrah", "Shubman Gill", "Cheteshwar Pujara", "Rishabh Pant (wk)", "Ravindra Jadeja", "Ravichandran Ashwin", "Mohammed Shami", "Yashasvi Jaiswal", "Mohammed Siraj"
+            { "name": "Rohit Sharma (c)", "avatar": "https://www.gettyimages.com/detail/news-photo/rohit-sharma-of-india-lifts-the-icc-mens-t20-cricket-world-news-photo/2156789012" },
+            { "name": "Virat Kohli", "avatar": "https://www.gettyimages.com/detail/news-photo/virat-kohli-of-india-poses-with-the-trophy-news-photo/2156781235" },
+            { "name": "Jasprit Bumrah", "avatar": "https://www.gettyimages.com/detail/news-photo/jasprit-bumrah-of-india-gestures-news-photo/2145678902" },
+            { "name": "Shubman Gill", "avatar": "https://sports.ndtv.com/cricket/players/shubman-gill.jpg" },
+            { "name": "Cheteshwar Pujara", "avatar": "https://via.placeholder.com/40" },
+            { "name": "Rishabh Pant (wk)", "avatar": "https://www.gettyimages.com/detail/news-photo/rishabh-pant-of-india-bats-news-photo/987654322" },
+            { "name": "Ravindra Jadeja", "avatar": "https://www.espncricinfo.com/cricketers/ravindra-jadeja-234675.jpg" },
+            { "name": "Ravichandran Ashwin", "avatar": "https://www.espncricinfo.com/cricketers/ravichandran-ashwin-26421.jpg" },
+            { "name": "Mohammed Shami", "avatar": "https://via.placeholder.com/40" },
+            { "name": "Yashasvi Jaiswal", "avatar": "https://sports.ndtv.com/cricket/players/yashasvi-jaiswal.jpg" },
+            { "name": "Mohammed Siraj", "avatar": "https://sports.ndtv.com/cricket/players/mohammed-siraj.jpg" }
           ],
-          "bench": ["KL Rahul", "Ishant Sharma", "Axar Patel"],
+          "bench": [
+            { "name": "KL Rahul", "avatar": "https://via.placeholder.com/40" },
+            { "name": "Ishant Sharma", "avatar": "https://via.placeholder.com/40" },
+            { "name": "Axar Patel", "avatar": "https://via.placeholder.com/40" }
+          ],
           "support_staff": ["Ravi Shastri (Head Coach)", "Vikram Rathour (Batting Coach)", "Arun Bharadwaj (Physio)"],
           "country": "India"
         },
         "Australia": {
           "playing_xi": [
-            "Pat Cummins (c)", "Steve Smith", "David Warner", "Marnus Labuschagne", "Travis Head", "Alex Carey (wk)", "Cameron Green", "Nathan Lyon", "Josh Hazlewood", "Mitchell Starc", "Usman Khawaja"
+            { "name": "Pat Cummins (c)", "avatar": "https://www.gettyimages.com/detail/news-photo/pat-cummins-of-australia-celebrates-news-photo/2156781236" },
+            { "name": "Steve Smith", "avatar": "https://en.wikipedia.org/wiki/File:Steve_Smith_(cricketer).jpg" },
+            { "name": "David Warner", "avatar": "https://via.placeholder.com/40" },
+            { "name": "Marnus Labuschagne", "avatar": "https://www.gettyimages.com/detail/news-photo/marnus-labuschagne-of-australia-bats-news-photo/2145678903" },
+            { "name": "Travis Head", "avatar": "https://www.gettyimages.com/detail/news-photo/travis-head-of-australia-celebrates-news-photo/2156789013" },
+            { "name": "Alex Carey (wk)", "avatar": "https://www.gettyimages.com/detail/news-photo/alex-carey-of-australia-news-photo/987654323" },
+            { "name": "Cameron Green", "avatar": "https://via.placeholder.com/40" },
+            { "name": "Nathan Lyon", "avatar": "https://via.placeholder.com/40" },
+            { "name": "Josh Hazlewood", "avatar": "https://via.placeholder.com/40" },
+            { "name": "Mitchell Starc", "avatar": "https://www.gettyimages.com/detail/news-photo/mitchell-starc-of-australia-bowls-news-photo/2184567891" },
+            { "name": "Usman Khawaja", "avatar": "https://via.placeholder.com/40" }
           ],
-          "bench": ["Mitchell Marsh", "Matthew Renshaw", "Scott Boland"],
+          "bench": [
+            { "name": "Mitchell Marsh", "avatar": "https://via.placeholder.com/40" },
+            { "name": "Matthew Renshaw", "avatar": "https://via.placeholder.com/40" },
+            { "name": "Scott Boland", "avatar": "https://via.placeholder.com/40" }
+          ],
           "support_staff": ["Andrew McDonald (Head Coach)", "Michael Di Venuto (Batting Coach)", "Alex Kountouri (Physio)"],
           "country": "Australia"
         }
@@ -124,13 +218,30 @@
           "score": "200/4",
           "overs": "40.0",
           "run_rate": 5.00,
-          "on_crease": ["Rohit Sharma 75*", "Virat Kohli 40*"],
+          "on_crease": [
+            { "name": "Rohit Sharma 75*", "R": 75, "B": 98, "4s": 9, "6s": 2, "SR": 76.53, "avatar": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Prime_Minister_Of_Bharat_Shri_Narendra_Damodardas_Modi_with_Shri_Rohit_Gurunath_Sharma_%28Cropped%29.jpg" },
+            { "name": "Virat Kohli 40*", "R": 40, "B": 62, "4s": 4, "6s": 0, "SR": 64.52, "avatar": "https://www.gettyimages.com/detail/news-photo/virat-kohli-of-india-poses-with-the-trophy-news-photo/2156781235" }
+          ],
           "extras": {"byes": 1, "leg_byes": 2, "wides": 2, "no_balls": 1, "total": 6},
           "fall_of_wickets": [
             "65-1 (Shubman Gill, 14.2)", "120-2 (Yashasvi Jaiswal, 24.5)", "165-3 (Rishabh Pant, 32.3)"
           ],
-          "top_batsmen": ["Rohit Sharma 75*", "Virat Kohli 40*", "Shubman Gill 35"],
-          "top_bowlers": ["Pat Cummins 2/45", "Josh Hazlewood 1/50"]
+          "batting": [
+            { "name": "Shubman Gill", "R": 35, "B": 42, "4s": 5, "6s": 0, "SR": 83.33 },
+            { "name": "Yashasvi Jaiswal", "R": 42, "B": 68, "4s": 5, "6s": 1, "SR": 61.76 },
+            { "name": "Rishabh Pant (wk)", "R": 28, "B": 38, "4s": 3, "6s": 1, "SR": 73.68 },
+            { "name": "Rohit Sharma (c)", "R": 75, "B": 98, "4s": 9, "6s": 2, "SR": 76.53 },
+            { "name": "Virat Kohli", "R": 40, "B": 62, "4s": 4, "6s": 0, "SR": 64.52 }
+          ],
+          "top_batsmen": [
+            { "name": "Rohit Sharma 75*", "avatar": "https://www.gettyimages.com/detail/news-photo/rohit-sharma-of-india-lifts-the-icc-mens-t20-cricket-world-news-photo/2156789012" },
+            { "name": "Virat Kohli 40*", "avatar": "https://www.gettyimages.com/detail/news-photo/virat-kohli-of-india-poses-with-the-trophy-news-photo/2156781235" },
+            { "name": "Shubman Gill 35", "avatar": "https://sports.ndtv.com/cricket/players/shubman-gill.jpg" }
+          ],
+          "top_bowlers": [
+            { "name": "Pat Cummins 2/45", "avatar": "https://www.gettyimages.com/detail/news-photo/pat-cummins-of-australia-celebrates-news-photo/2156781236" },
+            { "name": "Josh Hazlewood 1/50", "avatar": "https://via.placeholder.com/40" }
+          ]
         }
       },
       "overs_summary": "India 200/4 in 40.0 overs (RR 5.00)",
@@ -167,17 +278,45 @@
       "squads": {
         "England": {
           "playing_xi": [
-            "Joe Root (c)", "Jos Buttler (wk)", "Jofra Archer", "Jason Roy", "Jonny Bairstow", "Ben Stokes", "Moeen Ali", "Chris Woakes", "Adil Rashid", "Dawid Malan", "Mark Wood"
+            { "name": "Joe Root (c)", "avatar": "https://www.espncricinfo.com/cricketers/joe-root-303669.jpg" },
+            { "name": "Jos Buttler (wk)", "avatar": "https://www.espncricinfo.com/cricketers/jos-buttler-308967.jpg" },
+            { "name": "Jofra Archer", "avatar": "https://www.espncricinfo.com/cricketers/jofra-archer-669617.jpg" },
+            { "name": "Jason Roy", "avatar": "https://via.placeholder.com/40" },
+            { "name": "Jonny Bairstow", "avatar": "https://www.espncricinfo.com/cricketers/jonny-bairstow-308967.jpg" },
+            { "name": "Ben Stokes", "avatar": "https://www.espncricinfo.com/cricketers/ben-stokes-311158.jpg" },
+            { "name": "Moeen Ali", "avatar": "https://www.espncricinfo.com/cricketers/moeen-ali-891493.jpg" },
+            { "name": "Chris Woakes", "avatar": "https://www.espncricinfo.com/cricketers/chris-woakes-247235.jpg" },
+            { "name": "Adil Rashid", "avatar": "https://www.espncricinfo.com/cricketers/adil-rashid-234675.jpg" },
+            { "name": "Dawid Malan", "avatar": "https://www.espncricinfo.com/cricketers/dawid-malan-234675.jpg" },
+            { "name": "Mark Wood", "avatar": "https://www.espncricinfo.com/cricketers/mark-wood-247235.jpg" }
           ],
-          "bench": ["Zak Crawley", "Sam Curran", "Tom Curran"],
+          "bench": [
+            { "name": "Zak Crawley", "avatar": "https://via.placeholder.com/40" },
+            { "name": "Sam Curran", "avatar": "https://via.placeholder.com/40" },
+            { "name": "Tom Curran", "avatar": "https://via.placeholder.com/40" }
+          ],
           "support_staff": ["Chris Silverwood (Head Coach)", "Graham Thorpe (Batting Coach)", "Craig de Weymarn (Physio)"],
           "country": "England"
         },
         "New Zealand": {
           "playing_xi": [
-            "Kane Williamson (c)", "Trent Boult", "Devon Conway", "Tom Latham (wk)", "Martin Guptill", "Ross Taylor", "Mitchell Santner", "Lockie Ferguson", "Tim Southee", "Glenn Phillips", "Jimmy Neesham"
+            { "name": "Kane Williamson (c)", "avatar": "https://www.espncricinfo.com/cricketers/kane-williamson-277906.jpg" },
+            { "name": "Trent Boult", "avatar": "https://www.espncricinfo.com/cricketers/trent-boult-326012.jpg" },
+            { "name": "Devon Conway", "avatar": "https://www.espncricinfo.com/cricketers/devon-conway-379140.jpg" },
+            { "name": "Tom Latham (wk)", "avatar": "https://www.espncricinfo.com/cricketers/tom-latham-388802.jpg" },
+            { "name": "Martin Guptill", "avatar": "https://www.espncricinfo.com/cricketers/martin-guptill-249866.jpg" },
+            { "name": "Ross Taylor", "avatar": "https://www.espncricinfo.com/cricketers/ross-taylor-38699.jpg" },
+            { "name": "Mitchell Santner", "avatar": "https://www.espncricinfo.com/cricketers/mitchell-santner-523586.jpg" },
+            { "name": "Lockie Ferguson", "avatar": "https://www.espncricinfo.com/cricketers/lockie-ferguson-585783.jpg" },
+            { "name": "Tim Southee", "avatar": "https://www.espncricinfo.com/cricketers/tim-southee-38407.jpg" },
+            { "name": "Glenn Phillips", "avatar": "https://www.espncricinfo.com/cricketers/glenn-phillips-505120.jpg" },
+            { "name": "Jimmy Neesham", "avatar": "https://www.espncricinfo.com/cricketers/jimmy-neesham-355269.jpg" }
           ],
-          "bench": ["Colin de Grandhomme", "Matt Henry", "Will Young"],
+          "bench": [
+            { "name": "Colin de Grandhomme", "avatar": "https://via.placeholder.com/40" },
+            { "name": "Matt Henry", "avatar": "https://via.placeholder.com/40" },
+            { "name": "Will Young", "avatar": "https://via.placeholder.com/40" }
+          ],
           "support_staff": ["Gary Stead (Head Coach)", "Luke Ronchi (Batting Coach)", "Shane Jurgensen (Bowling Coach)"],
           "country": "New Zealand"
         }
@@ -188,13 +327,31 @@
           "score": "150/3",
           "overs": "18.0",
           "run_rate": 8.33,
-          "on_crease": ["Joe Root 60*", "Jos Buttler 45*"],
+          "on_crease": [
+            { "name": "Joe Root 60*", "R": 60, "B": 44, "4s": 7, "6s": 1, "SR": 136.36, "avatar": "https://www.espncricinfo.com/cricketers/joe-root-303669.jpg" },
+            { "name": "Jos Buttler 45*", "R": 45, "B": 38, "4s": 5, "6s": 2, "SR": 118.42, "avatar": "https://www.espncricinfo.com/cricketers/jos-buttler-308967.jpg" }
+          ],
           "extras": {"byes": 0, "leg_byes": 1, "wides": 2, "no_balls": 0, "total": 3},
           "fall_of_wickets": [
             "45-1 (Jason Roy, 4.2)", "85-2 (Jonny Bairstow, 8.5)", "110-3 (Dawid Malan, 12.3)"
           ],
-          "top_batsmen": ["Joe Root 60*", "Jos Buttler 45*", "Jason Roy 25"],
-          "top_bowlers": ["Trent Boult 1/35", "Lockie Ferguson 1/30", "Mitchell Santner 1/32"]
+          "batting": [
+            { "name": "Jason Roy", "R": 25, "B": 16, "4s": 4, "6s": 1, "SR": 156.25 },
+            { "name": "Jonny Bairstow", "R": 32, "B": 24, "4s": 4, "6s": 1, "SR": 133.33 },
+            { "name": "Dawid Malan", "R": 18, "B": 20, "4s": 2, "6s": 0, "SR": 90.00 },
+            { "name": "Joe Root (c)", "R": 60, "B": 44, "4s": 7, "6s": 1, "SR": 136.36 },
+            { "name": "Jos Buttler (wk)", "R": 45, "B": 38, "4s": 5, "6s": 2, "SR": 118.42 }
+          ],
+          "top_batsmen": [
+            { "name": "Joe Root 60*", "avatar": "https://www.espncricinfo.com/cricketers/joe-root-303669.jpg" },
+            { "name": "Jos Buttler 45*", "avatar": "https://www.espncricinfo.com/cricketers/jos-buttler-308967.jpg" },
+            { "name": "Jason Roy 25", "avatar": "https://via.placeholder.com/40" }
+          ],
+          "top_bowlers": [
+            { "name": "Trent Boult 1/35", "avatar": "https://www.espncricinfo.com/cricketers/trent-boult-326012.jpg" },
+            { "name": "Lockie Ferguson 1/30", "avatar": "https://www.espncricinfo.com/cricketers/lockie-ferguson-585783.jpg" },
+            { "name": "Mitchell Santner 1/32", "avatar": "https://www.espncricinfo.com/cricketers/mitchell-santner-523586.jpg" }
+          ]
         }
       },
       "overs_summary": "England 150/3 in 18.0 overs (RR 8.33) – 2 overs remaining",
