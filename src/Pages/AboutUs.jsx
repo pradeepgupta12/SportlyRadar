@@ -1,5 +1,6 @@
 
 
+
 // import React, { useState, useEffect } from "react";
 // import { Activity, Zap, Globe, BarChart3, CalendarDays } from "lucide-react";
 
@@ -8,32 +9,18 @@
 //   const [isVisible, setIsVisible] = useState({});
 
 //   const sportImages = [
-//     {
-//       url: "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=1600&h=600&fit=crop",
-//       name: "Cricket"
-//     },
-//     {
-//       url: "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=1600&h=600&fit=crop",
-//       name: "Football"
-//     },
-//     {
-//       url: "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=1600&h=600&fit=crop",
-//       name: "Basketball"
-//     },
-//     {
-//       url: "https://images.unsplash.com/photo-1515703407324-5f753afd8be8?w=1600&h=600&fit=crop",
-//       name: "Hockey"
-//     },
-//     {
-//       url: "https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?w=1600&h=600&fit=crop",
-//       name: "Tennis"
-//     }
+//     { url: "/Image/cricket.jpg", name: "Cricket" },
+//     { url: "/Image/football.jpg", name: "Football" },
+//     { url: "/Image/basketball.jpeg", name: "Basketball" },
+//     { url: "/Image/hockey.jpeg", name: "Hockey" },
+//     { url: "/Image/tennis.jpeg", name: "Tennis" },
 //   ];
 
 //   useEffect(() => {
 //     const interval = setInterval(() => {
 //       setCurrentImageIndex((prev) => (prev + 1) % sportImages.length);
 //     }, 3000);
+
 //     return () => clearInterval(interval);
 //   }, []);
 
@@ -57,13 +44,15 @@
 
 //   return (
 //     <div className="w-full bg-gradient-to-b from-gray-50 to-white">
-//       {/* FULL WIDTH CAROUSEL - unchanged */}
-//       <div className="relative w-full h-96 overflow-hidden">
+//       {/* FULL WIDTH CAROUSEL */}
+//       <div className="relative w-full h-96 md:h-[500px] overflow-hidden">
 //         {sportImages.map((sport, index) => (
 //           <div
 //             key={index}
-//             className={`absolute inset-0 transition-opacity duration-1000 ${
-//               index === currentImageIndex ? "opacity-100" : "opacity-0"
+//             className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
+//               index === currentImageIndex
+//                 ? "opacity-100 scale-100"
+//                 : "opacity-0 scale-105"
 //             }`}
 //           >
 //             <img
@@ -71,9 +60,11 @@
 //               alt={sport.name}
 //               className="w-full h-full object-cover"
 //             />
-//             <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/70"></div>
+//             <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/70"></div>
 //             <div className="absolute inset-0 flex items-center justify-center">
-//               <h2 className="text-white text-5xl font-bold drop-shadow-lg">{sport.name}</h2>
+//               <h2 className="text-white text-5xl md:text-7xl font-extrabold drop-shadow-2xl tracking-wide">
+//                 {sport.name}
+//               </h2>
 //             </div>
 //           </div>
 //         ))}
@@ -85,7 +76,7 @@
 //               onClick={() => setCurrentImageIndex(index)}
 //               className={`w-3 h-3 rounded-full transition-all duration-300 ${
 //                 index === currentImageIndex
-//                   ? "bg-white scale-125"
+//                   ? "bg-white scale-125 shadow-lg"
 //                   : "bg-white/50 hover:bg-white/80"
 //               }`}
 //             />
@@ -94,10 +85,9 @@
 //       </div>
 
 //       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-
-//         {/* HERO TEXT - unchanged */}
+//         {/* HERO TEXT */}
 //         <div className="text-center max-w-4xl mx-auto mb-24">
-//           <h1 
+//           <h1
 //             id="hero-title"
 //             data-animate
 //             className={`text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight transition-all duration-1000 ${
@@ -107,7 +97,7 @@
 //             We Watch the Numbers. <br />
 //             <span className="text-indigo-600">You Enjoy the Action</span>
 //           </h1>
-//           <p 
+//           <p
 //             id="hero-desc"
 //             data-animate
 //             className={`mt-6 text-gray-600 text-lg sm:text-xl leading-relaxed transition-all duration-1000 ${
@@ -120,18 +110,18 @@
 //           </p>
 //         </div>
 
-//         {/* STORY - Now beautiful animated cards */}
+//         {/* STORY SECTION */}
 //         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-28">
-//           <div 
+//           <div
 //             id="story-card-1"
 //             data-animate
-//             className={`bg-white rounded-3xl p-10 shadow-lg hover:shadow-2xl transition-all duration-700 group ${
+//             className={`bg-white rounded-3xl p-10 shadow-xl hover:shadow-2xl hover:-translate-y-3 hover:scale-[1.02] transition-all duration-500 ease-out group cursor-pointer ${
 //               isVisible["story-card-1"] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
 //             }`}
 //           >
-//             <div className="flex items-center gap-4 mb-6">
-//               <div className="w-14 h-14 flex items-center justify-center rounded-2xl bg-indigo-100 text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-400 transform group-hover:rotate-12 group-hover:scale-110">
-//                 <Zap size={28} />
+//             <div className="flex items-center gap-5 mb-6">
+//               <div className="w-16 h-16 flex items-center justify-center rounded-2xl bg-indigo-100 text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-400 transform group-hover:rotate-12 group-hover:scale-110">
+//                 <Zap size={32} />
 //               </div>
 //               <h2 className="text-3xl font-bold text-gray-900">Built to Calm the Chaos</h2>
 //             </div>
@@ -140,17 +130,17 @@
 //             </p>
 //           </div>
 
-//           <div 
+//           <div
 //             id="story-card-2"
 //             data-animate
-//             className={`bg-white rounded-3xl p-10 shadow-lg hover:shadow-2xl transition-all duration-700 group ${
+//             className={`bg-white rounded-3xl p-10 shadow-xl hover:shadow-2xl hover:-translate-y-3 hover:scale-[1.02] transition-all duration-500 ease-out group cursor-pointer ${
 //               isVisible["story-card-2"] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
 //             }`}
 //             style={{ transitionDelay: "150ms" }}
 //           >
-//             <div className="flex items-center gap-4 mb-6">
-//               <div className="w-14 h-14 flex items-center justify-center rounded-2xl bg-purple-100 text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-colors duration-400 transform group-hover:rotate-12 group-hover:scale-110">
-//                 <Activity size={28} />
+//             <div className="flex items-center gap-5 mb-6">
+//               <div className="w-16 h-16 flex items-center justify-center rounded-2xl bg-purple-100 text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-all duration-400 transform group-hover:rotate-12 group-hover:scale-110">
+//                 <Activity size={32} />
 //               </div>
 //               <h2 className="text-3xl font-bold text-gray-900">The SportlyRadar Appeal</h2>
 //             </div>
@@ -162,7 +152,7 @@
 
 //         {/* MISSION */}
 //         <div className="mb-28">
-//           <h2 
+//           <h2
 //             id="mission-title"
 //             data-animate
 //             className={`text-4xl font-bold text-gray-900 text-center mb-16 transition-all duration-1000 ${
@@ -181,7 +171,7 @@
 
 //         {/* OFFERINGS */}
 //         <div>
-//           <h2 
+//           <h2
 //             id="offer-title"
 //             data-animate
 //             className={`text-4xl font-bold text-gray-900 text-center mb-16 transition-all duration-1000 ${
@@ -197,13 +187,12 @@
 //             <OfferCard index={2} isVisible={isVisible["offer-2"]} />
 //           </div>
 //         </div>
-
 //       </div>
 //     </div>
 //   );
 // };
 
-// /* Reusable Animated Mission Card */
+// /* Mission Card with hover movement */
 // const MissionCard = ({ index, isVisible }) => {
 //   const items = [
 //     { icon: BarChart3, title: "Accuracy First", desc: "Rumours belong on social media. Facts belong here. Every stat, schedule change and ranking is verified.", color: "indigo" },
@@ -214,10 +203,10 @@
 //   const { icon: Icon, title, desc, color } = items[index];
 
 //   return (
-//     <div 
+//     <div
 //       id={`mission-${index}`}
 //       data-animate
-//       className={`bg-white rounded-3xl p-10 shadow-lg hover:shadow-2xl transition-all duration-700 group ${
+//       className={`bg-white rounded-3xl p-10 shadow-xl hover:shadow-2xl hover:-translate-y-3 hover:scale-[1.02] transition-all duration-500 ease-out group cursor-pointer ${
 //         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
 //       }`}
 //       style={{ transitionDelay: `${index * 150}ms` }}
@@ -231,7 +220,7 @@
 //   );
 // };
 
-// /* Reusable Animated Offer Card */
+// /* Offer Card with hover movement */
 // const OfferCard = ({ index, isVisible }) => {
 //   const items = [
 //     { icon: Activity, title: "Live Match Centres", desc: "Rich dashboards with live scores and commentary across 5+ major sports.", color: "indigo" },
@@ -242,10 +231,10 @@
 //   const { icon: Icon, title, desc, color } = items[index];
 
 //   return (
-//     <div 
+//     <div
 //       id={`offer-${index}`}
 //       data-animate
-//       className={`bg-white rounded-3xl p-10 shadow-lg hover:shadow-2xl transition-all duration-700 group ${
+//       className={`bg-white rounded-3xl p-10 shadow-xl hover:shadow-2xl hover:-translate-y-3 hover:scale-[1.02] transition-all duration-500 ease-out group cursor-pointer ${
 //         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
 //       }`}
 //       style={{ transitionDelay: `${index * 150}ms` }}
@@ -264,6 +253,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Activity, Zap, Globe, BarChart3, CalendarDays } from "lucide-react";
+import SEO from '../components/SEO.jsx';
 
 const AboutUs = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -305,6 +295,16 @@ const AboutUs = () => {
 
   return (
     <div className="w-full bg-gradient-to-b from-gray-50 to-white">
+      {/* SEO Component */}
+      <SEO 
+        title="About SportlyRadar - Your Ultimate Sports Tracking Destination"
+        description="Learn about SportlyRadar's mission to provide real-time sports scores, analytics, and match updates. Discover our story, values, and commitment to sports fans worldwide."
+        keywords="about SportlyRadar, sports tracking platform, live sports scores, match analytics, sports news, multi-sport platform, sports data"
+        canonical={window.location.href}
+        image="https://sportlyradar.com/about-og-image.jpg"
+        url={window.location.href}
+      />
+      
       {/* FULL WIDTH CAROUSEL */}
       <div className="relative w-full h-96 md:h-[500px] overflow-hidden">
         {sportImages.map((sport, index) => (

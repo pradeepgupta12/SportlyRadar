@@ -26,11 +26,26 @@
 // export default App;
 
 
+// import React from "react";
+// import AppRoutes from "./Routes/AppRoutes";
+
+// function App() {
+//   return <AppRoutes />;
+// }
+
+// export default App;
+
+
 import React from "react";
 import AppRoutes from "./Routes/AppRoutes";
+import { HelmetProvider } from "react-helmet-async";
 
 function App() {
-  return <AppRoutes />;
+  return (
+    <HelmetProvider>
+      <AppRoutes />
+    </HelmetProvider>
+  );
 }
 
 export default App;

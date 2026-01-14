@@ -75,28 +75,36 @@
       
 //       <div className="bg-orange-600 text-white p-4 rounded-lg mb-4">
 //         <div className="flex justify-between items-center mb-4">
-//           <div className="flex items-center gap-3">
-//             <img src={matchData.images.team1_flag} alt={matchData.teams[0].name} className="w-12 h-12 object-contain" />
+//           <div className="flex items-center gap-4">
+//             <img 
+//               src={matchData.images.team1_flag} 
+//               alt={matchData.teams[0].name} 
+//               className="w-14 h-14 sm:w-16 sm:h-16 object-contain rounded" 
+//             />
 //             <div>
-//               <p className="font-semibold text-lg">{matchData.teams[0].name}</p>
-//               <p className="text-xs opacity-90">{matchData.teams[0].short_name}</p>
+//               <p className="font-semibold text-lg sm:text-xl">{matchData.teams[0].name}</p>
+//               <p className="text-xs sm:text-sm opacity-90">{matchData.teams[0].short_name}</p>
 //             </div>
 //           </div>
-//           <div className="text-4xl font-bold">{matchData.teams[0].total_points}</div>
+//           <div className="text-4xl sm:text-5xl font-bold">{matchData.teams[0].total_points}</div>
 //         </div>
 
-//         <div className="text-center py-2 text-sm font-semibold">
+//         <div className="text-center py-2 text-sm sm:text-base font-semibold">
 //           Q{matchData.match_info.quarter} • {matchData.match_info.time_remaining} remaining
 //         </div>
 
 //         <div className="flex justify-between items-center">
-//           <div className="text-4xl font-bold">{matchData.teams[1].total_points}</div>
-//           <div className="flex items-center gap-3">
+//           <div className="text-4xl sm:text-5xl font-bold">{matchData.teams[1].total_points}</div>
+//           <div className="flex items-center gap-4">
 //             <div className="text-right">
-//               <p className="font-semibold text-lg">{matchData.teams[1].name}</p>
-//               <p className="text-xs opacity-90">{matchData.teams[1].short_name}</p>
+//               <p className="font-semibold text-lg sm:text-xl">{matchData.teams[1].name}</p>
+//               <p className="text-xs sm:text-sm opacity-90">{matchData.teams[1].short_name}</p>
 //             </div>
-//             <img src={matchData.images.team2_flag} alt={matchData.teams[1].name} className="w-12 h-12 object-contain" />
+//             <img 
+//               src={matchData.images.team2_flag} 
+//               alt={matchData.teams[1].name} 
+//               className="w-14 h-14 sm:w-16 sm:h-16 object-contain rounded" 
+//             />
 //           </div>
 //         </div>
 //       </div>
@@ -184,7 +192,15 @@
 //               <tbody className="divide-y">
 //                 {team.player_stats.map((player, pidx) => (
 //                   <tr key={pidx} className="hover:bg-gray-50">
-//                     <td className="p-2 font-medium text-blue-600">{player.name}</td>
+//                     <td className="p-2 font-medium text-blue-600 flex items-center gap-3">
+//                       <img
+//                         src={player.avatar_url || 'https://via.placeholder.com/40?text=' + player.name.charAt(0)}
+//                         alt={player.name}
+//                         className="w-10 h-10 rounded-full object-cover border border-gray-200 flex-shrink-0"
+//                         onError={(e) => { e.target.src = 'https://via.placeholder.com/40?text=' + player.name.charAt(0); }}
+//                       />
+//                       {player.name}
+//                     </td>
 //                     <td className="p-2 text-center font-semibold">{player.points}</td>
 //                     <td className="p-2 text-center">{player.rebounds}</td>
 //                     <td className="p-2 text-center">{player.assists}</td>
@@ -214,16 +230,47 @@
 //               <div className="space-y-2">
 //                 {team.squad.players.map((player, pidx) => (
 //                   <div key={pidx} className="flex items-center justify-between p-2 bg-white rounded">
-//                     <div>
-//                       <span className="text-sm font-medium">{player.name}</span>
-//                       {player.is_captain && <span className="ml-2 text-xs bg-yellow-400 text-black px-2 py-0.5 rounded">C</span>}
+//                     <div className="flex items-center gap-3">
+//                       <img 
+//                         src={player.avatar_url || 'https://via.placeholder.com/40?text=' + player.name.charAt(0)} 
+//                         alt={player.name} 
+//                         className="w-10 h-10 rounded-full object-cover border border-gray-200 flex-shrink-0"
+//                         onError={(e) => { e.target.src = 'https://via.placeholder.com/40?text=' + player.name.charAt(0); }}
+//                       />
+//                       <div>
+//                         <span className="text-sm font-medium">{player.name}</span>
+//                         {player.is_captain && <span className="ml-2 text-xs bg-yellow-400 text-black px-2 py-0.5 rounded">C</span>}
+//                       </div>
 //                     </div>
 //                     <span className="text-xs text-gray-600">{player.role}</span>
 //                   </div>
 //                 ))}
 //               </div>
 
-//               <h4 className="font-semibold mt-4 mb-2 text-sm">Coaching Staff</h4>
+//               {/* Benched Players */}
+//               {team.squad.benched_players && team.squad.benched_players.length > 0 && (
+//                 <>
+//                   <h4 className="font-semibold mt-6 mb-2 text-sm">Benched Players</h4>
+//                   <div className="space-y-2">
+//                     {team.squad.benched_players.map((player, pidx) => (
+//                       <div key={pidx} className="flex items-center justify-between p-2 bg-white rounded">
+//                         <div className="flex items-center gap-3">
+//                           <img 
+//                             src={player.avatar_url || 'https://via.placeholder.com/40?text=' + player.name.charAt(0)} 
+//                             alt={player.name} 
+//                             className="w-10 h-10 rounded-full object-cover border border-gray-200 flex-shrink-0"
+//                             onError={(e) => { e.target.src = 'https://via.placeholder.com/40?text=' + player.name.charAt(0); }}
+//                           />
+//                           <span className="text-sm font-medium">{player.name}</span>
+//                         </div>
+//                         <span className="text-xs text-gray-600">{player.role}</span>
+//                       </div>
+//                     ))}
+//                   </div>
+//                 </>
+//               )}
+
+//               <h4 className="font-semibold mt-6 mb-2 text-sm">Coaching Staff</h4>
 //               <div className="space-y-2">
 //                 {team.squad.supporting_staff.map((staff, sidx) => (
 //                   <div key={sidx} className="flex items-center justify-between p-2 bg-white rounded">
@@ -267,7 +314,7 @@
 //   return (
 //     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-orange-50 to-red-50">
 //       {/* Sticky Header */}
-//       <div className="bg-white shadow-sm sticky top-0 z-20">
+//       <div className="bg-white shadow-sm  z-20">
 //         <div className="max-w-7xl mx-auto px-4 py-3">
 //           <div className="flex items-center gap-3 mb-3">
 //             <button onClick={() => navigate(-1)} className="p-2 hover:bg-gray-100 rounded-full">
@@ -457,6 +504,7 @@ import { ArrowLeft, ChevronRight, Clock, Trophy } from 'lucide-react';
 import basketballData from '../data/BasketballData.json';
 import TopBasketballStories from '../data/TopBasketballStories.js';
 import LatestNews from '../data/LatestNews.js';
+import SEO from '../components/SEO.jsx';
 
 const BasketballScorecard = () => {
   const { matchId } = useParams();
@@ -761,10 +809,26 @@ const BasketballScorecard = () => {
     }
   };
 
+  // Generate dynamic SEO metadata based on match data
+  const seoTitle = `${matchData.teams[0].name} vs ${matchData.teams[1].name} - Basketball Scorecard | SportlyRadar`;
+  const seoDescription = `Live basketball match between ${matchData.teams[0].name} and ${matchData.teams[1].name}. Get real-time scores, player stats, quarter updates, and match highlights from ${matchData.league}.`;
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-orange-50 to-red-50">
+      {/* SEO Component with dynamic match data */}
+      <SEO 
+        title={seoTitle}
+        description={seoDescription}
+        keywords={`${matchData.teams[0].name}, ${matchData.teams[1].name}, basketball scorecard, ${matchData.league}, live basketball scores, player stats, match highlights, quarter scores`}
+        canonical={window.location.href}
+        image={matchData.images.team1_flag || "https://sportlyradar.com/basketball-scorecard-og-image.jpg"}
+        url={window.location.href}
+        type="article"
+        publishedTime={new Date(matchData.date).toISOString()}
+      />
+      
       {/* Sticky Header */}
-      <div className="bg-white shadow-sm  z-20">
+      <div className="bg-white shadow-sm z-20">
         <div className="max-w-7xl mx-auto px-4 py-3">
           <div className="flex items-center gap-3 mb-3">
             <button onClick={() => navigate(-1)} className="p-2 hover:bg-gray-100 rounded-full">

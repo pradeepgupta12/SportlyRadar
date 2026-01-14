@@ -1,6 +1,7 @@
 
 
 
+
 // import React, { useState, useEffect } from 'react';
 // import { useNavigate } from 'react-router-dom';
 
@@ -61,7 +62,7 @@
 //     return () => window.removeEventListener('resize', handleResize);
 //   }, []);
 
-//   // Card click → Scorecard page (default tab: Info)
+//   // Card click → Scorecard page
 //   const handleCardClick = (sport, matchId) => {
 //     const routes = {
 //       football: `/football-scorecard/${matchId}`,
@@ -77,9 +78,9 @@
 //     }
 //   };
 
-//   // Schedule button click → Same scorecard page (opens Info tab by default)
+//   // Schedule button click
 //   const handleScheduleClick = (sport, matchId, e) => {
-//     e.stopPropagation(); // Card के click को रोकता है
+//     e.stopPropagation();
 //     const routes = {
 //       football: `/football-scorecard/${matchId}`,
 //       basketball: `/basketball-scorecard/${matchId}`,
@@ -140,7 +141,6 @@
 //     let img1 = "https://via.placeholder.com/24";
 //     let img2 = "https://via.placeholder.com/24";
 
-//     // Sport-specific data (same as before)
 //     if (sport === 'football') {
 //       team1Name = match.teams?.home?.name || 'Home';
 //       team2Name = match.teams?.away?.name || 'Away';
@@ -186,17 +186,43 @@
 //       img2 = match.info?.team2_flag || img2;
 
 //     } else if (sport === 'tennis') {
-//       const p1 = match.players?.[0];
-//       const p2 = match.players?.[1];
-//       team1Name = p1?.name || 'Player 1';
-//       team2Name = p2?.name || 'Player 2';
+//       // NEW FIXED TENNIS BLOCK - Tested with your exact data
+//       team1Name = 'Unknown';
+//       team2Name = 'Unknown';
+
+//       if (match.players && Array.isArray(match.players) && match.players.length === 2) {
+//         // Singles matches
+//         if (match.players[0].country && match.players[1].country) {
+//           team1Name = match.players[0].country;
+//           team2Name = match.players[1].country;
+//         }
+//         // Doubles matches
+//         else if (match.players[0].team && match.players[1].team) {
+//           const team1 = match.players[0].team;
+//           const team2 = match.players[1].team;
+
+//           const countries1 = team1.map(p => p.country).filter(Boolean);
+//           const countries2 = team2.map(p => p.country).filter(Boolean);
+
+//           team1Name = (countries1.length === 2 && countries1[0] === countries1[1])
+//             ? countries1[0]
+//             : countries1.join(' / ') || 'Team 1';
+
+//           team2Name = (countries2.length === 2 && countries2[0] === countries2[1])
+//             ? countries2[0]
+//             : countries2.join(' / ') || 'Team 2';
+//         }
+//       }
+
 //       const currentSet = match.scorecard?.current_set;
 //       score1 = currentSet?.player1_games ?? currentSet?.team1_games ?? 0;
 //       score2 = currentSet?.player2_games ?? currentSet?.team2_games ?? 0;
+
 //       statusText = match.scorecard?.current_status || 'Live';
 //       venueText = `${match.venue?.name || ''}, ${match.venue?.city || ''}`.trim() || 'Venue TBD';
-//       img1 = match.images?.team1_flag || img1;
-//       img2 = match.images?.team2_flag || img2;
+
+//       img1 = match.images?.team1_flag || "https://via.placeholder.com/24";
+//       img2 = match.images?.team2_flag || "https://via.placeholder.com/24";
 //     }
 
 //     return (
@@ -237,7 +263,7 @@
 //         <p className="text-xs sm:text-sm text-gray-600 mt-2 truncate">{statusText}</p>
 //         <p className="text-xs sm:text-sm text-gray-600 truncate">{venueText}</p>
 
-//         {/* Schedule Button - अब scorecard page का Info tab खोलेगा */}
+//         {/* Schedule Button */}
 //         <div className="flex justify-end mt-2">
 //           <button
 //             onClick={(e) => handleScheduleClick(sport, match.match_id, e)}
@@ -302,362 +328,6 @@
 // export default Home;
 
 
-////// API vala code hai neeche 
-
-// import React, { useState, useEffect } from 'react';
-// import { useNavigate } from 'react-router-dom';
-// import LatestSportsNews from '../Pages/LatestSportsNews.jsx';
-// import Blogs from '../Pages/Blogs.jsx';
-
-// // Vite ke liye env variables
-// const API_SPORTS_KEY = import.meta.env.VITE_API_SPORTS_KEY;
-// const CRICKETDATA_KEY = import.meta.env.VITE_CRICKETDATA_KEY;
-// const API_TENNIS_KEY = import.meta.env.VITE_API_TENNIS_KEY;
-
-// const Home = () => {
-//   const [allMatches, setAllMatches] = useState([]);
-//   const [loading, setLoading] = useState(true);
-//   const [currentIndex, setCurrentIndex] = useState(0);
-//   const [cardsToShow, setCardsToShow] = useState(4);
-//   const navigate = useNavigate();
-
-//   // Responsive cards
-//   useEffect(() => {
-//     const handleResize = () => {
-//       if (window.innerWidth >= 1280) setCardsToShow(4);
-//       else if (window.innerWidth >= 1024) setCardsToShow(3);
-//       else if (window.innerWidth >= 640) setCardsToShow(2);
-//       else setCardsToShow(1);
-//     };
-//     handleResize();
-//     window.addEventListener('resize', handleResize);
-//     return () => window.removeEventListener('resize', handleResize);
-//   }, []);
-
-//   // Live matches fetch from all APIs
-//   const fetchLiveMatches = async () => {
-//     setLoading(true);
-//     const matches = [];
-
-//     try {
-//       // API-Sports: Football, Basketball, Hockey
-//       if (API_SPORTS_KEY) {
-//         // Football
-//         const footballRes = await fetch('https://v3.football.api-sports.io/fixtures?live=all', {
-//           headers: { 'x-apisports-key': API_SPORTS_KEY }
-//         });
-//         if (footballRes.ok) {
-//           const footballData = await footballRes.json();
-//           footballData.response?.forEach(f => {
-//             const status = f.fixture.status.short;
-//             if (['1H', '2H', 'HT', 'ET', 'P', 'LIVE'].includes(status)) {
-//               matches.push({
-//                 match_id: f.fixture.id,
-//                 sport: 'football',
-//                 teams: { home: f.teams.home, away: f.teams.away },
-//                 scores: { home: f.goals.home ?? 0, away: f.goals.away ?? 0 },
-//                 status: f.fixture.status.elapsed ? `${f.fixture.status.elapsed}'` : 'Live',
-//                 venue: [f.fixture.venue?.name, f.fixture.venue?.city].filter(Boolean).join(', '),
-//                 images: { team1_logo: f.teams.home.logo || '', team2_logo: f.teams.away.logo || '' }
-//               });
-//             }
-//           });
-//         }
-
-//         // Basketball
-//         const basketballRes = await fetch('https://v1.basketball.api-sports.io/games?live=all', {
-//           headers: { 'x-apisports-key': API_SPORTS_KEY }
-//         });
-//         if (basketballRes.ok) {
-//           const basketballData = await basketballRes.json();
-//           basketballData.response?.forEach(g => {
-//             matches.push({
-//               match_id: g.id,
-//               sport: 'basketball',
-//               teams: [g.teams.home, g.teams.visitors],
-//               scores: { home: g.scores?.home?.total ?? 0, away: g.scores?.visitors?.total ?? 0 },
-//               status: g.periods?.current ? `Q${g.periods.current}` : 'Live',
-//               venue: [g.arena?.name, g.arena?.city].filter(Boolean).join(', '),
-//               images: { team1_flag: g.teams.home.logo || '', team2_flag: g.teams.visitors.logo || '' }
-//             });
-//           });
-//         }
-
-//         // Hockey
-//         const hockeyRes = await fetch('https://v1.hockey.api-sports.io/games?live=all', {
-//           headers: { 'x-apisports-key': API_SPORTS_KEY }
-//         });
-//         if (hockeyRes.ok) {
-//           const hockeyData = await hockeyRes.json();
-//           hockeyData.response?.forEach(h => {
-//             matches.push({
-//               match_id: h.id,
-//               sport: 'hockey',
-//               teams: [h.teams.home, h.teams.visitors],
-//               scores: { home: h.scores?.home ?? 0, away: h.scores?.visitors ?? 0 },
-//               status: h.status?.long || 'Live',
-//               venue: [h.arena?.name, h.arena?.city].filter(Boolean).join(', '),
-//               images: { team1_flag: h.teams.home.logo || '', team2_flag: h.teams.visitors.logo || '' }
-//             });
-//           });
-//         }
-//       }
-
-//       // Cricket
-//       if (CRICKETDATA_KEY) {
-//         const cricketRes = await fetch(`https://api.cricapi.com/v1/currentMatches?apikey=${CRICKETDATA_KEY}&offset=0`);
-//         if (cricketRes.ok) {
-//           const cricketJson = await cricketRes.json();
-//           cricketJson.data?.forEach(m => {
-//             if (m.matchStarted && !m.matchEnded) {
-//               const currentInnings = m.score?.find(s => s.inning?.toLowerCase().includes('current')) || m.score?.[0] || {};
-//               matches.push({
-//                 match_id: m.id,
-//                 sport: 'cricket',
-//                 team1: m.teams?.[0] || 'Team 1',
-//                 team2: m.teams?.[1] || 'Team 2',
-//                 score: currentInnings.r !== undefined ? `${currentInnings.r}/${currentInnings.w || 0} (${currentInnings.o})` : '—',
-//                 status: m.status || 'Live',
-//                 venue: m.venue || '',
-//                 images: { team1_flag: '', team2_flag: '' }
-//               });
-//             }
-//           });
-//         }
-//       }
-
-//       // Tennis
-//       if (API_TENNIS_KEY) {
-//         const tennisRes = await fetch(`https://api.api-tennis.com/tennis/?method=get_livescore&APIkey=${API_TENNIS_KEY}`);
-//         if (tennisRes.ok) {
-//           const tennisJson = await tennisRes.json();
-//           tennisJson.result?.forEach(t => {
-//             if (t.event_live === '1') {
-//               // Prefer current set score, fallback to final result
-//               const displayScore = t.scores?.current_set || t.event_final_result || t.event_current_set || '0 - 0';
-//               matches.push({
-//                 match_id: t.event_key,
-//                 sport: 'tennis',
-//                 player1: t.event_first_player || 'Player 1',
-//                 player2: t.event_second_player || 'Player 2',
-//                 country1: t.event_first_player_country || '',
-//                 country2: t.event_second_player_country || '',
-//                 score: displayScore,
-//                 status: t.event_status || 'Live',
-//                 venue: t.tournament_name || '',
-//                 images: { team1_flag: t.event_first_player_logo || '', team2_flag: t.event_second_player_logo || '' }
-//               });
-//             }
-//           });
-//         }
-//       }
-
-//     } catch (err) {
-//       console.error('Error fetching matches:', err);
-//     }
-
-//     setAllMatches(matches);
-//     setLoading(false);
-//   };
-
-//   // Initial load + polling
-//   useEffect(() => {
-//     fetchLiveMatches();
-//     const interval = setInterval(fetchLiveMatches, 30000); // 30 seconds
-//     return () => clearInterval(interval);
-//   }, []);
-
-//   const handleCardClick = (sport, matchId) => {
-//     navigate(`/${sport}-scorecard/${matchId}`);
-//   };
-
-//   const handleScheduleClick = (sport, matchId, e) => {
-//     e.stopPropagation();
-//     navigate(`/${sport}-scorecard/${matchId}`);
-//   };
-
-//   const getSportBadge = (sport) => {
-//     const badges = {
-//       basketball: { name: 'Basketball', color: 'bg-orange-500' },
-//       football: { name: 'Football', color: 'bg-green-600' },
-//       tennis: { name: 'Tennis', color: 'bg-purple-600' },
-//       cricket: { name: 'Cricket', color: 'bg-blue-600' },
-//       hockey: { name: 'Hockey', color: 'bg-red-600' }
-//     };
-//     return badges[sport] || { name: sport.toUpperCase(), color: 'bg-gray-600' };
-//   };
-
-//   const handlePrevious = () => {
-//     setCurrentIndex(prev => (prev === 0 ? allMatches.length - 1 : prev - 1));
-//   };
-
-//   const handleNext = () => {
-//     setCurrentIndex(prev => (prev === allMatches.length - 1 ? 0 : prev + 1));
-//   };
-
-//   const getVisibleMatches = () => {
-//     if (allMatches.length === 0) return [];
-//     const visible = [];
-//     for (let i = 0; i < cardsToShow; i++) {
-//       const index = (currentIndex + i) % allMatches.length;
-//       visible.push(allMatches[index]);
-//     }
-//     return visible;
-//   };
-
-//   const renderMatchCard = (match) => {
-//     if (!match) return null;
-//     const sport = match.sport;
-//     const badge = getSportBadge(sport);
-
-//     let team1Country = 'Unknown';
-//     let team2Country = 'Unknown';
-//     let score1 = '0', score2 = '0';
-//     let statusText = 'Live';
-//     let venueText = '';
-//     let img1 = "https://via.placeholder.com/24";
-//     let img2 = "https://via.placeholder.com/24";
-
-//     if (sport === 'football') {
-//       team1Country = match.teams?.home?.name || 'Home';
-//       team2Country = match.teams?.away?.name || 'Away';
-//       score1 = match.scores?.home ?? 0;
-//       score2 = match.scores?.away ?? 0;
-//       statusText = match.status || 'Live';
-//       venueText = match.venue || '';
-//       img1 = match.images?.team1_logo || img1;
-//       img2 = match.images?.team2_logo || img2;
-//     } else if (sport === 'basketball') {
-//       team1Country = match.teams?.[0]?.name || 'Team 1';
-//       team2Country = match.teams?.[1]?.name || 'Team 2';
-//       score1 = match.scores?.home ?? 0;
-//       score2 = match.scores?.away ?? 0;
-//       statusText = match.status || 'Live';
-//       venueText = match.venue || '';
-//       img1 = match.images?.team1_flag || img1;
-//       img2 = match.images?.team2_flag || img2;
-//     } else if (sport === 'hockey') {
-//       team1Country = match.teams?.[0]?.name || 'Team 1';
-//       team2Country = match.teams?.[1]?.name || 'Team 2';
-//       score1 = match.scores?.home ?? 0;
-//       score2 = match.scores?.away ?? 0;
-//       statusText = match.status || 'Live';
-//       venueText = match.venue || '';
-//       img1 = match.images?.team1_flag || img1;
-//       img2 = match.images?.team2_flag || img2;
-//     } else if (sport === 'cricket') {
-//       team1Country = match.team1;
-//       team2Country = match.team2;
-//       score1 = match.score;
-//       score2 = '';
-//       statusText = match.status;
-//       venueText = match.venue;
-//     } else if (sport === 'tennis') {
-//       team1Country = `${match.player1}${match.country1 ? ` (${match.country1})` : ''}`;
-//       team2Country = `${match.player2}${match.country2 ? ` (${match.country2})` : ''}`;
-//       const scores = match.score.split(' - ');
-//       score1 = scores[0]?.trim() || '0';
-//       score2 = scores[1]?.trim() || '0';
-//       statusText = match.status;
-//       venueText = match.venue;
-//       img1 = match.images?.team1_flag || img1;
-//       img2 = match.images?.team2_flag || img2;
-//     }
-
-//     return (
-//       <div
-//         key={match.match_id}
-//         className="relative bg-white rounded-lg shadow-md p-4 w-full cursor-pointer hover:shadow-lg transition-shadow"
-//         onClick={() => handleCardClick(sport, match.match_id)}
-//       >
-//         <div className={`absolute top-2 right-2 ${badge.color} text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm`}>
-//           {badge.name}
-//         </div>
-
-//         <p className="text-xs sm:text-sm text-gray-500 truncate pr-20">
-//           <span className="text-blue-600 font-medium">LIVE</span>
-//         </p>
-
-//         <div className="flex justify-between items-center mt-2">
-//           <div className="flex items-center space-x-2 flex-1 min-w-0">
-//             <img src={img1} alt={team1Country} className="w-6 h-6 object-cover flex-shrink-0 rounded-full" />
-//             <p className="text-xs sm:text-sm font-semibold truncate">{team1Country}</p>
-//           </div>
-//           <p className="text-sm sm:text-base font-bold ml-2">{score1}</p>
-//         </div>
-
-//         <div className="flex justify-between items-center mt-2">
-//           <div className="flex items-center space-x-2 flex-1 min-w-0">
-//             <img src={img2} alt={team2Country} className="w-6 h-6 object-cover flex-shrink-0 rounded-full" />
-//             <p className="text-xs sm:text-sm font-semibold truncate">{team2Country}</p>
-//           </div>
-//           <p className="text-sm sm:text-base font-bold ml-2">{score2}</p>
-//         </div>
-
-//         <p className="text-xs sm:text-sm text-gray-600 mt-2 truncate">{statusText}</p>
-//         <p className="text-xs sm:text-sm text-gray-600 truncate">{venueText}</p>
-
-//         <div className="flex justify-end mt-2">
-//           <button
-//             onClick={(e) => handleScheduleClick(sport, match.match_id, e)}
-//             className="text-blue-600 text-xs sm:text-sm hover:underline"
-//           >
-//             Schedule
-//           </button>
-//         </div>
-//       </div>
-//     );
-//   };
-
-//   return (
-//     <main className="w-full bg-gray-50 min-h-screen">
-//       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6">
-//         {loading && allMatches.length === 0 ? (
-//           <p className="text-center text-gray-500 py-10 text-lg">Loading live matches...</p>
-//         ) : allMatches.length > 0 ? (
-//           <div className="relative">
-//             <button
-//               onClick={handlePrevious}
-//               className="absolute left-5 top-1/2 -translate-y-1/2 -translate-x-4 z-10 bg-green-600 hover:bg-green-700 text-white rounded-full p-3 shadow-lg transition-all duration-200 flex items-center justify-center"
-//               style={{ width: '35px', height: '35px' }}
-//             >
-//               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-10 h-10">
-//                 <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-//               </svg>
-//             </button>
-
-//             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 px-8">
-//               {getVisibleMatches().map((match, idx) => (
-//                 <div key={`${match.match_id}-${idx}`}>
-//                   {renderMatchCard(match)}
-//                 </div>
-//               ))}
-//             </div>
-
-//             <button
-//               onClick={handleNext}
-//               className="absolute right-5 top-1/2 -translate-y-1/2 translate-x-4 z-10 bg-green-600 hover:bg-green-700 text-white rounded-full p-3 shadow-lg transition-all duration-200 flex items-center justify-center"
-//               style={{ width: '35px', height: '35px' }}
-//             >
-//               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-10 h-10">
-//                 <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-//               </svg>
-//             </button>
-//           </div>
-//         ) : (
-//           <p className="text-center text-gray-500 py-10 text-lg">No live matches currently</p>
-//         )}
-//       </div>
-
-//       <LatestSportsNews />
-//       <Blogs />
-//     </main>
-//   );
-// };
-
-// export default Home;
-
-
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -670,6 +340,7 @@ import hockeyData from '../data/LiveHockeyMatchDetail.js';
 
 import LatestSportsNews from '../Pages/LatestSportsNews.jsx';
 import Blogs from '../Pages/Blogs.jsx';
+import SEO from '../components/SEO.jsx';
 
 const Home = () => {
   const [allMatches, setAllMatches] = useState([]);
@@ -842,17 +513,14 @@ const Home = () => {
       img2 = match.info?.team2_flag || img2;
 
     } else if (sport === 'tennis') {
-      // NEW FIXED TENNIS BLOCK - Tested with your exact data
       team1Name = 'Unknown';
       team2Name = 'Unknown';
 
       if (match.players && Array.isArray(match.players) && match.players.length === 2) {
-        // Singles matches
         if (match.players[0].country && match.players[1].country) {
           team1Name = match.players[0].country;
           team2Name = match.players[1].country;
         }
-        // Doubles matches
         else if (match.players[0].team && match.players[1].team) {
           const team1 = match.players[0].team;
           const team2 = match.players[1].team;
@@ -934,6 +602,16 @@ const Home = () => {
 
   return (
     <main className="w-full bg-gray-50 min-h-screen">
+      {/* SEO Component */}
+      <SEO 
+        title="SportlyRadar - Live Sports Scores, News & Updates"
+        description="Get real-time live scores, match updates, and breaking sports news for football, basketball, cricket, tennis, hockey and more. Your ultimate sports tracking destination."
+        keywords="live sports scores, football scores, basketball scores, cricket scores, tennis scores, hockey scores, sports news, match updates, live matches"
+        canonical={window.location.href}
+        image="https://sportlyradar.com/og-image.jpg"
+        url={window.location.href}
+      />
+      
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6">
         {allMatches.length === 0 ? (
           <p className="text-center text-gray-500 py-10 text-lg">Loading live matches...</p>

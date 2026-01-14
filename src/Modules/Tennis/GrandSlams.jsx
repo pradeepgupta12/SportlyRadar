@@ -53,15 +53,20 @@
 //                   className="group bg-white rounded-lg shadow hover:shadow-md transition-all border border-gray-100"
 //                 >
 //                   <div className={`bg-gradient-to-r ${slam.color} text-white p-5 rounded-t-lg`}>
-//                     <div className="flex justify-between items-start">
-//                       <div>
+//                     <div className="flex items-center gap-3">
+//                       <img
+//                         src={slam.logo_url}
+//                         alt={`${slam.name} logo`}
+//                         className="h-10 w-10 sm:h-12 sm:w-12 object-contain rounded bg-white/20 p-1 flex-shrink-0"
+//                       />
+//                       <div className="flex-1">
 //                         <h2 className="text-xl font-bold">{slam.name}</h2>
 //                         <div className="flex items-center gap-2 text-sm opacity-90 mt-1">
 //                           <MapPin className="w-4 h-4" />
 //                           <span>{slam.location}</span>
 //                         </div>
 //                       </div>
-//                       <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+//                       <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform flex-shrink-0" />
 //                     </div>
 //                   </div>
 
@@ -246,10 +251,10 @@
 
 // export default GrandSlams;
 
-
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Trophy, Calendar, MapPin, ChevronRight, Clock } from 'lucide-react';
+import SEO from '../../components/SEO.jsx';
 import TopTennisStories from '../../data/TopTennisStories.js';
 import LatestNews from '../../data/LatestNews.js';
 import { grandSlams } from '../../data/TennisGrandSlamData.js';
@@ -265,8 +270,24 @@ const GrandSlams = () => {
     navigate(`/news-details/${encodeURIComponent(title)}`);
   };
 
+  // SEO meta data
+  const seoTitle = "Grand Slam Tournaments | Tennis Majors | SportlyRadar";
+  const seoDescription = "Complete guide to all four Grand Slam tournaments - Australian Open, French Open, Wimbledon, US Open. Get schedules, venues, prize money and more.";
+  const seoKeywords = "Grand Slam tournaments, Australian Open, French Open, Wimbledon, US Open, tennis majors, tennis tournaments, ATP, WTA";
+  const seoImage = "https://sportlyradar.com/grand-slam-og-image.jpg";
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-green-50 to-blue-50">
+      {/* SEO Component */}
+      <SEO
+        title={seoTitle}
+        description={seoDescription}
+        keywords={seoKeywords}
+        image={seoImage}
+        url={window.location.href}
+        type="website"
+      />
+
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="bg-gradient-to-r from-green-600 via-blue-600 to-indigo-700 text-white rounded-xl shadow-xl p-5 sm:p-8">

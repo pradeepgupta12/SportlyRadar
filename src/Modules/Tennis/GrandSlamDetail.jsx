@@ -48,8 +48,13 @@
 //               </Link>
 
 //               <div className={`bg-gradient-to-r ${slam.color} text-white rounded-xl shadow-xl p-6`}>
-//                 <div className="flex items-center gap-4">
-//                   <Trophy className="w-12 h-12" />
+//                 <div className="flex items-center gap-4 sm:gap-6">
+//                   <img
+//                     src={slam.logo_url}
+//                     alt={`${slam.name} logo`}
+//                     className="h-14 w-14 sm:h-16 sm:w-16 object-contain rounded bg-white/20 p-2 flex-shrink-0 shadow-md"
+//                   />
+//                   <Trophy className="w-10 h-10 sm:w-12 sm:h-12 opacity-90 hidden sm:block" />
 //                   <div>
 //                     <h1 className="text-3xl sm:text-4xl font-bold">{slam.name}</h1>
 //                     <div className="flex flex-wrap items-center gap-4 text-sm opacity-90 mt-2">
@@ -153,8 +158,26 @@
 //                       {slam.pastChampions.map((c, i) => (
 //                         <tr key={i} className="hover:bg-gray-50">
 //                           <td className="py-4 px-6 font-medium">{c.year}</td>
-//                           <td className="py-4 px-6">{c.mens}</td>
-//                           <td className="py-4 px-6">{c.womens}</td>
+//                           <td className="py-4 px-6">
+//                             <div className="flex items-center gap-3">
+//                               <img
+//                                 src={c.mens_logo_url || 'https://via.placeholder.com/40'}
+//                                 alt={c.mens}
+//                                 className="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover border border-gray-200 flex-shrink-0"
+//                               />
+//                               <span>{c.mens}</span>
+//                             </div>
+//                           </td>
+//                           <td className="py-4 px-6">
+//                             <div className="flex items-center gap-3">
+//                               <img
+//                                 src={c.womens_logo_url || 'https://via.placeholder.com/40'}
+//                                 alt={c.womens}
+//                                 className="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover border border-gray-200 flex-shrink-0"
+//                               />
+//                               <span>{c.womens}</span>
+//                             </div>
+//                           </td>
 //                         </tr>
 //                       ))}
 //                     </tbody>
@@ -326,7 +349,8 @@
 
 import React, { useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { ArrowLeft, Trophy, Calendar, MapPin, Award } from 'lucide-react';
+import { ArrowLeft, Trophy, Calendar, MapPin } from 'lucide-react';
+import SEO from '../../components/SEO.jsx';
 
 import TopTennisStories from '../../data/TopTennisStories.js';
 import LatestNews from '../../data/LatestNews.js';
@@ -343,6 +367,10 @@ const GrandSlamDetail = () => {
   if (!slam) {
     return (
       <div className="min-h-screen flex items-center justify-center text-gray-600">
+        <SEO 
+          title="Grand Slam Not Found | SportlyRadar"
+          description="The requested Grand Slam tournament page could not be found."
+        />
         Grand Slam not found
       </div>
     );
@@ -356,8 +384,25 @@ const GrandSlamDetail = () => {
     navigate(`/news-details/${encodeURIComponent(articleTitle)}`);
   };
 
+  // SEO meta data
+  const seoTitle = `${slam.name} | Grand Slam Tournament Details | SportlyRadar`;
+  const seoDescription = `Complete guide to ${slam.name} - ${slam.description.substring(0, 150)}...`;
+  const seoKeywords = `${slam.name}, tennis grand slam, ${slam.location}, ${slam.surface}, tennis tournament, ${slam.month}`;
+  const seoImage = slam.logo_url;
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-green-50 to-blue-50">
+      {/* SEO Component */}
+      <SEO
+        title={seoTitle}
+        description={seoDescription}
+        keywords={seoKeywords}
+        image={seoImage}
+        url={window.location.href}
+        type="article"
+        publishedTime={new Date().toISOString()}
+      />
+
       {/* Main Content - Same layout as LiveScores */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
