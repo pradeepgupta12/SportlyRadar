@@ -1,0 +1,24 @@
+
+/cricket/ranking                /cricket/rankings                       301
+/old-ipl                        /cricket/leagues/ipl                    301
+/live-cricket                   /cricket/live                           301
+/series/ipl                     /cricket/series/ipl-2026                301
+/rankings/cricket               /cricket/rankings                       301
+
+/football/ranking               /football/rankings                      301
+/football/schedule-old          /football/schedule                      301
+
+/contact                        /contact-us                             301
+/about-us                       /about                                  301
+
+# Short URLs (user friendly)
+/ipl                            /cricket/leagues/ipl                    301
+/t20worldcup                    /cricket/series/icc-mens-t20-world-cup-2026  301
+/ashes                          /cricket/series/the-ashes-2025-26       301
+
+# Blog & News old patterns
+/blog                           /blogs                                  301
+/news                           /all-latest-news                        301
+
+# Agar koi galat URL type kare to homepage pe bhej do (optional)
+/*                              /                                       404
